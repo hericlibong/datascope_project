@@ -1,3 +1,32 @@
+# Environnement
 venv/
+.env
+.env.*
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.log
+
+# IDE
+.vscode/
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+
+# Tests / coverage
+htmlcov/
+.tox/
+.nox/
+coverage.*
+.cache
+pytest_cache/
