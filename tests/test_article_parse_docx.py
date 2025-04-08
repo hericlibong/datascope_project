@@ -1,0 +1,11 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
+from core.article_parser import extract_article_text
+
+if __name__ == "__main__":
+    path = "samples/test_article.docx"
+    content = extract_article_text(path)
+    print("----- CONTENU EXTRAIT DU DOCX -----\n")
+    print(content[:1000])
