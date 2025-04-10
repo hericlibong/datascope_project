@@ -1,4 +1,5 @@
 import os
+import re
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -98,4 +99,15 @@ def suggest_datasets_llm(text: str, entities: dict) -> str:
     ]
 
     return call_openai(messages)
+
+
+
+def parse_markdown_list(raw_text: str) -> list:
+    """
+    Extrait une liste structurée depuis un texte markdown GPT :
+    "1. **Titre** : Contenu"
+    """
+    entries = re.findall(r"\d+\.\s+\*\*(.*?)\*\*\s*:\s*(.*?)\s*(?=\d+\.\s|\Z)", raw_text, re.DOTALL)
+    return [{"title": title.strip(), "content": content.strip()} for title, content in entries]
+
 

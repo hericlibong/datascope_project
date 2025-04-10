@@ -192,3 +192,41 @@ def group_named_entities(entities: list[dict]) -> dict:
         text = ent["text"]
         grouped[label][text] += 1
     return grouped
+
+
+def interpret_datafication_score(score: int) -> str:
+    if score >= 9:
+        return "Très bon potentiel de datajournalisme (chiffré, localisé, visualisable)"
+    elif score >= 7:
+        return "Bon potentiel de datafication avec éléments structurés exploitables"
+    elif score >= 5:
+        return "Potentiel modéré : quelques éléments chiffrés ou datés identifiables"
+    elif score >= 3:
+        return "Faible potentiel data : surtout narratif, peu structuré"
+    else:
+        return "Très faible ou absent : article descriptif sans données exploitables"
+
+
+def get_article_profile(entities: dict, score_data: dict) -> str:
+    """
+    Génère un profil éditorial basé sur les entités, la densité, et le score de datafication.
+    """
+    n_verbs = len(entities.get("strong_verbs", []))
+    n_numbers = len(entities.get("numbers", []))
+    n_dates = len(entities.get("dates", []))
+    n_places = sum(1 for ent in entities.get("named_entities", []) if ent["label"] == "LOC")
+    density = score_data.get("density", 0)
+    score = score_data.get("score", 0)
+
+    if score >= 9 and density > 0.15 and n_verbs >= 2:
+        return "📊 Datajournalisme potentiel élevé – structuré, chiffré et dynamique"
+    elif n_numbers >= 3 and n_dates >= 2 and n_places >= 2:
+        return "📍 Localisé et temporel – structuré autour de données concrètes"
+    elif n_numbers <= 1 and n_verbs == 0 and density < 0.05:
+        return "📣 Narratif ou descriptif – peu de données exploitables"
+    elif score >= 6 and n_places >= 2 and n_verbs == 0:
+        return "🧮 Structuré et quantifiable – intéressant pour un angle local"
+    else:
+        return "🔬 Exploratoire ou symbolique – sujet riche mais peu structuré"
+
+

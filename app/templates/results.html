@@ -1,82 +1,108 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Résultat – DataScope</title>
-  <style>
-    body { font-family: sans-serif; line-height: 1.5; padding: 2em; max-width: 1000px; margin: auto; }
-    h2 { border-bottom: 1px solid #ccc; margin-top: 2em; }
-    pre { background: #f9f9f9; padding: 1em; overflow-x: auto; }
-    ul { padding-left: 1.2em; }
-    .score { font-size: 1.2em; font-weight: bold; color: darkgreen; }
-    .section { margin-bottom: 2em; }
-  </style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+    
+    
+    <h1 class="text-center mb-4">📊 Résultat de l’analyse DataScope</h1>
 
-  <h1>Résultat de l’analyse DataScope</h1>
+    <!-- Texte analysé -->
+    <div class="card mb-4">
+      <div class="card-header">🧾 Texte analysé</div>
+      <div class="card-body">
+        <pre class="text-wrap">{{ article_text }}</pre>
+      </div>
+    </div>
 
-  <div class="section">
-    <h2>Texte analysé</h2>
-    <pre>{{ article_text }}</pre>
-  </div>
+    <!-- Score -->
+    <div class="card mb-4">
+      <div class="card-header">📈 Score de datafication</div>
+      <div class="card-body">
+        <p><span class="badge bg-success fs-5">Score : {{ score.score }}/10</span></p>
+        <p><strong>Densité :</strong> {{ score.density }} ({{ score.structured_items }} éléments pour {{ score.word_count }} mots)</p>
+        <p><strong>Commentaire :</strong> {{ score_comment }}</p>
+        <p><strong>Profil éditorial :</strong> {{ profile_label }}</p>
+      </div>
+    </div>
 
-  <div class="section">
-    <h2>Score de datafication</h2>
-    <p class="score">Score : {{ score.score }}/10</p>
-    <ul>
-      {% for j in score.justifications %}
-        <li>{{ j }}</li>
-      {% endfor %}
-    </ul>
-    <p><strong>Densité :</strong> {{ score.density }} ({{ score.structured_items }} éléments pour {{ score.word_count }} mots)</p>
-  </div>
-
-  <div class="section">
-    <h2>Entités détectées</h2>
-    <ul>
-      <li><strong>Entités nommées regroupées :</strong>
+    <!-- Entités -->
+    <div class="card mb-4">
+      <div class="card-header">🧠 Entités détectées</div>
+      <div class="card-body">
         <ul>
-          {% for label, values in grouped_entities.items() %}
-            <li><strong>{{ label }} :</strong>
-              {% for name, count in values.items() %}
-                {{ name }}{% if count > 1 %} ({{ count }}){% endif %}{% if not loop.last %}, {% endif %}
+          <li><strong>Entités nommées regroupées :</strong>
+            <ul>
+              {% for label, values in grouped_entities.items() %}
+                <li><strong>{{ label }} :</strong>
+                  {% for name, count in values.items() %}
+                    {{ name }}{% if count > 1 %} ({{ count }}){% endif %}{% if not loop.last %}, {% endif %}
+                  {% endfor %}
+                </li>
               {% endfor %}
-            </li>
-          {% endfor %}
+            </ul>
+          </li>
+          <li><strong>Nombres + unités :</strong> 
+            {% for n in entities.numbers %}
+              {{ n.value }} {{ n.unit }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </li>
+          <li><strong>Dates :</strong> 
+            {% for d in entities.dates %}
+              {{ d.text }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </li>
+          <li><strong>Verbes forts :</strong> 
+            {% for v in entities.strong_verbs %}
+              {{ v.lemma }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </li>
         </ul>
-      </li>
-      <li><strong>Nombres + unités :</strong>
-        {% for n in entities.numbers %}
-          {{ n.value }} {{ n.unit }}{% if not loop.last %}, {% endif %}
-        {% endfor %}
-      </li>
-      <li><strong>Dates :</strong>
-        {% for d in entities.dates %}
-          {{ d.text }}{% if not loop.last %}, {% endif %}
-        {% endfor %}
-      </li>
-      <li><strong>Verbes forts :</strong>
-        {% for v in entities.strong_verbs %}
-          {{ v.lemma }}{% if not loop.last %}, {% endif %}
-        {% endfor %}
-      </li>
-    </ul>
-  </div>
+      </div>
+    </div>
 
-  <div class="section">
-    <h2>Suggestions d’angles journalistiques</h2>
-    <pre>{{ angles }}</pre>
-  </div>
+    <!-- Angles -->
+    <div class="card mb-4">
+        <div class="card-header">🧭 Suggestions d’angles journalistiques</div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            {% for item in parsed_angles %}
+              <li class="list-group-item">
+                <strong>{{ item.title }}</strong><br>
+                <span class="text-muted">{{ item.content }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      
 
-  <div class="section">
-    <h2>Suggestions de ressources / datasets</h2>
-    <pre>{{ sources }}</pre>
-  </div>
+    <!-- Sources -->
+    <div class="card mb-4">
+        <div class="card-header">🌐 Suggestions de ressources / datasets</div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            {% for item in parsed_sources %}
+              <li class="list-group-item">
+                <strong>{{ item.title }}</strong><br>
+                <span class="text-muted">{{ item.content }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      
 
-  <div class="section">
-    <a href="/" style="text-decoration: none;">← Analyser un autre article</a>
+    <!-- Actions -->
+    <div class="d-flex justify-content-between">
+      <a href="/" class="btn btn-outline-secondary">← Analyser un autre article</a>
+      <form method="POST" action="/download">
+        <input type="hidden" name="article_text" value="{{ article_text }}">
+        <input type="hidden" name="score" value="{{ score }}">
+        <input type="hidden" name="score_comment" value="{{ score_comment }}">
+        <input type="hidden" name="profile" value="{{ profile_label }}">
+        <input type="hidden" name="entities" value="{{ entities }}">
+        <input type="hidden" name="angles" value="{{ angles }}">
+        <input type="hidden" name="sources" value="{{ sources }}">
+        <button type="submit" class="btn btn-primary">📥 Exporter (Markdown)</button>
+      </form>
+    </div>
   </div>
-
-</body>
-</html>
+{% endblock %}

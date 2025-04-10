@@ -1,24 +1,24 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>DataScope – Analyse</title>
-</head>
-<body>
-  <h1>Analyser un article avec DataScope</h1>
+{% extends 'base.html' %}
+{% block content %}
 
-  {% if error %}
-    <p style="color:red;">{{ error }}</p>
-  {% endif %}
+<h2 class="mb-4">📝 Analyser un article</h2>
 
-  <form method="POST" action="/analyze" enctype="multipart/form-data">
-    <label for="article_text">Coller votre article :</label><br>
-    <textarea name="article_text" rows="12" cols="100" placeholder="Collez votre texte ici..."></textarea><br><br>
+<form method="POST" action="/analyze" enctype="multipart/form-data" class="mb-5">
+  <div class="mb-3">
+    <label for="article_text" class="form-label">Coller votre article</label>
+    <textarea name="article_text" class="form-control" rows="10" placeholder="Texte à analyser..."></textarea>
+  </div>
 
-    <label for="article_file">Ou envoyer un fichier (.txt, .pdf, .docx) :</label>
-    <input type="file" name="article_file"><br><br>
+  <div class="mb-3">
+    <label for="article_file" class="form-label">Ou envoyer un fichier (.txt, .pdf, .docx)</label>
+    <input type="file" class="form-control" name="article_file">
+  </div>
 
-    <button type="submit">Analyser</button>
-  </form>
-</body>
-</html>
+  <button type="submit" class="btn btn-primary">Analyser</button>
+</form>
+
+{% if error %}
+<div class="alert alert-warning">{{ error }}</div>
+{% endif %}
+
+{% endblock %}
