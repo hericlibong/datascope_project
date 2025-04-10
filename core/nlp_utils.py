@@ -3,6 +3,7 @@ from typing import List, Dict
 import re
 import dateparser
 from  .strongs_words import strongs_verbs
+from collections import defaultdict, Counter
 
 # Chargement des modèles au démarrage
 MODELS = {
@@ -183,3 +184,11 @@ def compute_datafication_score(entities: Dict, text: str) -> Dict:
         "structured_items": total_items,
         "word_count": words
     }
+
+def group_named_entities(entities: list[dict]) -> dict:
+    grouped = defaultdict(Counter)
+    for ent in entities:
+        label = ent["label"]
+        text = ent["text"]
+        grouped[label][text] += 1
+    return grouped

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>DataScope – Analyse</title>
+</head>
+<body>
+  <h1>Analyser un article avec DataScope</h1>
+
+  {% if error %}
+    <p style="color:red;">{{ error }}</p>
+  {% endif %}
+
+  <form method="POST" action="/analyze" enctype="multipart/form-data">
+    <label for="article_text">Coller votre article :</label><br>
+    <textarea name="article_text" rows="12" cols="100" placeholder="Collez votre texte ici..."></textarea><br><br>
+
+    <label for="article_file">Ou envoyer un fichier (.txt, .pdf, .docx) :</label>
+    <input type="file" name="article_file"><br><br>
+
+    <button type="submit">Analyser</button>
+  </form>
+</body>
+</html>

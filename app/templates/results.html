@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Résultat – DataScope</title>
+  <style>
+    body { font-family: sans-serif; line-height: 1.5; padding: 2em; max-width: 1000px; margin: auto; }
+    h2 { border-bottom: 1px solid #ccc; margin-top: 2em; }
+    pre { background: #f9f9f9; padding: 1em; overflow-x: auto; }
+    ul { padding-left: 1.2em; }
+    .score { font-size: 1.2em; font-weight: bold; color: darkgreen; }
+    .section { margin-bottom: 2em; }
+  </style>
+</head>
+<body>
+
+  <h1>Résultat de l’analyse DataScope</h1>
+
+  <div class="section">
+    <h2>Texte analysé</h2>
+    <pre>{{ article_text }}</pre>
+  </div>
+
+  <div class="section">
+    <h2>Score de datafication</h2>
+    <p class="score">Score : {{ score.score }}/10</p>
+    <ul>
+      {% for j in score.justifications %}
+        <li>{{ j }}</li>
+      {% endfor %}
+    </ul>
+    <p><strong>Densité :</strong> {{ score.density }} ({{ score.structured_items }} éléments pour {{ score.word_count }} mots)</p>
+  </div>
+
+  <div class="section">
+    <h2>Entités détectées</h2>
+    <ul>
+      <li><strong>Entités nommées regroupées :</strong>
+        <ul>
+          {% for label, values in grouped_entities.items() %}
+            <li><strong>{{ label }} :</strong>
+              {% for name, count in values.items() %}
+                {{ name }}{% if count > 1 %} ({{ count }}){% endif %}{% if not loop.last %}, {% endif %}
+              {% endfor %}
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li><strong>Nombres + unités :</strong>
+        {% for n in entities.numbers %}
+          {{ n.value }} {{ n.unit }}{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </li>
+      <li><strong>Dates :</strong>
+        {% for d in entities.dates %}
+          {{ d.text }}{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </li>
+      <li><strong>Verbes forts :</strong>
+        {% for v in entities.strong_verbs %}
+          {{ v.lemma }}{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Suggestions d’angles journalistiques</h2>
+    <pre>{{ angles }}</pre>
+  </div>
+
+  <div class="section">
+    <h2>Suggestions de ressources / datasets</h2>
+    <pre>{{ sources }}</pre>
+  </div>
+
+  <div class="section">
+    <a href="/" style="text-decoration: none;">← Analyser un autre article</a>
+  </div>
+
+</body>
+</html>
