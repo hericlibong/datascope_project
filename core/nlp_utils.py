@@ -228,5 +228,3 @@ def get_article_profile(entities: dict, score_data: dict) -> str:
         return "🧮 Structuré et quantifiable – intéressant pour un angle local"
     else:
         return "🔬 Exploratoire ou symbolique – sujet riche mais peu structuré"
-
-
