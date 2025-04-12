@@ -8,6 +8,7 @@ addopts = [
     "--cov=core",
     "--cov=app",
     "--cov-report=term-missing",
+    "--debug=config"
 
 ]
 
@@ -26,3 +27,5 @@ omit = [
 [tool.coverage.report]
 show_missing = true
 fail_under = 80
+
+

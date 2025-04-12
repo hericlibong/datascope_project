@@ -2,6 +2,7 @@ import os
 import re
 from openai import OpenAI
 from dotenv import load_dotenv
+from core.nlp_utils import format_entities
 
 # Charge les variables d'environnement (.env)
 load_dotenv()
@@ -56,7 +57,7 @@ def build_enriched_prompt(text: str, entities: dict) -> list[dict]:
 
     return [system_message, user_message]
 
-from core.nlp_utils import format_entities
+
 
 
 def generate_journalistic_angles(text: str, language: str = "fr") -> str:
@@ -101,7 +102,6 @@ def suggest_datasets_llm(text: str, entities: dict) -> str:
     return call_openai(messages)
 
 
-
 def parse_markdown_list(raw_text: str) -> list:
     """
     Extrait une liste structurée depuis un texte markdown GPT :
@@ -109,5 +109,3 @@ def parse_markdown_list(raw_text: str) -> list:
     """
     entries = re.findall(r"\d+\.\s+\*\*(.*?)\*\*\s*:\s*(.*?)\s*(?=\d+\.\s|\Z)", raw_text, re.DOTALL)
     return [{"title": title.strip(), "content": content.strip()} for title, content in entries]
-
-
