@@ -1,10 +1,11 @@
 import pytest
-from core.llm_engine import(
-    build_enriched_prompt, call_openai, 
+from core.llm_engine import (
+    build_enriched_prompt, call_openai,
     generate_journalistic_angles, suggest_datasets_llm,
     parse_markdown_list
 )
 from unittest.mock import MagicMock, patch
+
 
 def test_build_enriched_prompt_structure_and_content():
     # Entrées simulées
@@ -53,8 +54,6 @@ def test_call_openai_returns_text_without_api_call():
     assert result == "Réponse simulée."
 
 
-
-
 def test_generate_journalistic_angles_mocked_response():
     article = "Le président a déclaré une nouvelle politique le 2 février avec un budget de 50 millions d’euros."
 
@@ -66,7 +65,7 @@ def test_generate_journalistic_angles_mocked_response():
     }
 
     with patch("core.llm_engine.format_entities", return_value=fake_entities), \
-         patch("core.llm_engine.call_openai", return_value="Angle 1. Angle 2. Angle 3."):
+            patch("core.llm_engine.call_openai", return_value="Angle 1. Angle 2. Angle 3."):
 
         result = generate_journalistic_angles(article)
 
@@ -121,5 +120,3 @@ def test_call_openai_handles_exception_gracefully():
     assert isinstance(result, str)
     assert result.startswith("[ERREUR LLM]")
     assert "Simulated failure" in result
-
-

@@ -1,8 +1,8 @@
+from core.nlp_utils import format_entities, compute_datafication_score
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from core.nlp_utils import format_entities, compute_datafication_score
 
 if __name__ == "__main__":
     article = (

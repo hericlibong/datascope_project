@@ -2,6 +2,7 @@ import pytest
 from app import create_app  # ou directement depuis main.py si pas factorisé
 import io
 
+
 @pytest.fixture
 def client():
     app = create_app()  # si tu as une factory, sinon importe l’app directe
@@ -10,10 +11,12 @@ def client():
     with app.test_client() as client:
         yield client
 
+
 def test_homepage_loads(client):
     response = client.get("/")
     assert response.status_code == 200
     assert b"Analyser un article" in response.data or b"form" in response.data
+
 
 def test_analyze_route_with_text(client):
     payload = {"article_text": "Emmanuel Macron a annoncé 2 lois à Paris le 4 avril."}
@@ -21,10 +24,12 @@ def test_analyze_route_with_text(client):
     assert response.status_code == 200
     assert b"Score de datafication" in response.data
 
+
 def test_about_page_loads(client):
     response = client.get("/about")
     assert response.status_code == 200
     assert b"A propos" in response.data or b"DataScope" in response.data
+
 
 def test_analyze_with_uploaded_txt_file(client):
     data = {
@@ -34,10 +39,12 @@ def test_analyze_with_uploaded_txt_file(client):
     assert response.status_code == 200
     assert b"Score de datafication" in response.data
 
+
 def test_analyze_route_with_empty_text(client):
     response = client.post("/analyze", data={"article_text": ""})
     assert response.status_code == 200
     assert b"Aucun texte ou fichier valide fourni" in response.data
+
 
 def test_download_route_returns_markdown(client):
     payload = {
@@ -56,9 +63,7 @@ def test_download_route_returns_markdown(client):
     }
 
     response = client.post("/download", data=payload)
-    
+
     assert response.status_code == 200
     assert "markdown" in response.headers["Content-Type"]
     assert "Résultat de l’analyse DataScope".encode("utf-8") in response.data
-
-

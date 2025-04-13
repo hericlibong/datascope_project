@@ -1,8 +1,8 @@
+from core.nlp_utils import extract_dates
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from core.nlp_utils import extract_dates
 
 if __name__ == "__main__":
     article = (

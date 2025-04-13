@@ -1,8 +1,8 @@
+from core.nlp_utils import extract_numbers_and_units
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from core.nlp_utils import extract_numbers_and_units
 
 if __name__ == "__main__":
     article = (

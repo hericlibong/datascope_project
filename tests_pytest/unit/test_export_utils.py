@@ -1,5 +1,6 @@
 from core.export_utils import export_analysis_to_markdown
 
+
 def test_export_analysis_to_markdown_creates_valid_structure():
     text = "Exemple d’article simple."
     score = {"score": 8, "density": 0.1, "structured_items": 4, "word_count": 40}
@@ -44,4 +45,3 @@ def test_export_analysis_handles_empty_entities():
     assert "## 🧭 Suggestions d’angles journalistiques" in output
     assert "## 🌐 Suggestions de sources / datasets" in output
     assert "Aucun angle pertinent détecté." in output
-

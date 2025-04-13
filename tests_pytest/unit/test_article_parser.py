@@ -4,6 +4,7 @@ from pathlib import Path
 from core.article_parser import read_txt, read_pdf, read_docx, extract_article_text
 import docx
 
+
 def test_read_txt_with_utf8_encoding():
     content = "Ceci est un test avec accents éèê."
     content_bytes = content.encode("utf-8")
@@ -23,15 +24,17 @@ def test_read_txt_with_utf8_encoding():
     assert isinstance(result, str)
     assert result == content
 
+
 def generate_sample_pdf(text: str, filepath: Path):
     from reportlab.pdfgen import canvas
     c = canvas.Canvas(str(filepath))
     c.drawString(100, 750, text)
     c.save()
 
+
 def test_read_pdf_extracts_text():
     content = "Hello PDF world!"
-    
+
     # 1. Créer un PDF temporaire
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
         temp_path = Path(tmp.name)
@@ -47,9 +50,10 @@ def test_read_pdf_extracts_text():
     assert isinstance(result, str)
     assert content in result
 
+
 def test_read_docx_extracts_all_paragraphs():
     content = ["Bonjour", "Voici un test", "Fin"]
-    
+
     # 1. Créer un fichier Word temporaire avec plusieurs paragraphes
     with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp:
         temp_path = Path(tmp.name)
@@ -68,6 +72,7 @@ def test_read_docx_extracts_all_paragraphs():
     assert isinstance(result, str)
     assert result == "\n".join(content)
 
+
 def test_extract_article_text_with_txt():
     content = "Ceci est un .txt"
     with tempfile.NamedTemporaryFile(delete=False, suffix=".txt", mode="w", encoding="utf-8") as tmp:
@@ -76,6 +81,7 @@ def test_extract_article_text_with_txt():
     result = extract_article_text(temp_path)
     os.remove(temp_path)
     assert result == content
+
 
 def test_extract_article_text_with_docx():
     content = ["Ligne 1", "Ligne 2"]
@@ -89,6 +95,7 @@ def test_extract_article_text_with_docx():
     os.remove(temp_path)
     assert result == "\n".join(content)
 
+
 def test_extract_article_text_raises_on_unknown_extension():
     with tempfile.NamedTemporaryFile(delete=False, suffix=".md", mode="w", encoding="utf-8") as tmp:
         tmp.write("# Titre Markdown")
@@ -101,6 +108,7 @@ def test_extract_article_text_raises_on_unknown_extension():
         assert "Format non pris en charge" in str(e)
     finally:
         os.remove(temp_path)
+
 
 def test_extract_article_text_with_pdf():
     content = "Contenu PDF de test"

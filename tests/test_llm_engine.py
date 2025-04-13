@@ -1,8 +1,8 @@
+from core.llm_engine import call_openai
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from core.llm_engine import call_openai
 
 if __name__ == "__main__":
     messages = [

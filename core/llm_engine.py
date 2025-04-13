@@ -11,6 +11,7 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 
+
 def call_openai(messages: list[dict], model: str = OPENAI_MODEL, temperature: float = 0.7) -> str:
     """
     Envoie une requête à l'API OpenAI et renvoie la réponse (texte).
@@ -25,7 +26,7 @@ def call_openai(messages: list[dict], model: str = OPENAI_MODEL, temperature: fl
         return response.choices[0].message.content.strip()
     except Exception as e:
         return f"[ERREUR LLM] {e}"
-    
+
 
 def build_enriched_prompt(text: str, entities: dict) -> list[dict]:
     """
@@ -56,8 +57,6 @@ def build_enriched_prompt(text: str, entities: dict) -> list[dict]:
     }
 
     return [system_message, user_message]
-
-
 
 
 def generate_journalistic_angles(text: str, language: str = "fr") -> str:

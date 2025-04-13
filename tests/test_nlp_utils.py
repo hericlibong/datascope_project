@@ -1,8 +1,8 @@
+from core.nlp_utils import extract_named_entities
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from core.nlp_utils import extract_named_entities
 
 if __name__ == "__main__":
     article = (

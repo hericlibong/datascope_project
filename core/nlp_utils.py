@@ -2,7 +2,7 @@ import spacy
 from typing import List, Dict
 import re
 import dateparser
-from  .strongs_words import strongs_verbs
+from .strongs_words import strongs_verbs
 from collections import defaultdict, Counter
 
 # Chargement des modèles au démarrage
@@ -10,6 +10,7 @@ MODELS = {
     "fr": spacy.load("fr_core_news_md"),
     "en": spacy.load("en_core_web_md"),
 }
+
 
 def get_nlp(language: str = "fr"):
     """Retourne le pipeline spaCy selon la langue choisie (fr ou en)."""
@@ -118,6 +119,7 @@ def extract_strong_verbs(text: str, language: str = "fr") -> List[Dict]:
 
     return strong_hits
 
+
 def format_entities(text: str, language: str = "fr") -> Dict:
     """
     Regroupe toutes les entités extraites dans un dictionnaire lisible.
@@ -128,6 +130,7 @@ def format_entities(text: str, language: str = "fr") -> Dict:
         "dates": extract_dates(text, language),
         "strong_verbs": extract_strong_verbs(text, language),
     }
+
 
 def compute_datafication_score(entities: Dict, text: str) -> Dict:
     """
@@ -184,6 +187,7 @@ def compute_datafication_score(entities: Dict, text: str) -> Dict:
         "structured_items": total_items,
         "word_count": words
     }
+
 
 def group_named_entities(entities: list[dict]) -> dict:
     grouped = defaultdict(Counter)

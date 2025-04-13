@@ -12,12 +12,12 @@ from core.export_utils import export_analysis_to_markdown
 import tempfile
 
 
-
 main = Blueprint("main", __name__)
 
 
 UPLOAD_FOLDER = "uploads"
 ALLOWED_EXTENSIONS = {"txt", "pdf", "docx"}
+
 
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -70,10 +70,10 @@ def analyze():
             sources=sources,
             parsed_angles=parsed_angles,
             parsed_sources=parsed_sources,
-)
-
+        )
 
     return render_template("analyze.html", error="Aucun texte ou fichier valide fourni.")
+
 
 @main.route("/download", methods=["POST"])
 def download():
@@ -98,5 +98,3 @@ def download():
 @main.route("/about", methods=["GET"])
 def about():
     return render_template("about.html")
-
-
