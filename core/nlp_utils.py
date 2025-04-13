@@ -139,7 +139,7 @@ def compute_datafication_score(entities: Dict, text: str) -> Dict:
     basé sur la densité d'information.
 
     Args:
-        entities (Dict): Un dictionnaire contenant des listes d'entités détectées, 
+        entities (Dict): Un dictionnaire contenant des listes d'entités détectées,
                          telles que "numbers", "dates", "named_entities", et "strong_verbs".
         text (str): Le texte à analyser.
 
