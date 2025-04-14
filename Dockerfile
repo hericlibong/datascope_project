@@ -1,6 +1,5 @@
 # Étape 1 : Image de base légère avec Python 3.12.3-slim-bullseye
-FROM python:3.12.3-slim-bullseye
-
+FROM python:3.12-slim
 
 # Définir le répertoire de travail dans le conteneur
 WORKDIR /app
@@ -24,4 +23,7 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 5000
 
 # Commande de démarrage
-CMD ["python", "main.py"]
+# CMD ["python", "main.py"]
+CMD ["sh", "-c", "flask run --host=0.0.0.0 --port=${PORT}"]
+
+
