@@ -1,6 +1,7 @@
 # Environnement
 venv/
 .env
+.env.prod
 
 
 # Python
