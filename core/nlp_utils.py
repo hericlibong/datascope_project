@@ -7,8 +7,8 @@ from collections import defaultdict, Counter
 
 # Chargement des modèles au démarrage
 MODELS = {
-    "fr": spacy.load("fr_core_news_md"),
-    "en": spacy.load("en_core_web_md"),
+    "fr": spacy.load("fr_core_news_sm"),
+    "en": spacy.load("en_core_web_sm"),
 }
 
 
