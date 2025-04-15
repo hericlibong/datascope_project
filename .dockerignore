@@ -18,3 +18,4 @@ tests/
 .git
 .gitignore
 .env*
+medias/
