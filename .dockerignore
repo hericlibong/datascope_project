@@ -1,4 +1,5 @@
 __pycache__/
+.pytest_cache/
 *.pyc
 *.pyo
 *.pyd
@@ -13,3 +14,7 @@ tests/
 .idea/
 .vscode/
 .DS_Store
+.Python
+.git
+.gitignore
+.env*
