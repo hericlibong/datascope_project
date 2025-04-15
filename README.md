@@ -66,7 +66,7 @@ Créer une application Flask capable de :
 
 ## 📷 Aperçu de l’interface (optionnel)
 
-![accueil](medias/datascope_1.png)
+![accueil_test](medias/datascope_1.png)
 
 ---
 
