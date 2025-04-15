@@ -5,71 +5,73 @@
 [![Deployment](https://img.shields.io/badge/deployed-Render-success)](https://datascope.onrender.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-## A tool to find data in journalistic articles
+## A tool to reveal the data potential of journalistic articles
 
-**DataScope** est une application conçue pour aider les journalistes à détecter le potentiel "data" caché dans un article. Elle combine traitement NLP et intelligence artificielle pour extraire des entités clés, calculer un score de "datafication", suggérer des angles éditoriaux exploitables et proposer des sources de données pertinentes.
+**DataScope** is a Flask-based application designed to help journalists identify the “data” potential in a given article. It combines NLP and AI to extract key entities, compute a datafication score, suggest editorial angles, and propose relevant open data sources.
 
-🔗 **App en ligne** : [https://datascope.onrender.com/](https://datascope.onrender.com/)
-
----
-
-## 🔍 Objectif
-
-Créer une application Flask capable de :
-- détecter les entités clés, chiffres, lieux, dates (via NLP local)
-- calculer un score de potentiel "data"
-- générer des suggestions d’angles journalistiques (via LLM)
-- proposer des sources de données ouvertes ou d’APIs à explorer
-- permettre l’export de l’analyse (Markdown, JSON)
+🔗 **Live app**: [https://datascope.onrender.com/](https://datascope.onrender.com/)
 
 ---
 
-## 🚀 Stack technique
+## 🔍 Objective
+
+Build a lightweight assistant that:
+- Detects key entities, numbers, locations, dates (via local NLP)
+- Calculates a “datafication” score
+- Generates AI-powered editorial angles (via LLM)
+- Suggests open data sources or APIs to explore
+- Allows export of the analysis (Markdown, JSON)
+
+> ⚠️ NLP is currently optimized for **French** (using spaCy `fr_core_news_sm`). Support for other languages could be added later.
+
+---
+
+## 🚀 Tech Stack
 
 - **Python 3.12**
-- **Flask** pour l’interface web
-- **spaCy** pour le traitement NLP local
-- **OpenAI API** pour la génération d’angles
-- **pdfminer / python-docx** pour l’import multiformat
-- **pytest** et `black` pour les tests et la qualité de code
+- **Flask** for the web interface
+- **spaCy** for local NLP processing
+- **OpenAI API** for editorial suggestions
+- **pdfminer / python-docx** for multi-format input
+- **pytest** and `black` for testing and code formatting
 
 ---
 
-## 🧩 Structure du projet
+## 🧩 Project Structure
 
 ```
-├── app/         # Flask app (routes, logique web)
-├── core/        # Modules de traitement (parser, NLP, LLM)
-├── templates/   # Templates Jinja2 HTML
+├── app/         # Flask app (routes, views)
+├── core/        # Core processing modules (parsing, NLP, LLM)
+├── templates/   # Jinja2 HTML templates
 ├── static/      # CSS, images
-├── tests/       # Fichiers de tests
-├── .env.sample  # Exemple de fichier d’environnement
+├── tests/       # Test files
+├── .env.sample  # Sample environment config
 ├── requirements.txt
 ├── README.md
-└── run.py       # Point d'entrée
+└── run.py       # Entry point
 ```
 
 ---
 
-## 🗂️ Roadmap MVP
+## 🗂️ MVP Roadmap
 
-- ✅ Initialisation du projet (milestone 1)
-- ✅ Analyse NLP de base
-- ✅ Génération des angles via LLM
-- ✅ Interface Flask et affichage des résultats
-- ✅ Export Markdown / JSON
-- ✅ Dockerisation et déploiement sur Render
+- ✅ Project initialization
+- ✅ Basic NLP analysis
+- ✅ Editorial angle generation (LLM)
+- ✅ Flask UI and result display
+- ✅ Markdown / JSON export
+- ✅ Dockerization and deployment (Render)
 
-🎯 Chaque étape est suivie via le [GitHub Project Board](https://github.com/hericlibong/Datascope/projects) associé.
 
 ---
 
 ## 📷 Aperçu de l’interface (optionnel)
 
-![accueil_test](medias/datascope_1.png)
+![interface home](medias/datascope_1.png)
 
 ---
 
-## 📄 Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d’informations.
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
