@@ -8,8 +8,7 @@ WORKDIR /app
 COPY requirements.txt ./
 
 # Installer les dépendances
-RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 # Copier tout le reste de l’application dans le conteneur
 COPY . .
@@ -18,6 +17,7 @@ COPY . .
 ENV FLASK_APP=main.py
 ENV FLASK_ENV=production
 ENV PYTHONUNBUFFERED=1
+ENV PORT=5000
 
 # Port par défaut pour Render
 EXPOSE 5000
