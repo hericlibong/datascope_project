@@ -34,3 +34,6 @@ pytest_cache/
 
 # files txt
 uploads/
+
+# media files
+medias/
