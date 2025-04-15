@@ -22,9 +22,9 @@ ENV PORT=5000
 # Port par défaut pour Render
 EXPOSE 5000
 
-# Commande de démarrage
+
 # CMD ["python", "main.py"]
-# CMD ["sh", "-c", "flask run --host=0.0.0.0 --port=${PORT}"]
+
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
 
 
