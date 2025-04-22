@@ -3,6 +3,7 @@ from typing import List, Dict
 import re
 import dateparser
 from .strongs_words import strongs_verbs
+from .strongs_words_en import STRONGS_WORDS_EN
 from collections import defaultdict, Counter
 
 # Chargement des modèles au démarrage
@@ -98,18 +99,23 @@ def extract_dates(text: str, language: str = "fr") -> List[Dict]:
 
 def extract_strong_verbs(text: str, language: str = "fr") -> List[Dict]:
     """
-    Extrait les verbes forts présents dans le texte en les comparant
-    avec la liste de strongs_verbs. Utilise la lemmatisation pour fiabilité.
+    Extrait les verbes forts présents dans le texte en fonction de la langue.
+    Utilise la lemmatisation pour fiabilité.
     """
     nlp = get_nlp(language)
     doc = nlp(text)
 
+    # Choix du dictionnaire en fonction de la langue
+    if language == "en":
+        strongs_set = STRONGS_WORDS_EN
+    else:
+        strongs_set = strongs_verbs
+
     strong_hits = []
     for token in doc:
-        # Vérifie si le token est un verbe et si sa forme de base est dans strongs_verbs
         if token.pos_ == "VERB":
             lemma = token.lemma_.lower()
-            if lemma in strongs_verbs:
+            if lemma in strongs_set:
                 strong_hits.append({
                     "text": token.text,
                     "lemma": lemma,
@@ -118,6 +124,7 @@ def extract_strong_verbs(text: str, language: str = "fr") -> List[Dict]:
                 })
 
     return strong_hits
+
 
 
 def format_entities(text: str, language: str = "fr") -> Dict:
