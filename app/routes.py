@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, session, redirect, url_for
 from core.article_parser import extract_article_text
 from core.nlp_utils import format_entities, compute_datafication_score
 from core.llm_engine import generate_journalistic_angles, suggest_datasets_llm, parse_markdown_list
@@ -32,6 +32,8 @@ def home():
 def analyze():
     article_text = ""
 
+    language = session.get("lang", "en")
+
     # Si texte collé manuellement
     if request.form.get("article_text"):
         article_text = request.form.get("article_text")
@@ -48,9 +50,9 @@ def analyze():
 
     # Traitement uniquement si texte trouvé
     if article_text.strip():
-        entities = format_entities(article_text)
-        score_data = compute_datafication_score(entities, article_text)
-        angles = generate_journalistic_angles(article_text)
+        entities = format_entities(article_text, language)
+        score_data = compute_datafication_score(entities, article_text, language)
+        angles = generate_journalistic_angles(article_text, language)
         sources = suggest_datasets_llm(article_text, entities)
         parsed_angles = parse_markdown_list(angles)
         parsed_sources = parse_markdown_list(sources)
@@ -70,6 +72,7 @@ def analyze():
             sources=sources,
             parsed_angles=parsed_angles,
             parsed_sources=parsed_sources,
+            language=language,
         )
 
     return render_template("analyze.html", error="Aucun texte ou fichier valide fourni.")
@@ -98,3 +101,10 @@ def download():
 @main.route("/about", methods=["GET"])
 def about():
     return render_template("about.html")
+
+
+@main.route("/set-language/<lang_code>")
+def set_language(lang_code):
+    if lang_code in ["fr", "en"]:
+        session['lang'] = lang_code
+    return redirect(request.referrer or url_for('main.index'))
