@@ -1,20 +1,24 @@
 <!doctype html>
-<html lang="fr">
+<html lang="{{ language }}">
 <head>
   <meta charset="utf-8">
   <title>DataScope</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-md">
       <a class="navbar-brand" href="/">📊 DataScope</a>
       <div>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="/">Analyse</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about">À propos</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">{% if language == 'en' %}Analyze{% else %}Analyse{% endif %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">{% if language == 'en' %}About{% else %}À propos{% endif %}</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('main.set_language', lang_code='en') }}">
               <img src="{{ url_for('static', filename='icons/gb.svg') }}" alt="English" width="20">
@@ -25,8 +29,22 @@
               <img src="{{ url_for('static', filename='icons/fr.svg') }}" alt="Français" width="20">
             </a>
           </li>
+          {% if current_user.is_authenticated %}
+  <li class="nav-item text-light me-3 mt-2">
+    {% if language == "fr" %}
+      Connecté : <strong>{{ current_user.username }}</strong>
+    {% else %}
+      Logged in as: <strong>{{ current_user.username }}</strong>
+    {% endif %}
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('main.logout') }}">
+      {% if language == "fr" %}Déconnexion{% else %}Logout{% endif %}
+    </a>
+  </li>
+{% endif %}
+
         </ul>
-        
       </div>
     </div>
   </nav>
@@ -35,9 +53,44 @@
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="text-center text-muted py-3">
-    <small>© 2025 DataScope — Analyse augmentée par NLP & LLM</small>
-  </footer>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-info mt-3 text-center">
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+<footer class="bg-light text-center py-4 mt-5 border-top">
+  <div class="container">
+    <p class="mb-1 text-muted small">
+      © 2025 DataScope — Augmented analysis with NLP & LLM
+    </p>
+    <p class="mb-1">
+      <a href="https://hericldev.onrender.com" target="_blank" class="text-primary text-decoration-none">
+        {% if language == "fr" %}
+          Par Heric Libong
+        {% else %}
+          By Heric Libong
+        {% endif %}
+      </a>
+    </p>
+    <p class="mb-0">
+      <a href="/" class="text-secondary text-decoration-none">
+        {% if language == "fr" %}
+          ← Retour à l'accueil
+        {% else %}
+          ← Back to home
+        {% endif %}
+      </a>
+    </p>
+  </div>
+</footer>
+
+
 
 </body>
 </html>

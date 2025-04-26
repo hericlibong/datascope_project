@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+  <div class="col-md-6">
+    <h2 class="text-center mb-4">
+      {% if language == "fr" %}
+        🔐 Connexion à DataScope
+      {% else %}
+        🔐 Sign in to DataScope
+      {% endif %}
+    </h2>
+
+    {% if error %}
+    <div class="alert alert-danger text-center">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+      <div class="mb-3">
+        <label for="email" class="form-label">
+          {% if language == "fr" %}Adresse email{% else %}Email address{% endif %}
+        </label>
+        <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">
+        {% if language == "fr" %}Se connecter{% else %}Log in{% endif %}
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

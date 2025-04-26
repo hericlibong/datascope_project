@@ -1,22 +1,106 @@
-
 {% extends 'base.html' %}
 {% block content %}
 
-<h2>🧠 À propos de DataScope</h2>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10 col-lg-8">
+    <div class="card shadow-sm p-4 mt-4">
 
-<p class="lead">DataScope est un outil d’analyse de texte conçu pour aider les journalistes à identifier le potentiel d’un article à être exploité sous forme de données.</p>
+      <h2 class="text-center mb-4">
+        {% if language == "fr" %}
+          À propos de DataScope
+        {% else %}
+          About DataScope
+        {% endif %}
+      </h2>
+      <hr/>
 
-<h4>🎯 Ce que fait l'application :</h4>
-<ul>
-  <li>Extraction automatique des entités nommées, chiffres, dates</li>
-  <li>Évaluation du score de “datafication”</li>
-  <li>Suggestions d’angles éditoriaux exploitables</li>
-  <li>Recommandation de sources ou jeux de données pertinents</li>
-</ul>
+      {% if language == "fr" %}
+        <p class="lead">
+          DataScope est une application d’analyse de texte conçue pour aider les journalistes à repérer le potentiel "data" caché dans un article.
+        </p>
 
-<h4>💡 Utilisations possibles :</h4>
-<p>Préparer un dossier, concevoir un projet de visualisation, affiner une idée d’enquête, ou simplement mieux documenter une thématique.</p>
+        <h4 class="mt-4">Fonctionnalités principales</h4>
+        <ul>
+          <li>Extraction automatique des entités clés, chiffres et dates.</li>
+          <li>Évaluation d'un score de "datafication".</li>
+          <li>Génération de suggestions d’angles éditoriaux exploitables.</li>
+          <li>Proposition de sources ouvertes ou de jeux de données à explorer.</li>
+        </ul>
 
-<a href="/" class="btn btn-outline-primary mt-4">← Revenir à l’analyse</a>
+        <h4 class="mt-4">Utilité en salle de rédaction</h4>
+<p>
+  DataScope peut être utilisé en rédaction locale, régionale ou spécialisée, comme appui pour identifier rapidement les articles à fort potentiel de traitement datajournalistique.
+</p>
+<p>
+  Cela dit, même les articles affichant un faible potentiel selon l'analyse peuvent receler des pistes précieuses, à explorer et à recouper par le journaliste.
+</p>
+
+        <h4 class="mt-4">À propos des suggestions et sources</h4>
+        <p>
+          Les suggestions d’angles éditoriaux fournies sont des pistes d'inspiration. Elles nécessitent toujours un travail de validation, d’enrichissement et d'adaptation journalistique.
+          Les bases de données et sources proposées doivent également être vérifiées et complétées selon les besoins spécifiques de l’enquête.
+        </p>
+
+        <h4 class="mt-4">Note technique</h4>
+        <p>
+          Cette version est une première démonstration (MVP) fonctionnant avec des modèles linguistiques légers. Des évolutions futures permettront d'améliorer la précision et la profondeur d'analyse.
+        </p>
+
+        <h4 class="mt-4">Vos retours comptent</h4>
+        <p>
+          Vos retours d’utilisation sont essentiels pour continuer à faire évoluer DataScope. Merci pour vos avis, suggestions et signalements !
+        </p>
+
+        <div class="text-center mt-4">
+          <a href="/" class="btn btn-primary btn-lg">← Revenir à l’analyse</a>
+        </div>
+
+      {% else %}
+        <p class="lead">
+          DataScope is a text analysis application designed to help journalists detect the hidden "data" potential in an article.
+        </p>
+
+        <h4 class="mt-4">Key features</h4>
+        <ul>
+          <li>Automatic extraction of key entities, numbers, and dates.</li>
+          <li>Evaluation of a "datafication" score.</li>
+          <li>Generation of actionable editorial angle suggestions.</li>
+          <li>Recommendations for open data platforms and datasets to explore.</li>
+        </ul>
+
+        <h4 class="mt-4">Usefulness in newsrooms</h4>
+<p>
+  DataScope can assist local, regional, or specialized newsrooms by quickly identifying articles with strong data journalism potential.
+</p>
+<p>
+  However, even articles showing a lower potential according to the analysis may contain valuable leads that journalists are encouraged to investigate and cross-reference further.
+</p>
+
+
+        <h4 class="mt-4">About suggestions and sources</h4>
+        <p>
+          The editorial angle suggestions are offered as inspiration. Journalists are encouraged to validate, enrich, and adapt these ideas for their own reporting.
+          Recommended datasets and sources should also be verified and supplemented as needed.
+        </p>
+
+        <h4 class="mt-4">Technical note</h4>
+        <p>
+          This is a first demonstration version (MVP) based on lightweight linguistic models. Future versions will offer improved precision and deeper analysis.
+        </p>
+
+        <h4 class="mt-4">Your feedback matters</h4>
+        <p>
+          User feedback is essential to improve DataScope. Thank you for your ideas, suggestions, and bug reports!
+        </p>
+
+        <div class="text-center mt-4">
+          <a href="/" class="btn btn-primary btn-lg">← Back to analysis</a>
+        </div>
+
+      {% endif %}
+
+    </div>
+  </div>
+</div>
 
 {% endblock %}

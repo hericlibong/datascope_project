@@ -205,20 +205,33 @@ def group_named_entities(entities: list[dict]) -> dict:
     return grouped
 
 
-def interpret_datafication_score(score: int) -> str:
-    if score >= 9:
-        return "Très bon potentiel de datajournalisme (chiffré, localisé, visualisable)"
-    elif score >= 7:
-        return "Bon potentiel de datafication avec éléments structurés exploitables"
-    elif score >= 5:
-        return "Potentiel modéré : quelques éléments chiffrés ou datés identifiables"
-    elif score >= 3:
-        return "Faible potentiel data : surtout narratif, peu structuré"
+def interpret_datafication_score(score: int, language: str = "fr") -> str:
+    if language == "en":
+        if score >= 9:
+            return "High potential for data journalism (quantified, structured, and localized)"
+        elif score >= 7:
+            return "Good potential with structured and exploitable elements"
+        elif score >= 5:
+            return "Moderate potential: some identifiable numbers or dates"
+        elif score >= 3:
+            return "Low data potential: mostly narrative or descriptive"
+        else:
+            return "Very low or absent: no exploitable data found"
     else:
-        return "Très faible ou absent : article descriptif sans données exploitables"
+        if score >= 9:
+            return "Très bon potentiel de datajournalisme (chiffré, localisé, visualisable)"
+        elif score >= 7:
+            return "Bon potentiel de datafication avec éléments structurés exploitables"
+        elif score >= 5:
+            return "Potentiel modéré : quelques éléments chiffrés ou datés identifiables"
+        elif score >= 3:
+            return "Faible potentiel data : surtout narratif, peu structuré"
+        else:
+            return "Très faible ou absent : article descriptif sans données exploitables"
 
 
-def get_article_profile(entities: dict, score_data: dict) -> str:
+
+def get_article_profile(entities: dict, score_data: dict, language: str="fr") -> str:
     """
     Génère un profil éditorial basé sur les entités, la densité, et le score de datafication.
     """
@@ -229,13 +242,26 @@ def get_article_profile(entities: dict, score_data: dict) -> str:
     density = score_data.get("density", 0)
     score = score_data.get("score", 0)
 
-    if score >= 9 and density > 0.15 and n_verbs >= 2:
-        return "📊 Datajournalisme potentiel élevé – structuré, chiffré et dynamique"
-    elif n_numbers >= 3 and n_dates >= 2 and n_places >= 2:
-        return "📍 Localisé et temporel – structuré autour de données concrètes"
-    elif n_numbers <= 1 and n_verbs == 0 and density < 0.05:
-        return "📣 Narratif ou descriptif – peu de données exploitables"
-    elif score >= 6 and n_places >= 2 and n_verbs == 0:
-        return "🧮 Structuré et quantifiable – intéressant pour un angle local"
+    if language == "en":
+        if score >= 9 and density > 0.15 and n_verbs >= 2:
+            return "📊 High data journalism potential – structured, numeric and dynamic"
+        elif n_numbers >= 3 and n_dates >= 2 and n_places >= 2:
+            return "📍 Localized and time-based – structured around concrete data"
+        elif n_numbers <= 1 and n_verbs == 0 and density < 0.05:
+            return "📣 Narrative or descriptive – little usable data"
+        elif score >= 6 and n_places >= 2 and n_verbs == 0:
+            return "🧮 Structured and quantifiable – suitable for a local approach"
+        else:
+            return "🔬 Exploratory or symbolic – rich topic but loosely structured"
     else:
-        return "🔬 Exploratoire ou symbolique – sujet riche mais peu structuré"
+        if score >= 9 and density > 0.15 and n_verbs >= 2:
+            return "📊 Datajournalisme potentiel élevé – structuré, chiffré et dynamique"
+        elif n_numbers >= 3 and n_dates >= 2 and n_places >= 2:
+            return "📍 Localisé et temporel – structuré autour de données concrètes"
+        elif n_numbers <= 1 and n_verbs == 0 and density < 0.05:
+            return "📣 Narratif ou descriptif – peu de données exploitables"
+        elif score >= 6 and n_places >= 2 and n_verbs == 0:
+            return "🧮 Structuré et quantifiable – intéressant pour un angle local"
+        else:
+            return "🔬 Exploratoire ou symbolique – sujet riche mais peu structuré"
+

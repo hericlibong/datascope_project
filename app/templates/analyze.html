@@ -1,24 +1,51 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h2 class="mb-4">📝 Analyser un article</h2>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10 col-lg-9">
+    <div class="card shadow-sm p-4 mt-4">
+      <h2>
+        {% if language == "fr" %}📝 Analyser un article{% else %}📝 Analyze an Article{% endif %}
+      </h2>
+      <hr/>
 
-<form method="POST" action="/analyze" enctype="multipart/form-data" class="mb-5">
-  <div class="mb-3">
-    <label for="article_text" class="form-label">Coller votre article</label>
-    <textarea name="article_text" class="form-control" rows="10" placeholder="Texte à analyser..."></textarea>
+      <form method="POST" action="/analyze" enctype="multipart/form-data">
+        <div class="mb-4">
+          <label for="article_text" class="form-label">
+            <span class="badge bg-dark">
+              {% if language == "fr" %}Coller votre article{% else %}Paste your article{% endif %}
+            </span>
+          </label>
+          <textarea name="article_text" class="form-control" rows="15" placeholder="{% if language == 'fr' %}Texte à analyser...{% else %}Text to analyze...{% endif %}"></textarea>
+        </div>
+        <hr/>
+
+        <div class="mb-4">
+          <label for="article_file" class="form-label">
+            <span class="badge bg-dark">
+            {% if language == "fr" %}Ou envoyer un fichier (.txt, .pdf, .docx){% else %}Or upload a file (.txt, .pdf, .docx){% endif %}
+            </span>
+          </label>
+          <input type="file" class="form-control">
+          {% if language == 'en' %}
+          <span class="badge bg-warning">
+          <small class="text-muted">Note: The “Browse” button label may appear in your system’s default language.</small>
+        </span>
+          {% endif %}
+        </div>
+       
+
+        <button type="submit" class="btn btn-primary btn-lg w-100">
+          {% if language == "fr" %}Analyser{% else %}Analyze{% endif %}
+        </button>
+      </form>
+    
+
+      {% if error %}
+      <div class="alert alert-warning mt-4 text-center">{{ error }}</div>
+      {% endif %}
+    </div>
   </div>
-
-  <div class="mb-3">
-    <label for="article_file" class="form-label">Ou envoyer un fichier (.txt, .pdf, .docx)</label>
-    <input type="file" class="form-control" name="article_file">
-  </div>
-
-  <button type="submit" class="btn btn-primary">Analyser</button>
-</form>
-
-{% if error %}
-<div class="alert alert-warning">{{ error }}</div>
-{% endif %}
+</div>
 
 {% endblock %}
