@@ -22,7 +22,7 @@ def create_app():
     @app.template_filter('markdown')
     def markdown_filter(text):
         return Markup(markdown.markdown(text, extensions=['fenced_code']))
-    
+
     login_manager = LoginManager()
     login_manager.login_view = "main.login"
     login_manager.init_app(app)

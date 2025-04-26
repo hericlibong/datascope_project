@@ -16,7 +16,6 @@ def client():
         yield client
 
 
-
 def test_homepage_loads(client):
     response = client.get("/")
     assert response.status_code == 200
@@ -30,8 +29,6 @@ def test_analyze_route_with_text(client):
     response = client.post("/analyze", data=payload)
     assert response.status_code == 200
     assert b"Datafication Score" in response.data
-
-
 
 
 def test_about_page_loads(client):
@@ -50,12 +47,10 @@ def test_analyze_with_uploaded_txt_file(client):
     assert b"Datafication Score" in response.data
 
 
-
 def test_analyze_route_with_empty_text(client):
     response = client.post("/analyze", data={"article_text": ""})
     assert response.status_code == 200
     assert b"Please provide at least 201 words" in response.data or b"Veuillez fournir au moins 201 mots" in response.data
-
 
 
 def test_download_route_returns_markdown(client):

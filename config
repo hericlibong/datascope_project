@@ -4,474 +4,474 @@ cwd=/home/hericdev/MEDIA_PROJECTS/Datascope
 args=()
 
   pytest_cmdline_main [hook]
-      config: <_pytest.config.Config object at 0x7432ec3978c0>
+      config: <_pytest.config.Config object at 0x729254de4710>
     pytest_plugin_registered [hook]
         plugin: <Session  exitstatus='<UNSET>' testsfailed=0 testscollected=0>
         plugin_name: session
-        manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+        manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
     finish pytest_plugin_registered --> [] [hook]
     pytest_configure [hook]
-        config: <_pytest.config.Config object at 0x7432ec3978c0>
+        config: <_pytest.config.Config object at 0x729254de4710>
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.LFPlugin object at 0x7432ec397470>
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x729253edc890>
           plugin_name: lfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.NFPlugin object at 0x7432eb458f80>
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x729254b290a0>
           plugin_name: nfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
     early skip of rewriting module: faulthandler [assertion]
       pytest_plugin_registered [hook]
           plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
           plugin_name: legacypath-tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
     early skip of rewriting module: pdb [assertion]
     early skip of rewriting module: cmd [assertion]
     early skip of rewriting module: code [assertion]
     early skip of rewriting module: codeop [assertion]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
-          plugin_name: 127762062033360
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          plugin: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
+          plugin_name: 125972812718848
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.Config object at 0x7432ec3978c0>
+          plugin: <_pytest.config.Config object at 0x729254de4710>
           plugin_name: pytestconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.mark' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/mark/__init__.py'>
           plugin_name: mark
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.main' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/main.py'>
           plugin_name: main
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.runner' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/runner.py'>
           plugin_name: runner
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.fixtures' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/fixtures.py'>
           plugin_name: fixtures
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.helpconfig' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/helpconfig.py'>
           plugin_name: helpconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/python.py'>
           plugin_name: python
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.terminal' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/terminal.py'>
           plugin_name: terminal
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.debugging' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/debugging.py'>
           plugin_name: debugging
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unittest' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/unittest.py'>
           plugin_name: unittest
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.capture' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/capture.py'>
           plugin_name: capture
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.skipping' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/skipping.py'>
           plugin_name: skipping
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.legacypath' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/legacypath.py'>
           plugin_name: legacypath
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.tmpdir' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/tmpdir.py'>
           plugin_name: tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.monkeypatch' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/monkeypatch.py'>
           plugin_name: monkeypatch
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.recwarn' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/recwarn.py'>
           plugin_name: recwarn
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.pastebin' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/pastebin.py'>
           plugin_name: pastebin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.assertion' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/assertion/__init__.py'>
           plugin_name: assertion
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.junitxml' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/junitxml.py'>
           plugin_name: junitxml
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.doctest' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/doctest.py'>
           plugin_name: doctest
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.cacheprovider' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/cacheprovider.py'>
           plugin_name: cacheprovider
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.freeze_support' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/freeze_support.py'>
           plugin_name: freeze_support
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setuponly' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/setuponly.py'>
           plugin_name: setuponly
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setupplan' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/setupplan.py'>
           plugin_name: setupplan
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.stepwise' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/stepwise.py'>
           plugin_name: stepwise
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.warnings' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/warnings.py'>
           plugin_name: warnings
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.logging' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/logging.py'>
           plugin_name: logging
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.reports' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/reports.py'>
           plugin_name: reports
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python_path' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/python_path.py'>
           plugin_name: python_path
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unraisableexception' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/unraisableexception.py'>
           plugin_name: unraisableexception
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.threadexception' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/threadexception.py'>
           plugin_name: threadexception
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.faulthandler' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/faulthandler.py'>
           plugin_name: faulthandler
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module 'pytest_cov.plugin' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/pytest_cov/plugin.py'>
           plugin_name: pytest_cov
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module 'anyio.pytest_plugin' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/anyio/pytest_plugin.py'>
           plugin_name: anyio
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=6 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=8 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
           plugin_name: capturemanager
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <pytest_cov.plugin.CovPlugin object at 0x7432eb100f50>
+          plugin: <pytest_cov.plugin.CovPlugin object at 0x729253f18da0>
           plugin_name: _cov
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
           plugin_name: session
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.LFPlugin object at 0x7432ec397470>
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x729253edc890>
           plugin_name: lfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.NFPlugin object at 0x7432eb458f80>
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x729254b290a0>
           plugin_name: nfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
           plugin_name: legacypath-tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.terminal.TerminalReporter object at 0x7432eb76cd10>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x729253edd040>
           plugin_name: terminalreporter
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.logging.LoggingPlugin object at 0x7432ebed6fc0>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x729254b2bad0>
           plugin_name: logging-plugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
     finish pytest_configure --> [] [hook]
     pytest_sessionstart [hook]
         session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
-          plugin_name: 127762062033360
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          plugin: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
+          plugin_name: 125972812718848
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.Config object at 0x7432ec3978c0>
+          plugin: <_pytest.config.Config object at 0x729254de4710>
           plugin_name: pytestconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.mark' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/mark/__init__.py'>
           plugin_name: mark
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.main' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/main.py'>
           plugin_name: main
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.runner' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/runner.py'>
           plugin_name: runner
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.fixtures' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/fixtures.py'>
           plugin_name: fixtures
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.helpconfig' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/helpconfig.py'>
           plugin_name: helpconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/python.py'>
           plugin_name: python
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.terminal' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/terminal.py'>
           plugin_name: terminal
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.debugging' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/debugging.py'>
           plugin_name: debugging
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unittest' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/unittest.py'>
           plugin_name: unittest
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.capture' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/capture.py'>
           plugin_name: capture
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.skipping' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/skipping.py'>
           plugin_name: skipping
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.legacypath' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/legacypath.py'>
           plugin_name: legacypath
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.tmpdir' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/tmpdir.py'>
           plugin_name: tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.monkeypatch' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/monkeypatch.py'>
           plugin_name: monkeypatch
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.recwarn' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/recwarn.py'>
           plugin_name: recwarn
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.pastebin' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/pastebin.py'>
           plugin_name: pastebin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.assertion' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/assertion/__init__.py'>
           plugin_name: assertion
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.junitxml' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/junitxml.py'>
           plugin_name: junitxml
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.doctest' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/doctest.py'>
           plugin_name: doctest
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.cacheprovider' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/cacheprovider.py'>
           plugin_name: cacheprovider
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.freeze_support' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/freeze_support.py'>
           plugin_name: freeze_support
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setuponly' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/setuponly.py'>
           plugin_name: setuponly
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setupplan' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/setupplan.py'>
           plugin_name: setupplan
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.stepwise' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/stepwise.py'>
           plugin_name: stepwise
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.warnings' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/warnings.py'>
           plugin_name: warnings
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.logging' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/logging.py'>
           plugin_name: logging
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.reports' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/reports.py'>
           plugin_name: reports
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python_path' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/python_path.py'>
           plugin_name: python_path
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unraisableexception' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/unraisableexception.py'>
           plugin_name: unraisableexception
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.threadexception' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/threadexception.py'>
           plugin_name: threadexception
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.faulthandler' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/_pytest/faulthandler.py'>
           plugin_name: faulthandler
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module 'pytest_cov.plugin' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/pytest_cov/plugin.py'>
           plugin_name: pytest_cov
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module 'anyio.pytest_plugin' from '/home/hericdev/MEDIA_PROJECTS/Datascope/venv/lib/python3.12/site-packages/anyio/pytest_plugin.py'>
           plugin_name: anyio
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=6 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=8 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
           plugin_name: capturemanager
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <pytest_cov.plugin.CovPlugin object at 0x7432eb100f50>
+          plugin: <pytest_cov.plugin.CovPlugin object at 0x729253f18da0>
           plugin_name: _cov
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
           plugin_name: session
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.LFPlugin object at 0x7432ec397470>
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x729253edc890>
           plugin_name: lfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.NFPlugin object at 0x7432eb458f80>
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x729254b290a0>
           plugin_name: nfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
           plugin_name: legacypath-tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.terminal.TerminalReporter object at 0x7432eb76cd10>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x729253edd040>
           plugin_name: terminalreporter
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.logging.LoggingPlugin object at 0x7432ebed6fc0>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x729254b2bad0>
           plugin_name: logging-plugin
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.fixtures.FixtureManager object at 0x7432ebe565a0>
+          plugin: <_pytest.fixtures.FixtureManager object at 0x729253ccdf70>
           plugin_name: funcmanage
-          manager: <_pytest.config.PytestPluginManager object at 0x7432ec52c1d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x729254c0e300>
       finish pytest_plugin_registered --> [] [hook]
       pytest_report_header [hook]
-          config: <_pytest.config.Config object at 0x7432ec3978c0>
+          config: <_pytest.config.Config object at 0x729254de4710>
           start_path: /home/hericdev/MEDIA_PROJECTS/Datascope
           startdir: /home/hericdev/MEDIA_PROJECTS/Datascope
       early skip of rewriting module: email.parser [assertion]
@@ -497,7 +497,7 @@ args=()
             pytest_make_collect_report [hook]
                 collector: <Dir Datascope>
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.dockerignore
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.dockerignore
               finish pytest_ignore_collect --> None [hook]
@@ -507,7 +507,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.dockerignore
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env
               finish pytest_ignore_collect --> None [hook]
@@ -517,7 +517,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env.prod
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env.prod
               finish pytest_ignore_collect --> None [hook]
@@ -527,7 +527,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env.prod
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env.sample
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env.sample
               finish pytest_ignore_collect --> None [hook]
@@ -537,17 +537,17 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.env.sample
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.git
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.git
               finish pytest_ignore_collect --> True [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.github
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.github
               finish pytest_ignore_collect --> True [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.gitignore
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.gitignore
               finish pytest_ignore_collect --> None [hook]
@@ -557,12 +557,12 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.gitignore
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/.pytest_cache
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/.pytest_cache
               finish pytest_ignore_collect --> True [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/Dockerfile
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/Dockerfile
               finish pytest_ignore_collect --> None [hook]
@@ -572,7 +572,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/Dockerfile
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/README.md
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/README.md
               finish pytest_ignore_collect --> None [hook]
@@ -582,12 +582,12 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/README.md
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/__pycache__
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/__pycache__
               finish pytest_ignore_collect --> True [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/app
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/app
               finish pytest_ignore_collect --> None [hook]
@@ -596,7 +596,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Package app> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/config
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/config
               finish pytest_ignore_collect --> None [hook]
@@ -606,7 +606,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/config
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/core
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/core
               finish pytest_ignore_collect --> None [hook]
@@ -615,7 +615,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Package core> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/docker-compose.yml
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/docker-compose.yml
               finish pytest_ignore_collect --> None [hook]
@@ -625,7 +625,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/docker-compose.yml
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/main.py
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/main.py
               finish pytest_ignore_collect --> None [hook]
@@ -635,7 +635,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/main.py
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/medias
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/medias
               finish pytest_ignore_collect --> None [hook]
@@ -644,7 +644,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Dir medias> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/models.py
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/models.py
               finish pytest_ignore_collect --> None [hook]
@@ -654,7 +654,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/models.py
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/pyproject.toml
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/pyproject.toml
               finish pytest_ignore_collect --> None [hook]
@@ -664,7 +664,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/pyproject.toml
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/requirements.txt
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/requirements.txt
               finish pytest_ignore_collect --> None [hook]
@@ -674,7 +674,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/requirements.txt
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/samples
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/samples
               finish pytest_ignore_collect --> None [hook]
@@ -683,7 +683,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Dir samples> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/setup.cfg
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/setup.cfg
               finish pytest_ignore_collect --> None [hook]
@@ -693,7 +693,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/setup.cfg
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/static
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/static
               finish pytest_ignore_collect --> None [hook]
@@ -702,7 +702,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Dir static> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/templates
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/templates
               finish pytest_ignore_collect --> None [hook]
@@ -711,7 +711,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Dir templates> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests
               finish pytest_ignore_collect --> None [hook]
@@ -724,7 +724,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Package tests_pytest> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/uploads
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/uploads
               finish pytest_ignore_collect --> None [hook]
@@ -733,7 +733,7 @@ args=()
                   parent: <Dir Datascope>
               finish pytest_collect_directory --> <Dir uploads> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/users.json
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/users.json
               finish pytest_ignore_collect --> None [hook]
@@ -743,7 +743,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/users.json
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/venv
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/venv
               finish pytest_ignore_collect --> True [hook]
@@ -754,7 +754,7 @@ args=()
             pytest_make_collect_report [hook]
                 collector: <Package tests_pytest>
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/__init__.py
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/__init__.py
               finish pytest_ignore_collect --> None [hook]
@@ -764,7 +764,7 @@ args=()
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/__init__.py
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x7432ec3978c0>
+                  config: <_pytest.config.Config object at 0x729254de4710>
                   collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/__pycache__
                   path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/__pycache__
               finish pytest_ignore_collect --> True [hook]
@@ -789,7 +789,7 @@ args=()
       pytest_make_collect_report [hook]
           collector: <Package unit>
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/__init__.py
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/__init__.py
         finish pytest_ignore_collect --> None [hook]
@@ -799,12 +799,12 @@ args=()
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/__init__.py
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/__pycache__
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/__pycache__
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_article_parser.py
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_article_parser.py
         finish pytest_ignore_collect --> None [hook]
@@ -819,7 +819,7 @@ args=()
           finish pytest_pycollect_makemodule --> <Module test_article_parser.py> [hook]
         finish pytest_collect_file --> [<Module test_article_parser.py>] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_export_utils.py
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_export_utils.py
         finish pytest_ignore_collect --> None [hook]
@@ -834,7 +834,7 @@ args=()
           finish pytest_pycollect_makemodule --> <Module test_export_utils.py> [hook]
         finish pytest_collect_file --> [<Module test_export_utils.py>] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_llm_engine.py
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_llm_engine.py
         finish pytest_ignore_collect --> None [hook]
@@ -849,7 +849,7 @@ args=()
           finish pytest_pycollect_makemodule --> <Module test_llm_engine.py> [hook]
         finish pytest_collect_file --> [<Module test_llm_engine.py>] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_nlp_utils.py
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/unit/test_nlp_utils.py
         finish pytest_ignore_collect --> None [hook]
@@ -1109,22 +1109,22 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: read_txt
-            obj: <function read_txt at 0x7432eb05e660>
+            obj: <function read_txt at 0x729253d12660>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: read_pdf
-            obj: <function read_pdf at 0x7432ea6a4180>
+            obj: <function read_pdf at 0x7292533b4180>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: read_docx
-            obj: <function read_docx at 0x7432e99e9d00>
+            obj: <function read_docx at 0x7292530b5d00>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: extract_article_text
-            obj: <function extract_article_text at 0x7432e99e9da0>
+            obj: <function extract_article_text at 0x7292530b5da0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
@@ -1134,62 +1134,62 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: test_read_txt_with_utf8_encoding
-            obj: <function test_read_txt_with_utf8_encoding at 0x7432eb05e480>
+            obj: <function test_read_txt_with_utf8_encoding at 0x729253d12480>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb1dc350>
+              metafunc: <_pytest.python.Metafunc object at 0x729252fd6bd0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_read_txt_with_utf8_encoding>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: generate_sample_pdf
-            obj: <function generate_sample_pdf at 0x7432eb05e5c0>
+            obj: <function generate_sample_pdf at 0x729253d125c0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: test_read_pdf_extracts_text
-            obj: <function test_read_pdf_extracts_text at 0x7432eb05e520>
+            obj: <function test_read_pdf_extracts_text at 0x729253d12520>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb1dc350>
+              metafunc: <_pytest.python.Metafunc object at 0x729253ccfa70>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_read_pdf_extracts_text>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: test_read_docx_extracts_all_paragraphs
-            obj: <function test_read_docx_extracts_all_paragraphs at 0x7432e99e9e40>
+            obj: <function test_read_docx_extracts_all_paragraphs at 0x7292530b5e40>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432ea4a7770>
+              metafunc: <_pytest.python.Metafunc object at 0x729252fd6bd0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_read_docx_extracts_all_paragraphs>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: test_extract_article_text_with_txt
-            obj: <function test_extract_article_text_with_txt at 0x7432e99e9ee0>
+            obj: <function test_extract_article_text_with_txt at 0x7292530b5ee0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432ebed5280>
+              metafunc: <_pytest.python.Metafunc object at 0x72925317b170>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_article_text_with_txt>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: test_extract_article_text_with_docx
-            obj: <function test_extract_article_text_with_docx at 0x7432e99e9f80>
+            obj: <function test_extract_article_text_with_docx at 0x7292530b5f80>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb1dc350>
+              metafunc: <_pytest.python.Metafunc object at 0x729253ccfa70>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_article_text_with_docx>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: test_extract_article_text_raises_on_unknown_extension
-            obj: <function test_extract_article_text_raises_on_unknown_extension at 0x7432e99ea020>
+            obj: <function test_extract_article_text_raises_on_unknown_extension at 0x7292530b6020>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb103950>
+              metafunc: <_pytest.python.Metafunc object at 0x729253358ef0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_article_text_raises_on_unknown_extension>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_article_parser.py>
             name: test_extract_article_text_with_pdf
-            obj: <function test_extract_article_text_with_pdf at 0x7432e99ea0c0>
+            obj: <function test_extract_article_text_with_pdf at 0x7292530b60c0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432ea4a7770>
+              metafunc: <_pytest.python.Metafunc object at 0x729252fd6bd0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_article_text_with_pdf>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'tests_pytest/unit/test_article_parser.py' lenresult=7 outcome='passed'> [hook]
@@ -1247,22 +1247,22 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_export_utils.py>
             name: export_analysis_to_markdown
-            obj: <function export_analysis_to_markdown at 0x7432e99eac00>
+            obj: <function export_analysis_to_markdown at 0x7292530b6c00>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_export_utils.py>
             name: test_export_analysis_to_markdown_creates_valid_structure
-            obj: <function test_export_analysis_to_markdown_creates_valid_structure at 0x7432e99ea840>
+            obj: <function test_export_analysis_to_markdown_creates_valid_structure at 0x7292530b6840>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432e99e2a50>
+              metafunc: <_pytest.python.Metafunc object at 0x7292530aebd0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_export_analysis_to_markdown_creates_valid_structure>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_export_utils.py>
             name: test_export_analysis_handles_empty_entities
-            obj: <function test_export_analysis_handles_empty_entities at 0x7432e99ea980>
+            obj: <function test_export_analysis_handles_empty_entities at 0x7292530b6980>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432e99e2bd0>
+              metafunc: <_pytest.python.Metafunc object at 0x7292530aeab0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_export_analysis_handles_empty_entities>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'tests_pytest/unit/test_export_utils.py' lenresult=2 outcome='passed'> [hook]
@@ -3070,27 +3070,27 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: build_enriched_prompt
-            obj: <function build_enriched_prompt at 0x7432d38cf1a0>
+            obj: <function build_enriched_prompt at 0x72923c5431a0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: call_openai
-            obj: <function call_openai at 0x7432d38cf100>
+            obj: <function call_openai at 0x72923c543100>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: generate_journalistic_angles
-            obj: <function generate_journalistic_angles at 0x7432d38cf240>
+            obj: <function generate_journalistic_angles at 0x72923c543240>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: suggest_datasets_llm
-            obj: <function suggest_datasets_llm at 0x7432d38cf2e0>
+            obj: <function suggest_datasets_llm at 0x72923c5432e0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: parse_markdown_list
-            obj: <function parse_markdown_list at 0x7432d38cf380>
+            obj: <function parse_markdown_list at 0x72923c543380>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
@@ -3100,54 +3100,54 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: patch
-            obj: <function patch at 0x7432d38f3740>
+            obj: <function patch at 0x72923c567740>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: test_build_enriched_prompt_structure_and_content
-            obj: <function test_build_enriched_prompt_structure_and_content at 0x7432e99eb560>
+            obj: <function test_build_enriched_prompt_structure_and_content at 0x7292530b7560>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d33e7020>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b75d850>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_build_enriched_prompt_structure_and_content>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: test_call_openai_returns_text_without_api_call
-            obj: <function test_call_openai_returns_text_without_api_call at 0x7432d38cfe20>
+            obj: <function test_call_openai_returns_text_without_api_call at 0x72923c543e20>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d3223950>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b57e450>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_call_openai_returns_text_without_api_call>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: test_generate_journalistic_angles_mocked_response
-            obj: <function test_generate_journalistic_angles_mocked_response at 0x7432d38cf560>
+            obj: <function test_generate_journalistic_angles_mocked_response at 0x72923c543560>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d33fb7a0>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b57d160>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_generate_journalistic_angles_mocked_response>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: test_suggest_datasets_llm_mocked_response
-            obj: <function test_suggest_datasets_llm_mocked_response at 0x7432d39127a0>
+            obj: <function test_suggest_datasets_llm_mocked_response at 0x72923c5867a0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d467ba40>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b58e690>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_suggest_datasets_llm_mocked_response>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: test_parse_markdown_list_extracts_titles_and_contents
-            obj: <function test_parse_markdown_list_extracts_titles_and_contents at 0x7432d3912b60>
+            obj: <function test_parse_markdown_list_extracts_titles_and_contents at 0x72923c586b60>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d3223950>
+              metafunc: <_pytest.python.Metafunc object at 0x72925317a930>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_parse_markdown_list_extracts_titles_and_contents>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_llm_engine.py>
             name: test_call_openai_handles_exception_gracefully
-            obj: <function test_call_openai_handles_exception_gracefully at 0x7432d3912c00>
+            obj: <function test_call_openai_handles_exception_gracefully at 0x72923c586c00>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d33fb7a0>
+              metafunc: <_pytest.python.Metafunc object at 0x729253d2ca10>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_call_openai_handles_exception_gracefully>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'tests_pytest/unit/test_llm_engine.py' lenresult=6 outcome='passed'> [hook]
@@ -3200,52 +3200,52 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: get_nlp
-            obj: <function get_nlp at 0x7432d7eac4a0>
+            obj: <function get_nlp at 0x729240b4c4a0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: extract_named_entities
-            obj: <function extract_named_entities at 0x7432d06c0b80>
+            obj: <function extract_named_entities at 0x729238a34b80>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: extract_numbers_and_units
-            obj: <function extract_numbers_and_units at 0x7432d06c0ae0>
+            obj: <function extract_numbers_and_units at 0x729238a34ae0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: extract_dates
-            obj: <function extract_dates at 0x7432d06c0a40>
+            obj: <function extract_dates at 0x729238a34a40>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: extract_strong_verbs
-            obj: <function extract_strong_verbs at 0x7432d06c09a0>
+            obj: <function extract_strong_verbs at 0x729238a349a0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: format_entities
-            obj: <function format_entities at 0x7432d06c0900>
+            obj: <function format_entities at 0x729238a34900>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: compute_datafication_score
-            obj: <function compute_datafication_score at 0x7432d06c0860>
+            obj: <function compute_datafication_score at 0x729238a34860>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: group_named_entities
-            obj: <function group_named_entities at 0x7432d06c07c0>
+            obj: <function group_named_entities at 0x729238a347c0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: interpret_datafication_score
-            obj: <function interpret_datafication_score at 0x7432d06c0720>
+            obj: <function interpret_datafication_score at 0x729238a34720>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: get_article_profile
-            obj: <function get_article_profile at 0x7432d06c02c0>
+            obj: <function get_article_profile at 0x729238a342c0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
@@ -3255,161 +3255,161 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_get_nlp_returns_spacy_pipeline
-            obj: <function test_get_nlp_returns_spacy_pipeline at 0x7432d3913740>
+            obj: <function test_get_nlp_returns_spacy_pipeline at 0x72923c587740>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02f050>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9d7230>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_nlp_returns_spacy_pipeline>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_named_entities_french
-            obj: <function test_extract_named_entities_french at 0x7432d39137e0>
+            obj: <function test_extract_named_entities_french at 0x72923c5877e0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9d7110>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_named_entities_french>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_named_entities_english
-            obj: <function test_extract_named_entities_english at 0x7432d3913880>
+            obj: <function test_extract_named_entities_english at 0x72923c587880>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02d670>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9d6ff0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_named_entities_english>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_numbers_and_units_basic_cases
-            obj: <function test_extract_numbers_and_units_basic_cases at 0x7432d3913920>
+            obj: <function test_extract_numbers_and_units_basic_cases at 0x72923c587920>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02f050>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9d6ed0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_numbers_and_units_basic_cases>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_numbers_and_units_excludes_auxiliaries
-            obj: <function test_extract_numbers_and_units_excludes_auxiliaries at 0x7432d39139c0>
+            obj: <function test_extract_numbers_and_units_excludes_auxiliaries at 0x72923c5879c0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9d6d20>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_numbers_and_units_excludes_auxiliaries>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_dates_detects_multiple_formats
-            obj: <function test_extract_dates_detects_multiple_formats at 0x7432d3913a60>
+            obj: <function test_extract_dates_detects_multiple_formats at 0x72923c587a60>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02d670>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9d6ba0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_dates_detects_multiple_formats>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_dates_ignores_invalid_inputs
-            obj: <function test_extract_dates_ignores_invalid_inputs at 0x7432d3913b00>
+            obj: <function test_extract_dates_ignores_invalid_inputs at 0x72923c587b00>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02f050>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9d69f0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_dates_ignores_invalid_inputs>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_strong_verbs_detects_known_lemmas
-            obj: <function test_extract_strong_verbs_detects_known_lemmas at 0x7432d3913ba0>
+            obj: <function test_extract_strong_verbs_detects_known_lemmas at 0x72923c587ba0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9ec800>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_strong_verbs_detects_known_lemmas>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_strong_verbs_ignores_non_matching_verbs
-            obj: <function test_extract_strong_verbs_ignores_non_matching_verbs at 0x7432d3913c40>
+            obj: <function test_extract_strong_verbs_ignores_non_matching_verbs at 0x72923c587c40>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02f050>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b751b20>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_strong_verbs_ignores_non_matching_verbs>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_format_entities_aggregates_all_extractors
-            obj: <function test_format_entities_aggregates_all_extractors at 0x7432d3913ce0>
+            obj: <function test_format_entities_aggregates_all_extractors at 0x72923c587ce0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b753290>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_format_entities_aggregates_all_extractors>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_compute_datafication_score_high
-            obj: <function test_compute_datafication_score_high at 0x7432d3913d80>
+            obj: <function test_compute_datafication_score_high at 0x72923c587d80>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x729240b15070>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_compute_datafication_score_high>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_compute_datafication_score_low_density_penalty
-            obj: <function test_compute_datafication_score_low_density_penalty at 0x7432d3913e20>
+            obj: <function test_compute_datafication_score_low_density_penalty at 0x72923c587e20>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02d670>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b7435f0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_compute_datafication_score_low_density_penalty>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_group_named_entities_counts_occurrences_by_label
-            obj: <function test_group_named_entities_counts_occurrences_by_label at 0x7432d3913ec0>
+            obj: <function test_group_named_entities_counts_occurrences_by_label at 0x72923c587ec0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b753290>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_group_named_entities_counts_occurrences_by_label>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_interpret_datafication_score_ranges
-            obj: <function test_interpret_datafication_score_ranges at 0x7432d3913f60>
+            obj: <function test_interpret_datafication_score_ranges at 0x72923c587f60>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02d670>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9e49e0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_interpret_datafication_score_ranges>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_get_article_profile_datajournalisme_eleve
-            obj: <function test_get_article_profile_datajournalisme_eleve at 0x7432d391c040>
+            obj: <function test_get_article_profile_datajournalisme_eleve at 0x72923c590040>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x729240b15070>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_article_profile_datajournalisme_eleve>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_get_article_profile_localise_temporel
-            obj: <function test_get_article_profile_localise_temporel at 0x7432d391c0e0>
+            obj: <function test_get_article_profile_localise_temporel at 0x72923c5900e0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02d670>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b7435f0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_article_profile_localise_temporel>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_get_article_profile_narratif_descriptif
-            obj: <function test_get_article_profile_narratif_descriptif at 0x7432d391c180>
+            obj: <function test_get_article_profile_narratif_descriptif at 0x72923c590180>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b753290>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_article_profile_narratif_descriptif>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_get_article_profile_structure_quantifiable
-            obj: <function test_get_article_profile_structure_quantifiable at 0x7432d391c220>
+            obj: <function test_get_article_profile_structure_quantifiable at 0x72923c590220>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02d670>
+              metafunc: <_pytest.python.Metafunc object at 0x72923c9e49e0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_article_profile_structure_quantifiable>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_get_article_profile_exploratoire
-            obj: <function test_get_article_profile_exploratoire at 0x7432d391c2c0>
+            obj: <function test_get_article_profile_exploratoire at 0x72923c5902c0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432eb02e210>
+              metafunc: <_pytest.python.Metafunc object at 0x729240b15070>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_article_profile_exploratoire>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_nlp_utils.py>
             name: test_extract_numbers_excludes_unit_est
-            obj: <function test_extract_numbers_excludes_unit_est at 0x7432d391c360>
+            obj: <function test_extract_numbers_excludes_unit_est at 0x72923c590360>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d31e2300>
+              metafunc: <_pytest.python.Metafunc object at 0x72923b7435f0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_extract_numbers_excludes_unit_est>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'tests_pytest/unit/test_nlp_utils.py' lenresult=20 outcome='passed'> [hook]
@@ -3506,12 +3506,12 @@ args=()
       pytest_make_collect_report [hook]
           collector: <Dir integration>
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/integration/__pycache__
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/integration/__pycache__
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             collection_path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/integration/test_routes.py
             path: /home/hericdev/MEDIA_PROJECTS/Datascope/tests_pytest/integration/test_routes.py
         finish pytest_ignore_collect --> None [hook]
@@ -3656,7 +3656,7 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: create_app
-            obj: <function create_app at 0x7432d38b23e0>
+            obj: <function create_app at 0x72923c5263e0>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
@@ -3666,54 +3666,54 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: client
-            obj: <function client at 0x7432ea447b00>
+            obj: <function client at 0x729253153b00>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: test_homepage_loads
-            obj: <function test_homepage_loads at 0x7432eb05dbc0>
+            obj: <function test_homepage_loads at 0x729253d11bc0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d480a960>
+              metafunc: <_pytest.python.Metafunc object at 0x72923ca04260>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_homepage_loads>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: test_analyze_route_with_text
-            obj: <function test_analyze_route_with_text at 0x7432d0512a20>
+            obj: <function test_analyze_route_with_text at 0x72923c38aa20>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d480a0f0>
+              metafunc: <_pytest.python.Metafunc object at 0x72923ca066c0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_analyze_route_with_text>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: test_about_page_loads
-            obj: <function test_about_page_loads at 0x7432d03a2480>
+            obj: <function test_about_page_loads at 0x72923c20e480>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d480a960>
+              metafunc: <_pytest.python.Metafunc object at 0x72923ca04260>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_about_page_loads>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: test_analyze_with_uploaded_txt_file
-            obj: <function test_analyze_with_uploaded_txt_file at 0x7432d03a2520>
+            obj: <function test_analyze_with_uploaded_txt_file at 0x72923c20e520>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d480a0f0>
+              metafunc: <_pytest.python.Metafunc object at 0x72923ca066c0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_analyze_with_uploaded_txt_file>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: test_analyze_route_with_empty_text
-            obj: <function test_analyze_route_with_empty_text at 0x7432d03a25c0>
+            obj: <function test_analyze_route_with_empty_text at 0x72923c20e5c0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d480a960>
+              metafunc: <_pytest.python.Metafunc object at 0x72923ca04260>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_analyze_route_with_empty_text>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_routes.py>
             name: test_download_route_returns_markdown
-            obj: <function test_download_route_returns_markdown at 0x7432d03a2660>
+            obj: <function test_download_route_returns_markdown at 0x72923c20e660>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7432d480a0f0>
+              metafunc: <_pytest.python.Metafunc object at 0x72923ca066c0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_download_route_returns_markdown>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'tests_pytest/integration/test_routes.py' lenresult=6 outcome='passed'> [hook]
@@ -3749,13 +3749,13 @@ args=()
       finish pytest_collectreport --> [] [hook]
       pytest_collection_modifyitems [hook]
           session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
-          config: <_pytest.config.Config object at 0x7432ec3978c0>
+          config: <_pytest.config.Config object at 0x729254de4710>
           items: [<Function test_read_txt_with_utf8_encoding>, <Function test_read_pdf_extracts_text>, <Function test_read_docx_extracts_all_paragraphs>, <Function test_extract_article_text_with_txt>, <Function test_extract_article_text_with_docx>, <Function test_extract_article_text_raises_on_unknown_extension>, <Function test_extract_article_text_with_pdf>, <Function test_export_analysis_to_markdown_creates_valid_structure>, <Function test_export_analysis_handles_empty_entities>, <Function test_build_enriched_prompt_structure_and_content>, <Function test_call_openai_returns_text_without_api_call>, <Function test_generate_journalistic_angles_mocked_response>, <Function test_suggest_datasets_llm_mocked_response>, <Function test_parse_markdown_list_extracts_titles_and_contents>, <Function test_call_openai_handles_exception_gracefully>, <Function test_get_nlp_returns_spacy_pipeline>, <Function test_extract_named_entities_french>, <Function test_extract_named_entities_english>, <Function test_extract_numbers_and_units_basic_cases>, <Function test_extract_numbers_and_units_excludes_auxiliaries>, <Function test_extract_dates_detects_multiple_formats>, <Function test_extract_dates_ignores_invalid_inputs>, <Function test_extract_strong_verbs_detects_known_lemmas>, <Function test_extract_strong_verbs_ignores_non_matching_verbs>, <Function test_format_entities_aggregates_all_extractors>, <Function test_compute_datafication_score_high>, <Function test_compute_datafication_score_low_density_penalty>, <Function test_group_named_entities_counts_occurrences_by_label>, <Function test_interpret_datafication_score_ranges>, <Function test_get_article_profile_datajournalisme_eleve>, <Function test_get_article_profile_localise_temporel>, <Function test_get_article_profile_narratif_descriptif>, <Function test_get_article_profile_structure_quantifiable>, <Function test_get_article_profile_exploratoire>, <Function test_extract_numbers_excludes_unit_est>, <Function test_homepage_loads>, <Function test_analyze_route_with_text>, <Function test_about_page_loads>, <Function test_analyze_with_uploaded_txt_file>, <Function test_analyze_route_with_empty_text>, <Function test_download_route_returns_markdown>]
       finish pytest_collection_modifyitems --> [] [hook]
       pytest_collection_finish [hook]
           session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
         pytest_report_collectionfinish [hook]
-            config: <_pytest.config.Config object at 0x7432ec3978c0>
+            config: <_pytest.config.Config object at 0x729254de4710>
             items: [<Function test_read_txt_with_utf8_encoding>, <Function test_read_pdf_extracts_text>, <Function test_read_docx_extracts_all_paragraphs>, <Function test_extract_article_text_with_txt>, <Function test_extract_article_text_with_docx>, <Function test_extract_article_text_raises_on_unknown_extension>, <Function test_extract_article_text_with_pdf>, <Function test_export_analysis_to_markdown_creates_valid_structure>, <Function test_export_analysis_handles_empty_entities>, <Function test_build_enriched_prompt_structure_and_content>, <Function test_call_openai_returns_text_without_api_call>, <Function test_generate_journalistic_angles_mocked_response>, <Function test_suggest_datasets_llm_mocked_response>, <Function test_parse_markdown_list_extracts_titles_and_contents>, <Function test_call_openai_handles_exception_gracefully>, <Function test_get_nlp_returns_spacy_pipeline>, <Function test_extract_named_entities_french>, <Function test_extract_named_entities_english>, <Function test_extract_numbers_and_units_basic_cases>, <Function test_extract_numbers_and_units_excludes_auxiliaries>, <Function test_extract_dates_detects_multiple_formats>, <Function test_extract_dates_ignores_invalid_inputs>, <Function test_extract_strong_verbs_detects_known_lemmas>, <Function test_extract_strong_verbs_ignores_non_matching_verbs>, <Function test_format_entities_aggregates_all_extractors>, <Function test_compute_datafication_score_high>, <Function test_compute_datafication_score_low_density_penalty>, <Function test_group_named_entities_counts_occurrences_by_label>, <Function test_interpret_datafication_score_ranges>, <Function test_get_article_profile_datajournalisme_eleve>, <Function test_get_article_profile_localise_temporel>, <Function test_get_article_profile_narratif_descriptif>, <Function test_get_article_profile_structure_quantifiable>, <Function test_get_article_profile_exploratoire>, <Function test_extract_numbers_excludes_unit_est>, <Function test_homepage_loads>, <Function test_analyze_route_with_text>, <Function test_about_page_loads>, <Function test_analyze_with_uploaded_txt_file>, <Function test_analyze_route_with_empty_text>, <Function test_download_route_returns_markdown>]
             start_path: /home/hericdev/MEDIA_PROJECTS/Datascope
             startdir: /home/hericdev/MEDIA_PROJECTS/Datascope
@@ -3782,7 +3782,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_txt_with_utf8_encoding' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_txt_with_utf8_encoding' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -3799,7 +3799,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_txt_with_utf8_encoding' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_txt_with_utf8_encoding' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -3814,7 +3814,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_txt_with_utf8_encoding' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_txt_with_utf8_encoding' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -3840,7 +3840,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_pdf_extracts_text' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_pdf_extracts_text' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -3935,7 +3935,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_pdf_extracts_text' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_pdf_extracts_text' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -3950,7 +3950,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_pdf_extracts_text' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_pdf_extracts_text' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -3976,7 +3976,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_docx_extracts_all_paragraphs' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_docx_extracts_all_paragraphs' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -3994,7 +3994,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_docx_extracts_all_paragraphs' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_docx_extracts_all_paragraphs' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4009,7 +4009,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_docx_extracts_all_paragraphs' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_read_docx_extracts_all_paragraphs' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4035,7 +4035,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_txt' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_txt' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4052,7 +4052,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_txt' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_txt' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4067,7 +4067,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_txt' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_txt' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4093,7 +4093,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_docx' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_docx' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4110,7 +4110,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_docx' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_docx' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4125,7 +4125,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_docx' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_docx' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4151,7 +4151,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_raises_on_unknown_extension' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_raises_on_unknown_extension' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4168,7 +4168,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_raises_on_unknown_extension' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_raises_on_unknown_extension' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4183,7 +4183,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_raises_on_unknown_extension' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_raises_on_unknown_extension' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4209,7 +4209,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_pdf' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_pdf' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4226,7 +4226,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_pdf' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_pdf' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4241,7 +4241,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_pdf' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_article_parser.py::test_extract_article_text_with_pdf' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4267,7 +4267,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_to_markdown_creates_valid_structure' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_to_markdown_creates_valid_structure' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4284,7 +4284,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_to_markdown_creates_valid_structure' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_to_markdown_creates_valid_structure' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4299,7 +4299,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_to_markdown_creates_valid_structure' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_to_markdown_creates_valid_structure' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4325,7 +4325,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_handles_empty_entities' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_handles_empty_entities' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4342,7 +4342,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_handles_empty_entities' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_handles_empty_entities' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4357,7 +4357,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_handles_empty_entities' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_export_utils.py::test_export_analysis_handles_empty_entities' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4383,7 +4383,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_build_enriched_prompt_structure_and_content' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_build_enriched_prompt_structure_and_content' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4400,7 +4400,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_build_enriched_prompt_structure_and_content' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_build_enriched_prompt_structure_and_content' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4415,7 +4415,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_build_enriched_prompt_structure_and_content' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_build_enriched_prompt_structure_and_content' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4441,7 +4441,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_returns_text_without_api_call' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_returns_text_without_api_call' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4458,7 +4458,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_returns_text_without_api_call' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_returns_text_without_api_call' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4473,7 +4473,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_returns_text_without_api_call' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_returns_text_without_api_call' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4499,7 +4499,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_generate_journalistic_angles_mocked_response' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_generate_journalistic_angles_mocked_response' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4516,7 +4516,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_generate_journalistic_angles_mocked_response' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_generate_journalistic_angles_mocked_response' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4531,7 +4531,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_generate_journalistic_angles_mocked_response' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_generate_journalistic_angles_mocked_response' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4557,7 +4557,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_suggest_datasets_llm_mocked_response' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_suggest_datasets_llm_mocked_response' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4574,7 +4574,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_suggest_datasets_llm_mocked_response' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_suggest_datasets_llm_mocked_response' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4589,7 +4589,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_suggest_datasets_llm_mocked_response' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_suggest_datasets_llm_mocked_response' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4615,7 +4615,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_parse_markdown_list_extracts_titles_and_contents' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_parse_markdown_list_extracts_titles_and_contents' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4632,7 +4632,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_parse_markdown_list_extracts_titles_and_contents' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_parse_markdown_list_extracts_titles_and_contents' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4647,7 +4647,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_parse_markdown_list_extracts_titles_and_contents' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_parse_markdown_list_extracts_titles_and_contents' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4673,7 +4673,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_handles_exception_gracefully' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_handles_exception_gracefully' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4690,7 +4690,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_handles_exception_gracefully' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_handles_exception_gracefully' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4705,7 +4705,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_handles_exception_gracefully' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_llm_engine.py::test_call_openai_handles_exception_gracefully' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4731,7 +4731,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_nlp_returns_spacy_pipeline' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_nlp_returns_spacy_pipeline' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4748,7 +4748,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_nlp_returns_spacy_pipeline' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_nlp_returns_spacy_pipeline' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4763,7 +4763,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_nlp_returns_spacy_pipeline' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_nlp_returns_spacy_pipeline' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4789,7 +4789,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_french' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_french' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4806,7 +4806,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_french' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_french' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4821,7 +4821,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_french' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_french' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4847,7 +4847,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_english' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_english' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4864,7 +4864,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_english' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_english' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4879,7 +4879,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_english' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_named_entities_english' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4905,7 +4905,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_basic_cases' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_basic_cases' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4922,7 +4922,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_basic_cases' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_basic_cases' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4937,7 +4937,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_basic_cases' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_basic_cases' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -4963,7 +4963,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_excludes_auxiliaries' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_excludes_auxiliaries' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -4980,7 +4980,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_excludes_auxiliaries' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_excludes_auxiliaries' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -4995,7 +4995,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_excludes_auxiliaries' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_and_units_excludes_auxiliaries' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5021,7 +5021,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_detects_multiple_formats' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_detects_multiple_formats' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5042,7 +5042,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_detects_multiple_formats' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_detects_multiple_formats' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5057,7 +5057,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_detects_multiple_formats' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_detects_multiple_formats' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5083,7 +5083,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_ignores_invalid_inputs' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_ignores_invalid_inputs' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5100,7 +5100,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_ignores_invalid_inputs' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_ignores_invalid_inputs' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5115,7 +5115,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_ignores_invalid_inputs' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_dates_ignores_invalid_inputs' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5141,7 +5141,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_detects_known_lemmas' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_detects_known_lemmas' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5158,7 +5158,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_detects_known_lemmas' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_detects_known_lemmas' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5173,7 +5173,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_detects_known_lemmas' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_detects_known_lemmas' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5199,7 +5199,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_ignores_non_matching_verbs' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_ignores_non_matching_verbs' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5216,7 +5216,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_ignores_non_matching_verbs' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_ignores_non_matching_verbs' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5231,7 +5231,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_ignores_non_matching_verbs' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_strong_verbs_ignores_non_matching_verbs' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5257,7 +5257,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_format_entities_aggregates_all_extractors' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_format_entities_aggregates_all_extractors' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5274,7 +5274,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_format_entities_aggregates_all_extractors' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_format_entities_aggregates_all_extractors' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5289,7 +5289,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_format_entities_aggregates_all_extractors' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_format_entities_aggregates_all_extractors' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5315,7 +5315,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_high' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_high' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5332,7 +5332,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_high' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_high' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5347,7 +5347,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_high' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_high' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5373,7 +5373,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_low_density_penalty' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_low_density_penalty' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5390,7 +5390,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_low_density_penalty' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_low_density_penalty' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5405,7 +5405,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_low_density_penalty' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_compute_datafication_score_low_density_penalty' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5431,7 +5431,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_group_named_entities_counts_occurrences_by_label' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_group_named_entities_counts_occurrences_by_label' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5448,7 +5448,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_group_named_entities_counts_occurrences_by_label' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_group_named_entities_counts_occurrences_by_label' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5463,7 +5463,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_group_named_entities_counts_occurrences_by_label' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_group_named_entities_counts_occurrences_by_label' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5489,7 +5489,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_interpret_datafication_score_ranges' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_interpret_datafication_score_ranges' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5506,7 +5506,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_interpret_datafication_score_ranges' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_interpret_datafication_score_ranges' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5521,7 +5521,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_interpret_datafication_score_ranges' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_interpret_datafication_score_ranges' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5547,7 +5547,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_datajournalisme_eleve' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_datajournalisme_eleve' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5564,7 +5564,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_datajournalisme_eleve' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_datajournalisme_eleve' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5579,7 +5579,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_datajournalisme_eleve' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_datajournalisme_eleve' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5605,7 +5605,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_localise_temporel' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_localise_temporel' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5622,7 +5622,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_localise_temporel' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_localise_temporel' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5637,7 +5637,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_localise_temporel' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_localise_temporel' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5663,7 +5663,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_narratif_descriptif' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_narratif_descriptif' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5680,7 +5680,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_narratif_descriptif' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_narratif_descriptif' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5695,7 +5695,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_narratif_descriptif' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_narratif_descriptif' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5721,7 +5721,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_structure_quantifiable' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_structure_quantifiable' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5738,7 +5738,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_structure_quantifiable' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_structure_quantifiable' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5753,7 +5753,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_structure_quantifiable' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_structure_quantifiable' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5779,7 +5779,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_exploratoire' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_exploratoire' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5796,7 +5796,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_exploratoire' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_exploratoire' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5811,7 +5811,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_exploratoire' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_get_article_profile_exploratoire' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5837,7 +5837,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_excludes_unit_est' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_excludes_unit_est' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5854,7 +5854,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_excludes_unit_est' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_excludes_unit_est' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5869,7 +5869,7 @@ args=()
             report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_excludes_unit_est' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/unit/test_nlp_utils.py::test_extract_numbers_excludes_unit_est' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -5882,7 +5882,7 @@ args=()
           nextitem: <Function test_analyze_route_with_text>
         pytest_runtest_logstart [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_homepage_loads
-            location: ('tests_pytest/integration/test_routes.py', 19, 'test_homepage_loads')
+            location: ('tests_pytest/integration/test_routes.py', 18, 'test_homepage_loads')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_homepage_loads>
@@ -5912,7 +5912,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_homepage_loads' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_homepage_loads' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5929,7 +5929,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_homepage_loads' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_homepage_loads' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -5948,12 +5948,12 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_homepage_loads' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_homepage_loads' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_homepage_loads
-            location: ('tests_pytest/integration/test_routes.py', 19, 'test_homepage_loads')
+            location: ('tests_pytest/integration/test_routes.py', 18, 'test_homepage_loads')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -5961,7 +5961,7 @@ args=()
           nextitem: <Function test_about_page_loads>
         pytest_runtest_logstart [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_analyze_route_with_text
-            location: ('tests_pytest/integration/test_routes.py', 25, 'test_analyze_route_with_text')
+            location: ('tests_pytest/integration/test_routes.py', 24, 'test_analyze_route_with_text')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_analyze_route_with_text>
@@ -5978,7 +5978,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_text' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_text' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -5996,7 +5996,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_text' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_text' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -6015,12 +6015,12 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_text' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_text' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_analyze_route_with_text
-            location: ('tests_pytest/integration/test_routes.py', 25, 'test_analyze_route_with_text')
+            location: ('tests_pytest/integration/test_routes.py', 24, 'test_analyze_route_with_text')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -6028,7 +6028,7 @@ args=()
           nextitem: <Function test_analyze_with_uploaded_txt_file>
         pytest_runtest_logstart [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_about_page_loads
-            location: ('tests_pytest/integration/test_routes.py', 36, 'test_about_page_loads')
+            location: ('tests_pytest/integration/test_routes.py', 33, 'test_about_page_loads')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_about_page_loads>
@@ -6045,7 +6045,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_about_page_loads' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_about_page_loads' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -6062,7 +6062,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_about_page_loads' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_about_page_loads' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -6081,12 +6081,12 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_about_page_loads' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_about_page_loads' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_about_page_loads
-            location: ('tests_pytest/integration/test_routes.py', 36, 'test_about_page_loads')
+            location: ('tests_pytest/integration/test_routes.py', 33, 'test_about_page_loads')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -6094,7 +6094,7 @@ args=()
           nextitem: <Function test_analyze_route_with_empty_text>
         pytest_runtest_logstart [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file
-            location: ('tests_pytest/integration/test_routes.py', 42, 'test_analyze_with_uploaded_txt_file')
+            location: ('tests_pytest/integration/test_routes.py', 39, 'test_analyze_with_uploaded_txt_file')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_analyze_with_uploaded_txt_file>
@@ -6111,7 +6111,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -6128,7 +6128,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -6147,12 +6147,12 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_analyze_with_uploaded_txt_file
-            location: ('tests_pytest/integration/test_routes.py', 42, 'test_analyze_with_uploaded_txt_file')
+            location: ('tests_pytest/integration/test_routes.py', 39, 'test_analyze_with_uploaded_txt_file')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -6160,7 +6160,7 @@ args=()
           nextitem: <Function test_download_route_returns_markdown>
         pytest_runtest_logstart [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text
-            location: ('tests_pytest/integration/test_routes.py', 53, 'test_analyze_route_with_empty_text')
+            location: ('tests_pytest/integration/test_routes.py', 49, 'test_analyze_route_with_empty_text')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_analyze_route_with_empty_text>
@@ -6177,7 +6177,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -6194,7 +6194,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -6213,12 +6213,12 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_analyze_route_with_empty_text
-            location: ('tests_pytest/integration/test_routes.py', 53, 'test_analyze_route_with_empty_text')
+            location: ('tests_pytest/integration/test_routes.py', 49, 'test_analyze_route_with_empty_text')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -6226,7 +6226,7 @@ args=()
           nextitem: None
         pytest_runtest_logstart [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_download_route_returns_markdown
-            location: ('tests_pytest/integration/test_routes.py', 60, 'test_download_route_returns_markdown')
+            location: ('tests_pytest/integration/test_routes.py', 55, 'test_download_route_returns_markdown')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_download_route_returns_markdown>
@@ -6243,7 +6243,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_download_route_returns_markdown' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_download_route_returns_markdown' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -6260,7 +6260,7 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_download_route_returns_markdown' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_download_route_returns_markdown' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -6279,12 +6279,12 @@ args=()
             report: <TestReport 'tests_pytest/integration/test_routes.py::test_download_route_returns_markdown' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'tests_pytest/integration/test_routes.py::test_download_route_returns_markdown' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x7432ec3978c0>
+              config: <_pytest.config.Config object at 0x729254de4710>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: tests_pytest/integration/test_routes.py::test_download_route_returns_markdown
-            location: ('tests_pytest/integration/test_routes.py', 60, 'test_download_route_returns_markdown')
+            location: ('tests_pytest/integration/test_routes.py', 55, 'test_download_route_returns_markdown')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
     finish pytest_runtestloop --> True [hook]
@@ -6292,11 +6292,11 @@ args=()
         session: <Session  exitstatus=0 testsfailed=0 testscollected=41>
         exitstatus: 0
       pytest_terminal_summary [hook]
-          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x7432eb76cd10>
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x729253edd040>
           exitstatus: 0
-          config: <_pytest.config.Config object at 0x7432ec3978c0>
+          config: <_pytest.config.Config object at 0x729254de4710>
       finish pytest_terminal_summary --> [] [hook]
     finish pytest_sessionfinish --> [] [hook]
     pytest_unconfigure [hook]
-        config: <_pytest.config.Config object at 0x7432ec3978c0>
+        config: <_pytest.config.Config object at 0x729254de4710>
     finish pytest_unconfigure --> [] [hook]

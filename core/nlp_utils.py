@@ -126,7 +126,6 @@ def extract_strong_verbs(text: str, language: str = "fr") -> List[Dict]:
     return strong_hits
 
 
-
 def format_entities(text: str, language: str = "fr") -> Dict:
     """
     Regroupe toutes les entités extraites dans un dictionnaire lisible.
@@ -230,8 +229,7 @@ def interpret_datafication_score(score: int, language: str = "fr") -> str:
             return "Très faible ou absent : article descriptif sans données exploitables"
 
 
-
-def get_article_profile(entities: dict, score_data: dict, language: str="fr") -> str:
+def get_article_profile(entities: dict, score_data: dict, language: str = "fr") -> str:
     """
     Génère un profil éditorial basé sur les entités, la densité, et le score de datafication.
     """
@@ -264,4 +262,3 @@ def get_article_profile(entities: dict, score_data: dict, language: str="fr") ->
             return "🧮 Structuré et quantifiable – intéressant pour un angle local"
         else:
             return "🔬 Exploratoire ou symbolique – sujet riche mais peu structuré"
-

@@ -2,11 +2,13 @@ from flask_login import UserMixin
 import json
 import os
 
+
 class User(UserMixin):
     def __init__(self, id, email, username):
         self.id = id
         self.email = email
         self.username = username
+
 
 # Charger users.json (ou créer vide si inexistant)
 if os.path.exists("users.json"):
@@ -20,6 +22,7 @@ USERS = {
     for email, data in raw_users.items()
 }
 
+
 def save_users_to_json():
     """Enregistre USERS dans users.json"""
     data = {
@@ -29,10 +32,12 @@ def save_users_to_json():
     with open("users.json", "w") as f:
         json.dump(data, f, indent=2)
 
+
 def generate_username_from_email(email):
     """Crée un username basique à partir de l'email"""
     username = email.split("@")[0]
     return username.replace(".", "_").replace("-", "_")
+
 
 def get_user_by_email(email):
     """Cherche un utilisateur ou crée un nouveau"""

@@ -25,10 +25,12 @@ ALLOWED_EXTENSIONS = {"txt", "pdf", "docx"}
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
 @main.route("/", methods=["GET"])
 def home():
     language = session.get("lang", "fr")
     return render_template("analyze.html", language=language)
+
 
 @main.route("/login", methods=["GET", "POST"])
 def login():
@@ -54,7 +56,6 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for("main.login"))
-
 
 
 @main.route("/analyze", methods=["POST"])
@@ -146,7 +147,6 @@ def analyze():
         )
 
     return render_template("analyze.html", error="Aucun texte ou fichier valide fourni.", language=language)
-
 
 
 @main.route("/download", methods=["POST"])
