@@ -1,123 +1,110 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
 
-<h1 class="text-center mb-4">
-  {% if language == 'en' %}
-    📊 DataScope Analysis Result
-  {% else %}
-    📊 Résultat de l’analyse DataScope
-  {% endif %}
-</h1>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10 col-lg-9">
+    <div class="text-center mb-4">
+      <h1>📊 {% if language == "fr" %}Résultat de l’analyse{% else %}Analysis Result{% endif %}</h1>
+      <p class="text-muted">{% if language == "fr" %}Résumé de l’analyse NLP & LLM{% else %}NLP & LLM Analysis Summary{% endif %}</p>
+    </div>
 
-<div class="text-center mb-4">
-  {% if language == 'en' %}
-    <span class="badge bg-primary fs-6">Language selected: English 🇬🇧</span>
-  {% elif language == 'fr' %}
-    <span class="badge bg-success fs-6">Langue sélectionnée : Français 🇫🇷</span>
-  {% endif %}
+    <!-- Texte analysé -->
+    <div class="card mb-5">
+      <div class="card-header">
+        🧾 {% if language == "fr" %}Texte analysé{% else %}Analyzed Text{% endif %}
+      </div>
+      <div class="card-body">
+        <pre class="text-wrap">{{ article_text }}</pre>
+      </div>
+    </div>
+
+    <!-- Ligne Score + Entités -->
+    <div class="row mb-5">
+      <!-- Score -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            📈 {% if language == "fr" %}Score de datafication{% else %}Datafication Score{% endif %}
+          </div>
+          <div class="card-body">
+            <p><span class="badge bg-success fs-5">Score : {{ score.score }}/10</span></p>
+            <p><strong>{% if language == "fr" %}Densité :{% else %}Density:{% endif %}</strong> {{ score.density }} ({{ score.structured_items }} / {{ score.word_count }} mots)</p>
+            <p><strong>{% if language == "fr" %}Commentaire :{% else %}Commentary:{% endif %}</strong> {{ score_comment }}</p>
+            <p><strong>{% if language == "fr" %}Profil éditorial :{% else %}Editorial Profile:{% endif %}</strong> {{ profile_label }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Résumé Entités -->
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            🧠 {% if language == "fr" %}Résumé des entités détectées{% else %}Entities Detected Summary{% endif %}
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-sm text-center">
+              <thead>
+                <tr>
+                  <th>{% if language == "fr" %}Type d'entité{% else %}Entity Type{% endif %}</th>
+                  <th>{% if language == "fr" %}Nombre{% else %}Count{% endif %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for key, count in entity_counts.items() %}
+                  <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ count }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Angles -->
+    <div class="card mb-5">
+      <div class="card-header">
+        🧭 {% if language == "fr" %}Suggestions d’angles journalistiques{% else %}Suggested Journalistic Angles{% endif %}
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          {% for item in parsed_angles %}
+            <li class="list-group-item">
+              <strong>{{ item.title }}</strong><br>
+              <span class="text-muted">{{ item.content }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sources -->
+    <div class="card mb-5">
+      <div class="card-header">
+        🌐 {% if language == "fr" %}Suggestions de ressources / datasets{% else %}Suggested Sources / Datasets{% endif %}
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          {% for item in parsed_sources %}
+            <li class="list-group-item">
+              <strong>{{ item.title }}</strong><br>
+              <span class="text-muted">{{ item.content }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Action bouton retour -->
+    <div class="text-center mt-5">
+      <a href="/" class="btn btn-outline-primary btn-lg">
+        {% if language == "fr" %}← Analyser un autre article{% else %}← Analyze another article{% endif %}
+      </a>
+    </div>
+
+  </div>
 </div>
 
-<!-- Texte analysé -->
-<div class="card mb-4">
-  <div class="card-header">
-    {% if language == 'en' %}🧾 Input Text{% else %}🧾 Texte analysé{% endif %}
-  </div>
-  <div class="card-body">
-    <pre class="text-wrap">{{ article_text }}</pre>
-  </div>
-</div>
-
-<!-- Score -->
-<div class="card mb-4">
-  <div class="card-header">
-    {% if language == 'en' %}📈 Datafication Score{% else %}📈 Score de datafication{% endif %}
-  </div>
-  <div class="card-body">
-    <p>
-      <span class="badge bg-success fs-5">
-        {% if language == 'en' %}Score: {{ score.score }}/10{% else %}Score : {{ score.score }}/10{% endif %}
-      </span>
-    </p>
-    <p>
-      <strong>{% if language == 'en' %}Density:{% else %}Densité :{% endif %}</strong>
-      {{ score.density }} ({{ score.structured_items }} {% if language == 'en' %}items{% else %}éléments{% endif %} / {{ score.word_count }} {% if language == 'en' %}words{% else %}mots{% endif %})
-    </p>
-    <p><strong>{% if language == 'en' %}Comment:{% else %}Commentaire :{% endif %}</strong> {{ score_comment }}</p>
-    <p><strong>{% if language == 'en' %}Editorial Profile:{% else %}Profil éditorial :{% endif %}</strong> {{ profile_label }}</p>
-  </div>
-</div>
-
-<<!-- Entités : note informative uniquement -->
-<div class="card mb-4">
-  <div class="card-header">🧠
-    {% if language == "en" %}
-      Detected Entities (Summary)
-    {% else %}
-      Entités détectées (résumé)
-    {% endif %}
-  </div>
-  <div class="card-body">
-    {% if language == "en" %}
-      <p class="text-muted">📎 We detected named entities and quantitative elements in the article (locations, dates, numbers). They were used to compute the score. Details hidden for clarity.</p>
-    {% else %}
-      <p class="text-muted">📎 Des entités nommées et éléments quantitatifs ont été détectés dans l’article (lieux, dates, nombres). Elles ont servi au calcul du score. Détails masqués pour plus de clarté.</p>
-    {% endif %}
-  </div>
-</div>
-
-
-<!-- Angles -->
-<div class="card mb-4">
-  <div class="card-header">
-    {% if language == 'en' %}🧭 Suggested Editorial Angles{% else %}🧭 Suggestions d’angles journalistiques{% endif %}
-  </div>
-  <div class="card-body">
-    <ul class="list-group list-group-flush">
-      {% for item in parsed_angles %}
-        <li class="list-group-item">
-          <strong>{{ item.title }}</strong><br>
-          <span class="text-muted">{{ item.content | markdown }}</span>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
-
-<!-- Sources -->
-<div class="card mb-4">
-  <div class="card-header">
-    {% if language == 'en' %}🌐 Suggested Sources / Datasets{% else %}🌐 Suggestions de ressources / datasets{% endif %}
-  </div>
-  <div class="card-body">
-    <ul class="list-group list-group-flush">
-      {% for item in parsed_sources %}
-        <li class="list-group-item">
-          <strong>{{ item.title }}</strong><br>
-          <span class="text-muted">{{ item.content | markdown }}</span>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
-
-<!-- Actions -->
-<div class="d-flex justify-content-between">
-  <a href="/" class="btn btn-outline-secondary">
-    {% if language == 'en' %}← Analyze another article{% else %}← Analyser un autre article{% endif %}
-  </a>
-  <form method="POST" action="/download">
-    <input type="hidden" name="article_text" value="{{ article_text }}">
-    <input type="hidden" name="score" value="{{ score }}">
-    <input type="hidden" name="score_comment" value="{{ score_comment }}">
-    <input type="hidden" name="profile" value="{{ profile_label }}">
-    <input type="hidden" name="entities" value="{{ entities }}">
-    <input type="hidden" name="angles" value="{{ angles }}">
-    <input type="hidden" name="sources" value="{{ sources }}">
-    <button type="submit" class="btn btn-primary">
-      {% if language == 'en' %}📥 Export (Markdown){% else %}📥 Exporter (Markdown){% endif %}
-    </button>
-  </form>
-</div>
-
-</div>
 {% endblock %}

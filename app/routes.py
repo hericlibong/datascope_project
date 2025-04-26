@@ -61,7 +61,6 @@ def logout():
 @login_required
 def analyze():
     article_text = ""
-
     language = session.get("lang", "en")
 
     # Si texte collé manuellement
@@ -78,7 +77,7 @@ def analyze():
             file.save(path)
             article_text = extract_article_text(path)
 
-        # Vérification de la taille du texte
+    # Vérification de la taille du texte
     word_count = len(article_text.strip().split())
 
     if word_count <= 200:
@@ -95,17 +94,14 @@ def analyze():
         }
         return render_template("analyze.html", error=message[language], language=language)
 
-
-
     # Traitement uniquement si texte trouvé
-    # Vérification de la langue du texte
     if article_text.strip():
         try:
             detected_lang = detect(article_text)
         except LangDetectException:
             detected_lang = "unknown"
 
-        # Si la langue détectée ne correspond pas à celle sélectionnée
+        # Vérification de la langue détectée vs langue choisie
         lang_map = {"fr": "fr", "en": "en"}
         if detected_lang not in lang_map or lang_map[detected_lang] != language:
             message = {
@@ -114,6 +110,7 @@ def analyze():
             }
             return render_template("analyze.html", error=message[language], language=language)
 
+        # Analyse NLP et LLM
         entities = format_entities(article_text, language)
         score_data = compute_datafication_score(entities, article_text)
         angles = generate_journalistic_angles(article_text, language)
@@ -123,6 +120,14 @@ def analyze():
         grouped_entities = group_named_entities(entities["named_entities"])
         score_comment = interpret_datafication_score(score_data["score"], language)
         profile_label = get_article_profile(entities, score_data, language)
+
+        # Comptage des types d'entités
+        entity_counts = {
+            "Named Entities": len(entities.get("named_entities", [])),
+            "Numbers + Units": len(entities.get("numbers", [])),
+            "Dates": len(entities.get("dates", [])),
+            "Strong Verbs": len(entities.get("strong_verbs", [])),
+        }
 
         return render_template(
             "results.html",
@@ -137,9 +142,11 @@ def analyze():
             parsed_angles=parsed_angles,
             parsed_sources=parsed_sources,
             language=language,
+            entity_counts=entity_counts,  # ✅ Nouvel élément
         )
 
     return render_template("analyze.html", error="Aucun texte ou fichier valide fourni.", language=language)
+
 
 
 @main.route("/download", methods=["POST"])

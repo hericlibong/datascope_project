@@ -5,11 +5,16 @@ import io
 
 @pytest.fixture
 def client():
-    app = create_app()  # si tu as une factory, sinon importe l’app directe
+    app = create_app()
     app.config["TESTING"] = True
     app.config["WTF_CSRF_ENABLED"] = False
+
     with app.test_client() as client:
+        # Simuler une session utilisateur pour bypass login_required
+        with client.session_transaction() as session:
+            session["_user_id"] = "1"  # L'ID d'un utilisateur fictif existant
         yield client
+
 
 
 def test_homepage_loads(client):
@@ -19,10 +24,14 @@ def test_homepage_loads(client):
 
 
 def test_analyze_route_with_text(client):
-    payload = {"article_text": "Emmanuel Macron a annoncé 2 lois à Paris le 4 avril."}
+    # Générer un texte suffisamment long (> 200 mots)
+    long_article = "In 2023, the UK government announced a major investment plan into offshore wind farms. " * 50
+    payload = {"article_text": long_article}
     response = client.post("/analyze", data=payload)
     assert response.status_code == 200
-    assert b"Score de datafication" in response.data
+    assert b"Datafication Score" in response.data
+
+
 
 
 def test_about_page_loads(client):
@@ -32,18 +41,21 @@ def test_about_page_loads(client):
 
 
 def test_analyze_with_uploaded_txt_file(client):
+    text = ("On 3 April, 45 injured in Lyon in an earthquake. " * 50)  # Assez long > 200 mots
     data = {
-        "article_file": (io.BytesIO("Le 3 avril, 45 blessés a Lyon.".encode("utf-8")), "test_article.txt")
+        "article_file": (io.BytesIO(text.encode("utf-8")), "test_article.txt")
     }
     response = client.post("/analyze", data=data, content_type='multipart/form-data')
     assert response.status_code == 200
-    assert b"Score de datafication" in response.data
+    assert b"Datafication Score" in response.data
+
 
 
 def test_analyze_route_with_empty_text(client):
     response = client.post("/analyze", data={"article_text": ""})
     assert response.status_code == 200
-    assert b"Aucun texte ou fichier valide fourni" in response.data
+    assert b"Please provide at least 201 words" in response.data or b"Veuillez fournir au moins 201 mots" in response.data
+
 
 
 def test_download_route_returns_markdown(client):
