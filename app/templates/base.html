@@ -1,4 +1,6 @@
+
 <!doctype html>
+
 <html lang="{{ language }}">
 <head>
   <meta charset="utf-8">
@@ -20,6 +22,19 @@
             <a class="nav-link" href="/about">{% if language == 'en' %}About{% else %}À propos{% endif %}</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/guide">{% if language == 'en' %}Guide{% else %}Guide{% endif %}</a>
+          </li>
+  
+          {% if current_user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('main.feedback') }}">
+                {% if language == 'fr' %}Feedback{% else %}Feedback{% endif %}
+              </a>
+            </li>
+
+          {% endif %}
+  
+          <li class="nav-item">
             <a class="nav-link" href="{{ url_for('main.set_language', lang_code='en') }}">
               <img src="{{ url_for('static', filename='icons/gb.svg') }}" alt="English" width="20">
             </a>
@@ -29,25 +44,28 @@
               <img src="{{ url_for('static', filename='icons/fr.svg') }}" alt="Français" width="20">
             </a>
           </li>
+  
           {% if current_user.is_authenticated %}
-  <li class="nav-item text-light me-3 mt-2">
-    {% if language == "fr" %}
-      Connecté : <strong>{{ current_user.username }}</strong>
-    {% else %}
-      Logged in as: <strong>{{ current_user.username }}</strong>
-    {% endif %}
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{ url_for('main.logout') }}">
-      {% if language == "fr" %}Déconnexion{% else %}Logout{% endif %}
-    </a>
-  </li>
-{% endif %}
-
+            <li class="nav-item text-light me-3 mt-2">
+              {% if language == "fr" %}
+                Connecté : <strong>{{ current_user.username }}</strong>
+              {% else %}
+                Logged in as: <strong>{{ current_user.username }}</strong>
+              {% endif %}
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('main.logout') }}">
+                {% if language == "fr" %}Déconnexion{% else %}Logout{% endif %}
+              </a>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </div>
   </nav>
+  
+  
+  
 
   <main class="container-md py-4">
     {% block content %}{% endblock %}

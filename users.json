@@ -14,5 +14,9 @@
   "wrong@example.com": {
     "id": "4",
     "username": "wrong"
+  },
+  "testeur@gmail.com": {
+    "id": "5",
+    "username": "testeur"
   }
 }

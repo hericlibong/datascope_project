@@ -1,6 +1,9 @@
 from flask_login import UserMixin
 import json
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class User(UserMixin):
@@ -8,6 +11,10 @@ class User(UserMixin):
         self.id = id
         self.email = email
         self.username = username
+
+ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
+if ADMIN_EMAIL:
+    ADMIN_EMAIL = ADMIN_EMAIL.strip().lower()
 
 
 # Charger users.json (ou créer vide si inexistant)
@@ -52,3 +59,5 @@ def get_user_by_email(email):
         save_users_to_json()
 
     return user
+
+

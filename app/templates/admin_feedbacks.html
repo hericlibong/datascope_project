@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+  <div class="col-12 col-lg-10">
+    <h2 class="text-center mb-4">
+      {% if language == "fr" %}
+        📋 Retours utilisateurs
+      {% else %}
+        📋 User Feedbacks
+      {% endif %}
+    </h2>
+
+    {% if feedbacks %}
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Email</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for date, data in feedbacks.items() %}
+            <tr>
+              <td>{{ date }}</td>
+              <td>{{ data.email }}</td>
+              <td>{{ data.message }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p class="text-center">{% if language == "fr" %}Aucun feedback reçu.{% else %}No feedback received yet.{% endif %}</p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

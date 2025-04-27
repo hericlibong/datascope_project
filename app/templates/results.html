@@ -97,14 +97,39 @@
       </div>
     </div>
 
-    <!-- Action bouton retour -->
-    <div class="text-center mt-5">
-      <a href="/" class="btn btn-outline-primary btn-lg">
-        {% if language == "fr" %}← Analyser un autre article{% else %}← Analyze another article{% endif %}
-      </a>
-    </div>
+    <!-- Actions -->
+<div class="row mt-5">
+  <!-- Exporter -->
+  <div class="col-md-6 mb-3">
+    <form method="POST" action="/download">
+      <input type="hidden" name="article_text" value="{{ article_text }}">
+      <input type="hidden" name="score" value="{{ score }}">
+      <input type="hidden" name="score_comment" value="{{ score_comment }}">
+      <input type="hidden" name="profile" value="{{ profile_label }}">
+      <input type="hidden" name="entities" value="{{ entities }}">
+      <input type="hidden" name="angles" value="{{ angles }}">
+      <input type="hidden" name="sources" value="{{ sources }}">
+      <button type="submit" class="btn btn-success w-100 btn-lg">
+        📥 {% if language == "fr" %}
+          Exporter l’analyse (Markdown)
+        {% else %}
+          Export analysis (Markdown)
+        {% endif %}
+      </button>
+    </form>
+  </div>
 
+  <!-- Analyser un autre -->
+  <div class="col-md-6 mb-3">
+    <a href="/" class="btn btn-outline-primary w-100 btn-lg">
+      {% if language == "fr" %}
+        ← Analyser un autre article
+      {% else %}
+        ← Analyze another article
+      {% endif %}
+    </a>
   </div>
 </div>
+
 
 {% endblock %}

@@ -13,10 +13,15 @@ def create_app():
 
     app = Flask(__name__)
     app.secret_key = os.getenv("FLASK_SECRET_KEY", "dev-key")
+    from models import ADMIN_EMAIL
 
     # Enregistre les routes
     from app.routes import main
     app.register_blueprint(main)
+
+    app.context_processor
+    def inject_admin_email():
+        return dict(ADMIN_EMAIL=ADMIN_EMAIL)
 
     # Activer le filtre Markdown
     @app.template_filter('markdown')

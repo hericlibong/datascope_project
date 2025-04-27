@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10 col-lg-8">
+    <div class="card shadow-sm p-4 mt-4">
+      <h2 class="mb-4">
+        {% if language == "en" %}📘 User Guide{% else %}📘 Guide d'utilisation{% endif %}
+      </h2>
+
+      <h5>{% if language == "en" %}1. Analyze an article{% else %}1. Analyser un article{% endif %}</h5>
+      <p>{% if language == "en" %}Paste your text or upload a .txt, .pdf, or .docx file. Select the analysis language.{% else %}Collez votre texte ou téléversez un fichier (.txt, .pdf ou .docx). Sélectionnez la langue d’analyse.{% endif %}</p>
+
+      <h5>{% if language == "en" %}2. Understand the analysis{% else %}2. Comprendre l'analyse{% endif %}</h5>
+      <p>{% if language == "en" %}You will receive a datafication score, a list of extracted entities, suggested editorial angles, and links to open datasets.{% else %}Vous recevrez un score de datafication, une liste d’entités extraites, des suggestions d’angles éditoriaux, et des liens vers des jeux de données ouverts.{% endif %}</p>
+
+      <h5>{% if language == "en" %}3. Export the results{% else %}3. Exporter les résultats{% endif %}</h5>
+      <p>{% if language == "en" %}You can download the analysis in Markdown format for easier use in editorial projects.{% else %}Vous pouvez télécharger l’analyse au format Markdown pour une utilisation dans vos projets éditoriaux.{% endif %}</p>
+
+      <h5>{% if language == "en" %}4. Feedback is welcome!{% else %}4. Vos retours sont bienvenus !{% endif %}</h5>
+      <p>{% if language == "en" %}This is a first version. Your feedback will help improve future updates.{% else %}Ceci est une première version. Vos retours aideront à améliorer les futures évolutions.{% endif %}</p>
+
+      <div class="text-center mt-4">
+        <a href="/" class="btn btn-outline-primary">
+          {% if language == "en" %}← Back to Home{% else %}← Retour à l'accueil{% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

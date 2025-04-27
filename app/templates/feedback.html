@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+  <div class="col-md-8">
+    <h2 class="text-center mb-4">
+      {% if language == "fr" %}
+        ✉️ Donner votre avis
+      {% else %}
+        ✉️ Give Feedback
+      {% endif %}
+    </h2>
+
+    {% if success %}
+      <div class="alert alert-success text-center">{{ success }}</div>
+    {% endif %}
+
+    <form method="POST">
+      <div class="mb-3">
+        <label for="message" class="form-label">
+          {% if language == "fr" %}Votre message{% else %}Your message{% endif %}
+        </label>
+        <textarea name="message" class="form-control" rows="6" placeholder="{% if language == 'fr' %}Écrivez votre avis ici...{% else %}Write your feedback here...{% endif %}" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">
+        {% if language == "fr" %}Envoyer{% else %}Submit{% endif %}
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

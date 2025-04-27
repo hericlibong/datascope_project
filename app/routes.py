@@ -1,8 +1,9 @@
-from flask import Blueprint, render_template, request, session, redirect, url_for, flash
+from flask import Blueprint, render_template, request, session, redirect, url_for, flash, abort
 from core.article_parser import extract_article_text
 from core.nlp_utils import format_entities, compute_datafication_score
 from core.llm_engine import generate_journalistic_angles, suggest_datasets_llm, parse_markdown_list
 import os
+import json
 from werkzeug.utils import secure_filename
 from core.nlp_utils import group_named_entities
 from core.nlp_utils import interpret_datafication_score
@@ -12,8 +13,8 @@ from core.export_utils import export_analysis_to_markdown
 from langdetect import detect, LangDetectException
 import tempfile
 from datetime import datetime
-from flask_login import login_user, logout_user, login_required
-from models import get_user_by_email, USERS
+from flask_login import login_user, logout_user, login_required, current_user
+from models import get_user_by_email, USERS, ADMIN_EMAIL
 
 main = Blueprint("main", __name__)
 
@@ -24,6 +25,73 @@ ALLOWED_EXTENSIONS = {"txt", "pdf", "docx"}
 
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@main.route("/admin/users")
+@login_required
+def admin_users():
+    from models import ADMIN_EMAIL
+    if not current_user.is_authenticated or current_user.email != ADMIN_EMAIL:
+        abort(403)
+
+    try:
+        with open("users.json", "r") as f:
+            users_data = json.load(f)
+    except Exception:
+        users_data = {}
+
+    return render_template("admin_users.html", users=users_data, language=session.get("lang", "en"))
+
+
+
+# 📩 Route pour afficher le formulaire de feedback
+@main.route("/feedback", methods=["GET", "POST"])
+@login_required
+def feedback():
+    language = session.get("lang", "en")
+
+    if request.method == "POST":
+        email = current_user.email
+        message = request.form.get("message", "").strip()
+
+        if message:
+            try:
+                with open("feedbacks.json", "r") as f:
+                    feedbacks = json.load(f)
+            except (FileNotFoundError, json.JSONDecodeError):
+                feedbacks = {}
+
+            from datetime import datetime
+            timestamp = datetime.utcnow().isoformat(timespec='seconds')
+            feedbacks[timestamp] = {"email": email, "message": message}
+
+            with open("feedbacks.json", "w") as f:
+                json.dump(feedbacks, f, indent=4)
+
+            success_message = {
+                "fr": "Merci pour votre retour !",
+                "en": "Thank you for your feedback!"
+            }
+            return render_template("feedback.html", success=success_message[language], language=language)
+
+    return render_template("feedback.html", language=language)
+
+# 🔒 Route d'administration pour consulter les feedbacks
+@main.route("/admin/feedbacks")
+@login_required
+def admin_feedbacks():
+    # from models import ADMIN_EMAIL
+
+    if current_user.email != ADMIN_EMAIL:
+        abort(403)
+
+    try:
+        with open("feedbacks.json", "r") as f:
+            feedbacks = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        feedbacks = {}
+
+    return render_template("admin_feedbacks.html", feedbacks=feedbacks, language=session.get("lang", "en"))
 
 
 @main.route("/", methods=["GET"])
@@ -176,6 +244,13 @@ def download():
 def about():
     language = session.get("lang", "fr")
     return render_template("about.html", language=language)
+
+
+@main.route("/guide", methods=["GET"])
+def guide():
+    language = session.get("lang", "en")
+    return render_template("guide.html", language=language)
+
 
 
 @main.route("/set-language/<lang_code>")
