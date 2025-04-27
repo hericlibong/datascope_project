@@ -16,6 +16,25 @@ def client():
         yield client
 
 
+def test_login_get_page(client):
+    """
+    Teste l'affichage du formulaire de connexion (GET).
+    """
+    response = client.get("/login")
+    assert response.status_code == 200
+    assert b"Email" in response.data or b"email" in response.data
+
+
+def test_login_post_valid_email(client):
+    """
+    Teste un login réussi avec un email existant.
+    """
+    # Attention : ici il faut que l'email existe dans users.json
+    response = client.post("/login", data={"email": "hericlibong@gmail.com"})
+    assert response.status_code == 302  # Redirige vers home
+    assert "/home" not in response.location  # peut être simplement "/"
+
+
 def test_homepage_loads(client):
     response = client.get("/")
     assert response.status_code == 200

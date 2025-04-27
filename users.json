@@ -6,5 +6,13 @@
   "test@exmail.com": {
     "id": "2",
     "username": "test"
+  },
+  "email_incorrect@example.com": {
+    "id": "3",
+    "username": "email_incorrect"
+  },
+  "wrong@example.com": {
+    "id": "4",
+    "username": "wrong"
   }
 }

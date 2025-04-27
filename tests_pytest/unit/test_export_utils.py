@@ -1,6 +1,57 @@
 from core.export_utils import export_analysis_to_markdown
 
 
+def test_export_analysis_to_markdown_english_full_coverage():
+    text = "Sample English article to check all entities."
+    score = {"score": 8, "density": 0.2, "structured_items": 8, "word_count": 60}
+    comment = "Good potential."
+    profile = "📊 Strong structured article."
+
+    entities = {
+        "named_entities": [
+            {"text": "London", "label": "GPE"},
+            {"text": "BBC", "label": "ORG"}
+        ],
+        "numbers": [
+            {"value": 50, "unit": "injuries"},
+            {"value": 20, "unit": "hospitals"}
+        ],
+        "dates": [
+            {"text": "April 4"},
+            {"text": "2025"}
+        ],
+        "strong_verbs": [
+            {"lemma": "announce"},
+            {"lemma": "confirm"}
+        ]
+    }
+
+    angles = "1. **Title**: Study the renewable energy investments."
+    sources = "1. [ONS](https://ons.gov.uk)\n2. [UK Gov](https://gov.uk)"
+
+    md_output = export_analysis_to_markdown(
+        text, score, comment, profile, entities, angles, sources, language="en"
+    )
+
+    # Assertions générales
+    assert "# 📄 DataScope Analysis Result" in md_output
+    assert "## 🧾 Input Text" in md_output
+    assert "## 📊 Datafication Score" in md_output
+    assert "## 🧠 Extracted Entities" in md_output
+    assert "## 🧭 Suggested Editorial Angles" in md_output
+    assert "## 🌐 Suggested Sources / Datasets" in md_output
+
+    # Assertions spécifiques pour toutes les entités
+    assert "London (GPE)" in md_output
+    assert "BBC (ORG)" in md_output
+    assert "50 injuries" in md_output
+    assert "20 hospitals" in md_output
+    assert "April 4" in md_output
+    assert "2025" in md_output
+    assert "announce" in md_output
+    assert "confirm" in md_output
+
+
 def test_export_analysis_to_markdown_creates_valid_structure():
     text = "Exemple d’article simple."
     score = {"score": 8, "density": 0.1, "structured_items": 4, "word_count": 40}

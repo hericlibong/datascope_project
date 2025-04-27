@@ -12,8 +12,11 @@
     </h2>
 
     {% if error %}
-    <div class="alert alert-danger text-center">{{ error }}</div>
-    {% endif %}
+  <div class="alert alert-danger text-center" id="login-error">
+      {{ error }}
+  </div>
+{% endif %}
+
 
     <form method="POST">
       <div class="mb-3">
@@ -31,3 +34,7 @@
 </div>
 
 {% endblock %}
+
+
+
+
