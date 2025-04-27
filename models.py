@@ -12,6 +12,7 @@ class User(UserMixin):
         self.email = email
         self.username = username
 
+
 ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
 if ADMIN_EMAIL:
     ADMIN_EMAIL = ADMIN_EMAIL.strip().lower()
@@ -59,5 +60,3 @@ def get_user_by_email(email):
         save_users_to_json()
 
     return user
-
-

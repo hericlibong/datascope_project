@@ -20,6 +20,7 @@ def create_app():
     app.register_blueprint(main)
 
     app.context_processor
+
     def inject_admin_email():
         return dict(ADMIN_EMAIL=ADMIN_EMAIL)
 

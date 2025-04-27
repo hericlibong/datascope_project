@@ -43,7 +43,6 @@ def admin_users():
     return render_template("admin_users.html", users=users_data, language=session.get("lang", "en"))
 
 
-
 # 📩 Route pour afficher le formulaire de feedback
 @main.route("/feedback", methods=["GET", "POST"])
 @login_required
@@ -77,6 +76,8 @@ def feedback():
     return render_template("feedback.html", language=language)
 
 # 🔒 Route d'administration pour consulter les feedbacks
+
+
 @main.route("/admin/feedbacks")
 @login_required
 def admin_feedbacks():
@@ -250,7 +251,6 @@ def about():
 def guide():
     language = session.get("lang", "en")
     return render_template("guide.html", language=language)
-
 
 
 @main.route("/set-language/<lang_code>")
