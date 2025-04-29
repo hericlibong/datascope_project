@@ -87,6 +87,7 @@
     <p class="mb-1 text-muted small">
       © 2025 DataScope — Augmented analysis with NLP & LLM
     </p>
+
     <p class="mb-1">
       <a href="https://hericldev.onrender.com" target="_blank" class="text-primary text-decoration-none">
         {% if language == "fr" %}
@@ -96,6 +97,17 @@
         {% endif %}
       </a>
     </p>
+
+    <!-- Liens GitHub et LinkedIn -->
+    <div class="mb-2">
+      <a href="https://github.com/hericlibong" target="_blank" class="mx-2 text-decoration-none">
+        <img src="{{ url_for('static', filename='Github.svg') }}" alt="GitHub" width="24" height="24">
+      </a>
+      <a href="https://www.linkedin.com/in/hericlibong" target="_blank" class="mx-2 text-decoration-none">
+        <img src="{{ url_for('static', filename='icons/linkedin.svg') }}" alt="LinkedIn" width="24" height="24">
+      </a>
+    </div>
+
     <p class="mb-0">
       <a href="/" class="text-secondary text-decoration-none">
         {% if language == "fr" %}
@@ -107,6 +119,7 @@
     </p>
   </div>
 </footer>
+
 
 
 
