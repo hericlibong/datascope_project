@@ -3,6 +3,7 @@ import re
 from openai import OpenAI
 from dotenv import load_dotenv
 from core.nlp_utils import format_entities
+import markdown
 
 # Charge les variables d'environnement (.env)
 load_dotenv()
@@ -120,8 +121,14 @@ def suggest_datasets_llm(text: str, entities: dict, language: str = "fr") -> str
 
 def parse_markdown_list(raw_text: str) -> list:
     """
-    Extrait une liste structurée depuis un texte markdown GPT :
-    "1. **Titre** : Contenu"
+    Extrait une liste structurée depuis un texte markdown GPT
+    et transforme le contenu en HTML.
     """
     entries = re.findall(r"\d+\.\s+\*\*(.*?)\*\*\s*:\s*(.*?)\s*(?=\d+\.\s|\Z)", raw_text, re.DOTALL)
-    return [{"title": title.strip(), "content": content.strip()} for title, content in entries]
+    return [
+        {
+            "title": title.strip(),
+            "content": markdown.markdown(content.strip())  # 🔁 ici la transformation HTML
+        }
+        for title, content in entries
+    ]

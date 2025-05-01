@@ -9,16 +9,23 @@
       </h2>
 
       <h5>{% if language == "en" %}1. Analyze an article{% else %}1. Analyser un article{% endif %}</h5>
-      <p>{% if language == "en" %}Paste your text or upload a .txt, .pdf, or .docx file. Select the analysis language.{% else %}Collez votre texte ou téléversez un fichier (.txt, .pdf ou .docx). Sélectionnez la langue d’analyse.{% endif %}</p>
+<p>{% if language == "en" %}Paste your text or upload a .txt, .pdf, or .docx file. Select the analysis language.{% else %}Collez votre texte ou téléversez un fichier (.txt, .pdf ou .docx). Sélectionnez la langue d’analyse.{% endif %}</p>
 
-      <h5>{% if language == "en" %}2. Understand the analysis{% else %}2. Comprendre l'analyse{% endif %}</h5>
-      <p>{% if language == "en" %}You will receive a datafication score, a list of extracted entities, suggested editorial angles, and links to open datasets.{% else %}Vous recevrez un score de datafication, une liste d’entités extraites, des suggestions d’angles éditoriaux, et des liens vers des jeux de données ouverts.{% endif %}</p>
+<h5>{% if language == "en" %}2. Understand the analysis{% else %}2. Comprendre l'analyse{% endif %}</h5>
+<p>{% if language == "en" %}You will receive a datafication score, a list of extracted entities, suggested editorial angles, and links to open datasets.{% else %}Vous recevrez un score de datafication, une liste d’entités extraites, des suggestions d’angles éditoriaux, et des liens vers des jeux de données ouverts.{% endif %}</p>
 
-      <h5>{% if language == "en" %}3. Export the results{% else %}3. Exporter les résultats{% endif %}</h5>
-      <p>{% if language == "en" %}You can download the analysis in Markdown format for easier use in editorial projects.{% else %}Vous pouvez télécharger l’analyse au format Markdown pour une utilisation dans vos projets éditoriaux.{% endif %}</p>
+<h5>{% if language == "en" %}3. Try again for new suggestions{% else %}3. Relancer pour de nouvelles suggestions{% endif %}</h5>
+<p>{% if language == "en" %}
+  Editorial angles and suggested datasets are AI-generated and change slightly on each refresh. This can help if you’re looking for other ideas or were not fully satisfied.
+{% else %}
+  Les angles éditoriaux et les sources suggérées sont générés par l’IA et changent légèrement à chaque actualisation. Cela peut vous aider si vous cherchez d'autres idées ou si vous n'étiez pas pleinement satisfait.
+{% endif %}</p>
 
-      <h5>{% if language == "en" %}4. Feedback is welcome!{% else %}4. Vos retours sont bienvenus !{% endif %}</h5>
-      <p>{% if language == "en" %}This is a first version. Your feedback will help improve future updates.{% else %}Ceci est une première version. Vos retours aideront à améliorer les futures évolutions.{% endif %}</p>
+<h5>{% if language == "en" %}4. Export the results{% else %}4. Exporter les résultats{% endif %}</h5>
+<p>{% if language == "en" %}You can download the analysis in Markdown format for easier use in editorial projects.{% else %}Vous pouvez télécharger l’analyse au format Markdown pour une utilisation dans vos projets éditoriaux.{% endif %}</p>
+
+<h5>{% if language == "en" %}5. Feedback is welcome!{% else %}5. Vos retours sont bienvenus !{% endif %}</h5>
+<p>{% if language == "en" %}This is a first version. Your feedback will help improve future updates.{% else %}Ceci est une première version. Vos retours aideront à améliorer les futures évolutions.{% endif %}</p>
 
       <div class="text-center mt-4">
         <a href="/" class="btn btn-outline-primary">

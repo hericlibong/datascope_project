@@ -4,6 +4,17 @@
 <div class="row justify-content-center mt-5">
   <div class="col-12 col-lg-10">
     <h2 class="text-center mb-4">
+      <div class="text-center mb-4">
+        <a href="{{ url_for('main.download_feedbacks') }}" class="btn btn-outline-secondary btn-sm" target="_blank">
+          {% if language == "fr" %}
+            ⬇️ Télécharger le fichier JSON
+          {% else %}
+            ⬇️ Download JSON file
+          {% endif %}
+        </a>
+      </div>
+      
+
       {% if language == "fr" %}
         📋 Retours utilisateurs
       {% else %}
@@ -17,6 +28,10 @@
           <tr>
             <th>Date</th>
             <th>Email</th>
+            <th>Relevance</th>
+            <th>Angles</th>
+            <th>Sources</th>
+            <th>Reusability</th>
             <th>Message</th>
           </tr>
         </thead>
@@ -24,7 +39,11 @@
           {% for date, data in feedbacks.items() %}
             <tr>
               <td>{{ date }}</td>
-              <td>{{ data.email }}</td>
+              <td>{{ data.email }}</td> 
+              <td>{{ data.relevance }}</td>
+              <td>{{ data.angles }}</td>
+              <td>{{ data.sources }}</td>
+              <td>{{ data.reusability }}</td>
               <td>{{ data.message }}</td>
             </tr>
           {% endfor %}

@@ -10,5 +10,13 @@
     "2025-04-27T12:09:18": {
         "email": "testeur@gmail.com",
         "message": "c'est l'avis de testeur"
+    },
+    "2025-05-01T14:32:45": {
+        "email": "hericlibong@gmail.com",
+        "relevance": "not_relevant",
+        "angles": "interesting",
+        "sources": "acceptable",
+        "reusability": "maybe",
+        "message": "c'est un bon début"
     }
 }

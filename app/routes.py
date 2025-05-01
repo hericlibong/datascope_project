@@ -15,6 +15,7 @@ import tempfile
 from datetime import datetime
 from flask_login import login_user, logout_user, login_required, current_user
 from models import get_user_by_email, USERS, ADMIN_EMAIL
+from io import BytesIO
 
 main = Blueprint("main", __name__)
 
@@ -43,7 +44,7 @@ def admin_users():
     return render_template("admin_users.html", users=users_data, language=session.get("lang", "en"))
 
 
-# 📩 Route pour afficher le formulaire de feedback
+# 📩 Route pour afficher et enregistrer le feedback structuré
 @main.route("/feedback", methods=["GET", "POST"])
 @login_required
 def feedback():
@@ -51,33 +52,46 @@ def feedback():
 
     if request.method == "POST":
         email = current_user.email
+
+        # Données du formulaire
+        relevance = request.form.get("relevance")
+        angles = request.form.get("angles")
+        sources = request.form.get("sources")
+        reusability = request.form.get("reusability")
         message = request.form.get("message", "").strip()
 
-        if message:
+        if relevance and angles and sources and reusability:
             try:
                 with open("feedbacks.json", "r") as f:
                     feedbacks = json.load(f)
             except (FileNotFoundError, json.JSONDecodeError):
                 feedbacks = {}
 
-            from datetime import datetime
             timestamp = datetime.utcnow().isoformat(timespec='seconds')
-            feedbacks[timestamp] = {"email": email, "message": message}
+
+            feedbacks[timestamp] = {
+                "email": email,
+                "relevance": relevance,
+                "angles": angles,
+                "sources": sources,
+                "reusability": reusability,
+                "message": message
+            }
 
             with open("feedbacks.json", "w") as f:
-                json.dump(feedbacks, f, indent=4)
+                json.dump(feedbacks, f, indent=4, ensure_ascii=False)
 
             success_message = {
-                "fr": "Merci pour votre retour !",
-                "en": "Thank you for your feedback!"
+                "fr": "Merci pour votre retour structuré !",
+                "en": "Thank you for your detailed feedback!"
             }
+
             return render_template("feedback.html", success=success_message[language], language=language)
 
     return render_template("feedback.html", language=language)
 
+
 # 🔒 Route d'administration pour consulter les feedbacks
-
-
 @main.route("/admin/feedbacks")
 @login_required
 def admin_feedbacks():
@@ -270,3 +284,22 @@ def set_language(lang_code):
         return redirect(url_for("main.home"))
 
     return redirect(referrer)
+
+
+@main.route("/admin/download-feedbacks")
+@login_required
+def download_feedbacks():
+    if current_user.email != ADMIN_EMAIL:
+        abort(403)
+
+    try:
+        with open("feedbacks.json", "rb") as f:
+            content = f.read()
+        return send_file(
+            BytesIO(content),
+            mimetype="application/json",
+            as_attachment=True,
+            download_name="feedbacks.json"
+        )
+    except FileNotFoundError:
+        return "Fichier de feedback introuvable.", 404

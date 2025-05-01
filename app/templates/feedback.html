@@ -16,11 +16,88 @@
     {% endif %}
 
     <form method="POST">
+      <!-- 1. Pertinence de l'analyse -->
+      <div class="mb-3">
+        <label class="form-label">
+          {% if language == 'fr' %}
+            1. L’analyse automatisée vous semble-t-elle pertinente ?
+          {% else %}
+            1. Was the automated analysis relevant to you?
+          {% endif %}
+        </label>
+        {% for value, fr, en in [('not_relevant','Peu pertinente','Not relevant'), ('moderately','Assez pertinente','Somewhat relevant'), ('highly','Très pertinente','Highly relevant')] %}
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="relevance" value="{{ value }}" required>
+            <label class="form-check-label">
+              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- 2. Angles éditoriaux -->
+      <div class="mb-3">
+        <label class="form-label">
+          {% if language == 'fr' %}
+            2. Les angles éditoriaux proposés vous ont-ils inspiré ?
+          {% else %}
+            2. Were the suggested editorial angles inspiring?
+          {% endif %}
+        </label>
+        {% for value, fr, en in [('not_useful','Peu utiles','Not useful'), ('interesting','Intéressants','Interesting'), ('inspiring','Inspirants','Inspiring')] %}
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="angles" value="{{ value }}" required>
+            <label class="form-check-label">
+              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- 3. Fiabilité des sources -->
+      <div class="mb-3">
+        <label class="form-label">
+          {% if language == 'fr' %}
+            3. Que pensez-vous des sources/datasets suggérés ?
+          {% else %}
+            3. How reliable were the suggested datasets/sources?
+          {% endif %}
+        </label>
+        {% for value, fr, en in [('unreliable','Peu fiables','Unreliable'), ('acceptable','Acceptables','Acceptable'), ('reliable','Fiables','Reliable')] %}
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sources" value="{{ value }}" required>
+            <label class="form-check-label">
+              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- 4. Réutilisation future -->
+      <div class="mb-3">
+        <label class="form-label">
+          {% if language == 'fr' %}
+            4. Avez-vous envie de réutiliser cet outil ?
+          {% else %}
+            4. Would you want to reuse this tool?
+          {% endif %}
+        </label>
+        {% for value, fr, en in [('no','Non','No'), ('maybe','Peut-être','Maybe'), ('yes','Oui, certainement','Yes, definitely')] %}
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="reusability" value="{{ value }}" required>
+            <label class="form-check-label">
+              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Champ texte libre -->
       <div class="mb-3">
         <label for="message" class="form-label">
-          {% if language == "fr" %}Votre message{% else %}Your message{% endif %}
+          {% if language == "fr" %}Votre message libre (optionnel){% else %}Optional comment{% endif %}
         </label>
-        <textarea name="message" class="form-control" rows="6" placeholder="{% if language == 'fr' %}Écrivez votre avis ici...{% else %}Write your feedback here...{% endif %}" required></textarea>
+        <textarea name="message" class="form-control" rows="4" placeholder="{% if language == 'fr' %}Écrivez votre remarque ici...{% else %}Write your comment here...{% endif %}"></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary w-100">

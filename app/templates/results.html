@@ -73,7 +73,7 @@
           {% for item in parsed_angles %}
             <li class="list-group-item">
               <strong>{{ item.title }}</strong><br>
-              <span class="text-muted">{{ item.content }}</span>
+              <span class="text-muted">{{ item.content | safe }}</span>
             </li>
           {% endfor %}
         </ul>
@@ -90,7 +90,8 @@
           {% for item in parsed_sources %}
             <li class="list-group-item">
               <strong>{{ item.title }}</strong><br>
-              <span class="text-muted">{{ item.content }}</span>
+              <span class="text-muted">{{ item.content | safe }}</span>
+
             </li>
           {% endfor %}
         </ul>
