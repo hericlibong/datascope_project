@@ -80,6 +80,22 @@
       </div>
     </div>
 
+    <!-- Bloc Suggestions de Visualisation -->
+<div class="card mb-5">
+  <div class="card-header">
+    📊 {% if language == "fr" %}Suggestions de visualisation par angle{% else %}Visualization Suggestions by Angle{% endif %}
+  </div>
+  <div class="card-body">
+    {% for angle in parsed_angles %}
+      <div class="mb-3">
+        <strong>{{ angle.title }}</strong><br>
+        <small class="text-muted">{{ angle.visualization | safe }}</small>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
     <!-- Sources -->
     <div class="card mb-5">
       <div class="card-header">
@@ -97,6 +113,8 @@
         </ul>
       </div>
     </div>
+
+   
 
     <!-- Actions -->
 <div class="row mt-5">

@@ -119,6 +119,38 @@ def suggest_datasets_llm(text: str, entities: dict, language: str = "fr") -> str
     return call_openai(messages)
 
 
+def suggest_visualizations_llm(angles: list[dict], language="fr") -> str:
+    """
+    Génère des suggestions de visualisation pour chaque angle éditorial.
+    """
+    prompt = "Voici des angles éditoriaux proposés :\n"
+    for idx, angle in enumerate(angles, 1):
+        prompt += f"{idx}. {angle['title']}\n"
+
+    if language == "en":
+        instruction = (
+            "For each angle above, suggest 1 or 2 relevant types of data visualizations "
+            "and explain why these would support the story. Clearly link each visualization suggestion to the corresponding angle."
+        )
+    else:
+        instruction = (
+            "Pour chaque angle ci-dessus, suggère une ou deux visualisations de données pertinentes "
+            "et explique brièvement pourquoi elles soutiendraient bien l'analyse. Associe chaque suggestion à l'angle correspondant."
+        )
+
+    messages = [
+        {"role": "system", "content": "You are a data visualization advisor for data journalism."},
+        {"role": "user", "content": prompt + "\n\n" + instruction}
+    ]
+
+    # Appel LLM pour générer les visualisations
+    response = call_openai(messages)
+    return response.strip()
+
+
+
+
+
 def parse_markdown_list(raw_text: str) -> list:
     """
     Extrait une liste structurée depuis un texte markdown GPT

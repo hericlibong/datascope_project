@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, session, redirect, url_for, flash, abort
 from core.article_parser import extract_article_text
 from core.nlp_utils import format_entities, compute_datafication_score
-from core.llm_engine import generate_journalistic_angles, suggest_datasets_llm, parse_markdown_list
+from core.llm_engine import generate_journalistic_angles, suggest_datasets_llm, parse_markdown_list, suggest_visualizations_llm
 import os
 import json
 from werkzeug.utils import secure_filename
@@ -16,6 +16,8 @@ from datetime import datetime
 from flask_login import login_user, logout_user, login_required, current_user
 from models import get_user_by_email, USERS, ADMIN_EMAIL
 from io import BytesIO
+import re
+import markdown
 
 main = Blueprint("main", __name__)
 
@@ -204,6 +206,46 @@ def analyze():
         grouped_entities = group_named_entities(entities["named_entities"])
         score_comment = interpret_datafication_score(score_data["score"], language)
         profile_label = get_article_profile(entities, score_data, language)
+
+             
+        # 🧮  Génération des suggestions de visualisation pour chaque angle
+        try:
+            viz_suggestions = suggest_visualizations_llm(parsed_angles, language)
+            print("Réponse LLM Brute (Visualisation) :\n", viz_suggestions)
+
+            # -------- 1. découper bloc par bloc ------------- #
+            bloc_re = re.compile(
+                r"^\d+\.\s+\*\*(.*?)\*\*\s*(.*?)(?=\n\d+\.\s|\Z)",
+                re.DOTALL | re.MULTILINE
+            )
+            blocs = bloc_re.findall(viz_suggestions)
+
+            for idx, angle in enumerate(parsed_angles):
+                if idx < len(blocs):
+                    _titre, corps = blocs[idx]
+
+                    # -------- 2. extraire chaque puce ------------- #
+                    items = []
+                    for m in re.findall(r"^\s*-\s+\*\*(.*?)\*\*\s*:\s*(.*?)(?=\n\s*-\s|\Z)", 
+                                        corps, re.DOTALL | re.MULTILINE):
+                        viz_title, desc = m
+                        # format Markdown propre : **Titre** : description
+                        items.append(f"- **{viz_title.strip()}**: {desc.strip()}")
+
+                    # Si pas de puce détectée, on garde le corps tel quel
+                    markdown_in = "\n".join(items) if items else corps.strip()
+
+                    # -------- 3. conversion Markdown -> HTML -------- #
+                    angle["visualization"] = markdown.markdown(markdown_in)
+                else:
+                    angle["visualization"] = "<em>N/A</em>"
+        except Exception as e:
+            print("Erreur parsing visualisations :", e)
+            for angle in parsed_angles:
+                angle["visualization"] = "<em>N/A</em>"
+
+
+
 
         # Comptage des types d'entités
         entity_counts = {
