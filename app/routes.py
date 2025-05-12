@@ -207,7 +207,6 @@ def analyze():
         score_comment = interpret_datafication_score(score_data["score"], language)
         profile_label = get_article_profile(entities, score_data, language)
 
-             
         # 🧮  Génération des suggestions de visualisation pour chaque angle
         try:
             viz_suggestions = suggest_visualizations_llm(parsed_angles, language)
@@ -226,7 +225,7 @@ def analyze():
 
                     # -------- 2. extraire chaque puce ------------- #
                     items = []
-                    for m in re.findall(r"^\s*-\s+\*\*(.*?)\*\*\s*:\s*(.*?)(?=\n\s*-\s|\Z)", 
+                    for m in re.findall(r"^\s*-\s+\*\*(.*?)\*\*\s*:\s*(.*?)(?=\n\s*-\s|\Z)",
                                         corps, re.DOTALL | re.MULTILINE):
                         viz_title, desc = m
                         # format Markdown propre : **Titre** : description
@@ -243,9 +242,6 @@ def analyze():
             print("Erreur parsing visualisations :", e)
             for angle in parsed_angles:
                 angle["visualization"] = "<em>N/A</em>"
-
-
-
 
         # Comptage des types d'entités
         entity_counts = {

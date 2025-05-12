@@ -148,9 +148,6 @@ def suggest_visualizations_llm(angles: list[dict], language="fr") -> str:
     return response.strip()
 
 
-
-
-
 def parse_markdown_list(raw_text: str) -> list:
     """
     Extrait une liste structurée depuis un texte markdown GPT
