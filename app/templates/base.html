@@ -1,20 +1,30 @@
 
+
 <!doctype html>
 
 <html lang="{{ language }}">
 <head>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
   <meta charset="utf-8">
   <title>DataScope</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/yeti/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/quartz/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container-md">
-      <a class="navbar-brand" href="/">📊 DataScope</a>
-      <div>
-        <ul class="navbar-nav ms-auto">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow rounded-3 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="/">
+        <img src="{{ url_for('static', filename='assets/logo_datascope_sized.png') }}" alt="DataScope" width="60" height="50" class="d-inline-block align-text-top">        
+    </a>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="/">{% if language == 'en' %}Analyze{% else %}Analyse{% endif %}</a>
           </li>
@@ -24,29 +34,41 @@
           <li class="nav-item">
             <a class="nav-link" href="/guide">{% if language == 'en' %}Guide{% else %}Guide{% endif %}</a>
           </li>
-  
-          {% if current_user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.feedback') }}">
-                {% if language == 'fr' %}Feedback{% else %}Feedback{% endif %}
-              </a>
-            </li>
 
-          {% endif %}
-  
+          {% if current_user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('main.set_language', lang_code='en') }}">
-              <img src="{{ url_for('static', filename='icons/gb.svg') }}" alt="English" width="20">
+            <a class="nav-link" href="{{ url_for('main.feedback') }}">
+              {% if language == 'fr' %}Feedback{% else %}Feedback{% endif %}
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('main.set_language', lang_code='fr') }}">
-              <img src="{{ url_for('static', filename='icons/fr.svg') }}" alt="Français" width="20">
+
+        {% endif %}
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {% if language == 'en' %}
+                <img src="{{ url_for('static', filename='icons/gb.svg') }}" class="language-flag" alt="English"> English
+              {% else %}
+                <img src="{{ url_for('static', filename='icons/fr.svg') }}" class="language-flag" alt="Français"> Français
+              {% endif %}
             </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item" href="{{ url_for('main.set_language', lang_code='en') }}">
+                  <img src="{{ url_for('static', filename='icons/gb.svg') }}" class="language-flag" alt="English"> English
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ url_for('main.set_language', lang_code='fr') }}">
+                  <img src="{{ url_for('static', filename='icons/fr.svg') }}" class="language-flag" alt="Français"> Français
+                </a>
+              </li>
+            </ul>
           </li>
+
   
           {% if current_user.is_authenticated %}
-            <li class="nav-item text-light me-3 mt-2">
+            <li class="nav-item text-primary me-3 mt-2">
               {% if language == "fr" %}
                 Connecté : <strong>{{ current_user.username }}</strong>
               {% else %}
@@ -82,12 +104,34 @@
 {% endwith %}
 
 
-<footer class="bg-light text-center py-4 mt-5 border-top">
-  <div class="container">
-    <p class="mb-1 text-muted small">
-      © 2025 DataScope — Augmented analysis with NLP & LLM
-    </p>
+<footer class="bg-dark text-light py-5">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Colonne 1 : Logo et Réseaux Sociaux -->
+    <div class="d-flex align-items-center">
+      <a href="/" class="d-flex align-items-center text-decoration-none">
+        <img src="{{ url_for('static', filename='assets/datascope_logo_white_rezided.png') }}" alt="DataScope" width="120" height="100" class="me-2">
+        <span class="fw-bold">DataScope</span>
+      </a>
+      <div class="ms-3">
+        <a href="https://github.com/hericlibong/datascope_project" target="_blank" class="text-light text-decoration-none me-2">
+          <img src="{{ url_for('static', filename='icons/Github.svg') }}" alt="GitHub" width="24" height="24">
+        </a>
+        <a href="https://www.linkedin.com/in/hericlibong" target="_blank" class="text-light text-decoration-none">
+          <img src="{{ url_for('static', filename='icons/linkedin.svg') }}" alt="LinkedIn" width="24" height="24">
+        </a>
+      </div>
+    </div>
 
+    <!-- Colonne 2 : Liens -->
+    <div>
+      <ul class="list-unstyled">
+        <li><a href="/about" class="text-light text-decoration-none">{% if language == 'en' %}About{% else %}À propos{% endif %}</a></li>
+        <li><a href="/guide" class="text-light text-decoration-none">{% if language == 'en' %}Guide{% else %}Guide{% endif %}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <p class="mb-0 small">© 2025 DataScope — Augmented analysis with NLP & LLM</p>
     <p class="mb-1">
       <a href="https://hericldev.onrender.com" target="_blank" class="text-primary text-decoration-none">
         {% if language == "fr" %}
@@ -97,31 +141,10 @@
         {% endif %}
       </a>
     </p>
-
-    <!-- Liens GitHub et LinkedIn -->
-    <div class="mb-2">
-      <a href="https://github.com/hericlibong/datascope_project" target="_blank" class="mx-2 text-decoration-none">
-        <img src="{{ url_for('static', filename='icons/Github.svg') }}" alt="GitHub" width="24" height="24">
-      </a>
-      <a href="https://www.linkedin.com/in/hericlibong" target="_blank" class="mx-2 text-decoration-none">
-        <img src="{{ url_for('static', filename='icons/linkedin.svg') }}" alt="LinkedIn" width="24" height="24">
-      </a>
-    </div>
-
-    <p class="mb-0">
-      <a href="/" class="text-secondary text-decoration-none">
-        {% if language == "fr" %}
-          ← Retour à l'accueil
-        {% else %}
-          ← Back to home
-        {% endif %}
-      </a>
-    </p>
   </div>
 </footer>
 
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

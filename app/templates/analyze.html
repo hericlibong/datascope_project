@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="row justify-content-center">
+<div class="row justify-content-center custom-analyze">
   <div class="col-12 col-md-10 col-lg-9">
-    <div class="card shadow-sm p-4 mt-4">
-      <h2>
-        {% if language == "fr" %}📝 Analyser un article{% else %}📝 Analyze an Article{% endif %}
-      </h2>
-      <hr/>
+    <div class="analyze-block">
+      <div class="d-flex align-items-center">
+        <div class="analyze-header" style="color: grey;">
+          <img src="{{ url_for('static', filename='assets/logo_datascope_sized.png') }}" alt="DataScope" width="60" height="50" class="me-2">
+          <span class="fw-bold">DataScope</span>
+      </div>
+        <h2 class="ms-3 custom-title text-end" style="color:grey">
+          {% if language == "fr" %} Analyser un article{% else %} Analyze an Article{% endif %}
+        </h2>
+      </div>
+      <hr class="my-3"/>
 
       <form method="POST" action="/analyze" enctype="multipart/form-data">
         <div class="mb-4">
@@ -16,30 +22,27 @@
               {% if language == "fr" %}Coller votre article{% else %}Paste your article{% endif %}
             </span>
           </label>
-          <textarea name="article_text" class="form-control" rows="15" placeholder="{% if language == 'fr' %}Texte à analyser...{% else %}Text to analyze...{% endif %}"></textarea>
+          <textarea name="article_text" class="analyze-textarea" rows="15" placeholder="{% if language == 'fr' %}Texte à analyser...{% else %}Text to analyze...{% endif %}"></textarea>
         </div>
-        <hr/>
 
         <div class="mb-4">
           <label for="article_file" class="form-label">
             <span class="badge bg-dark">
-            {% if language == "fr" %}Ou envoyer un fichier (.txt, .pdf, .docx){% else %}Or upload a file (.txt, .pdf, .docx){% endif %}
+              {% if language == "fr" %}Ou envoyer un fichier (.txt, .pdf, .docx){% else %}Or upload a file (.txt, .pdf, .docx){% endif %}
             </span>
           </label>
-          <input type="file" class="form-control">
+          <input type="file" class="form-control" style="color:grey">
           {% if language == 'en' %}
           <span class="badge bg-warning">
-          <small class="text-muted">Note: The “Browse” button label may appear in your system’s default language.</small>
-        </span>
+            <small class="text-muted">Note: The “Browse” button label may appear in your system’s default language.</small>
+          </span>
           {% endif %}
         </div>
-       
 
-        <button type="submit" class="btn btn-primary btn-lg w-100">
+        <button type="submit" class="analyze-btn">
           {% if language == "fr" %}Analyser{% else %}Analyze{% endif %}
         </button>
       </form>
-    
 
       {% if error %}
       <div class="alert alert-warning mt-4 text-center">{{ error }}</div>

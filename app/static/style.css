@@ -1,8 +1,104 @@
 body {
   /* font-family: 'Segoe UI', sans-serif; */
-  background-color: #f9f9f9;
+  background-color: #ebedf7;
   font-weight: 500; /* Ajouté pour un texte légèrement plus gras */
 }
+
+.navbar {
+  backdrop-filter: blur(5px);
+  background-color: #d5e7f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 30px !important; /* Ajouter !important pour forcer l'application */
+  margin: 20px auto;
+  max-width: 60%;
+  opacity: 80%;
+  
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar .btn {
+  margin-left: 5px;
+}
+
+.language-flag {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.navbar-brand img {
+  
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+footer {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+footer a:hover {
+  color: #00bcd4;
+}
+.custom-analyze {
+  margin-top: 100px;
+}
+
+.custom-analyze {
+  margin-top: 100px;
+}
+
+.card {
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: #6c757d;
+}
+
+textarea {
+  border-radius: 0.5rem;
+  border-color: #6c757d;
+
+}
+.custom-analyze {
+    margin-top: 100px;
+}
+
+.analyze-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.analyze-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+
+.analyze-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.analyze-block {
+  padding: 20px;
+  background-color: #d5e7f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 80%;
+}
+.analyze-header {
+  padding: 8px;
+  background-color: #d5e7f0;
+  border-right: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+}
+
 
  
   
