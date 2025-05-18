@@ -18,82 +18,114 @@
       </div>
     </div>
 
-    <!-- Ligne Score + Entités -->
-    <div class="row mb-5">
-      <!-- Score -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-header">
-            📈 {% if language == "fr" %}Score de datafication{% else %}Datafication Score{% endif %}
-          </div>
-          <div class="card-body">
-            <p><span class="badge bg-success fs-5">Score : {{ score.score }}/10</span></p>
-            <p><strong>{% if language == "fr" %}Densité :{% else %}Density:{% endif %}</strong> {{ score.density }} ({{ score.structured_items }} / {{ score.word_count }} mots)</p>
-            <p><strong>{% if language == "fr" %}Commentaire :{% else %}Commentary:{% endif %}</strong> {{ score_comment }}</p>
-            <p><strong>{% if language == "fr" %}Profil éditorial :{% else %}Editorial Profile:{% endif %}</strong> {{ profile_label }}</p>
-          </div>
-        </div>
+ <!-- Ligne Score + Entités -->
+<div class="row mb-5">
+  <!-- Datafication Score -->
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header d-flex align-items-center">
+        📈 {% if language == "fr" %}Score de datafication{% else %}Datafication Score{% endif %}
+        <button type="button"
+                class="btn btn-sm btn-outline-secondary ms-2"
+                data-bs-toggle="popover"
+                data-bs-trigger="hover focus"
+                title="{% if language == 'fr' %}Comment est calculé le score ?{% else %}How is the score calculated?{% endif %}"
+                data-bs-content="{{ datafication_explanation }}">
+          ?
+        </button>
       </div>
-
-      <!-- Résumé Entités -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-header">
-            🧠 {% if language == "fr" %}Résumé des entités détectées{% else %}Entities Detected Summary{% endif %}
-          </div>
-          <div class="card-body">
-            <table class="table table-bordered table-sm text-center">
-              <thead>
-                <tr>
-                  <th>{% if language == "fr" %}Type d'entité{% else %}Entity Type{% endif %}</th>
-                  <th>{% if language == "fr" %}Nombre{% else %}Count{% endif %}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for key, count in entity_counts.items() %}
-                  <tr>
-                    <td>{{ key }}</td>
-                    <td>{{ count }}</td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          </div>
+      
+      <div class="card-body">
+        <p>
+          <span class="badge {% if score.score >= 7 %}bg-success{% elif score.score >= 4 %}bg-warning{% else %}bg-danger{% endif %} fs-4">
+            {% if language == "fr" %}Score{% else %}Score{% endif %} : {{ score.score }}/10
+          </span>
+        </p>
+        <hr/>
+        <div class="mt-3">
+          <p class="fw-bold mb-1">
+            {% if language == "fr" %}Densité :{% else %}Density:{% endif %} 
+            <span class="text-primary">{{ score.density }}</span> 
+            ({{ score.structured_items }} / {{ score.word_count }} {% if language == "fr" %}mots{% else %}words{% endif %})
+          </p>
+        <hr/>
+          <p class="fw-bold mb-1">
+            {% if language == "fr" %}Commentaire :{% else %}Commentary:{% endif %} <span class="text-primary">{{ score_comment }}</span>          
+          </p>
+          <hr/>
+          <p class="fw-bold mb-1">
+            {% if language == "fr" %}Profil éditorial :{% else %}Editorial Profile:{% endif %} 
+            <span class="text-primary">{{ profile_label }}</span>
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Angles -->
-    <div class="card mb-5">
+  <!-- Entities Detected Summary -->
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
       <div class="card-header">
-        🧭 {% if language == "fr" %}Suggestions d’angles journalistiques{% else %}Suggested Journalistic Angles{% endif %}
+        🧠 {% if language == "fr" %}Résumé des entités détectées{% else %}Entities Detected Summary{% endif %}
       </div>
       <div class="card-body">
-        <ul class="list-group list-group-flush">
-          {% for item in parsed_angles %}
-            <li class="list-group-item">
-              <strong>{{ item.title }}</strong><br>
-              <span class="text-muted">{{ item.content | safe }}</span>
-            </li>
-          {% endfor %}
-        </ul>
+        <table class="table table-bordered table-hover text-start">
+          <thead class="table-light">
+            <tr>
+              <th>{% if language == "fr" %}Type d'entité{% else %}Entity Type{% endif %}</th>
+              <th class="text-center">{% if language == "fr" %}Nombre{% else %}Count{% endif %}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for key, count in entity_counts.items() %}
+              <tr>
+                <td class="fw-bold">{{ key }}</td>
+                <td class="text-center">
+                  <span class="badge bg-primary">{{ count }}</span>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
     </div>
-
-    <!-- Bloc Suggestions de Visualisation -->
-<div class="card mb-5">
-  <div class="card-header">
-    📊 {% if language == "fr" %}Suggestions de visualisation par angle{% else %}Visualization Suggestions by Angle{% endif %}
-  </div>
-  <div class="card-body">
-    {% for angle in parsed_angles %}
-      <div class="mb-3">
-        <strong>{{ angle.title }}</strong><br>
-        <small class="text-muted">{{ angle.visualization | safe }}</small>
-      </div>
-    {% endfor %}
   </div>
 </div>
+
+
+
+  <!-- Angles et Visualisations combinés -->
+<div class="card mb-5">
+  <div class="card-header">
+    🧭 {% if language == "fr" %}Suggestions d’angles journalistiques{% else %}Suggested Journalistic Angles{% endif %}
+  </div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      {% for item in parsed_angles %}
+        <li class="list-group-item">
+          <strong>{{ item.title }}</strong><br>
+          <span class="text-muted">{{ item.content | safe }}</span>
+
+          <!-- Bouton Collapse pour Visualisation -->
+          {% if item.visualization %}
+          <button class="btn btn-outline-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#viz-{{ loop.index0 }}" aria-expanded="false" aria-controls="viz-{{ loop.index0 }}">
+            {% if language == "fr" %}Voir la suggestion de visualisation{% else %}View Visualization Suggestion{% endif %}
+          </button>
+
+          <!-- Bloc Collapse -->
+          <div class="collapse mt-2" id="viz-{{ loop.index0 }}">
+            <div class="card card-body">
+              <small class="text-muted">{{ item.visualization | safe }}</small>
+            </div>
+          </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
 
 
     <!-- Sources -->

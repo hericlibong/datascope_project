@@ -100,5 +100,64 @@ textarea {
 }
 
 
+/* Style spécifique pour la carte de login */
+.login-card {
+  width: 350px;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h3 {
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  background-color: #00bcd4;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+}
+
+a.text-info:hover {
+  color: #00bcd4;
+}
+
+#login-error {
+  margin-bottom: 15px;
+}
+
+input.form-control {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+input.form-control:focus {
+  background-color: #444;
+  color: #ffffff;
+  border-color: #00bcd4;
+}
+
+/* Marges pour les pages statiques (about, guide, feedback) */
+.page-content {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.card-static {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
  
   

@@ -1,0 +1,9 @@
+{
+    "fr": {
+      "datafication_score": "Le score de datafication représente la capacité d'un texte à être structuré et quantifié pour une analyse de données. Il est calculé en divisant le nombre d'informations structurées (entités nommées, chiffres, dates, verbes forts...) par le nombre total de mots, puis en multipliant le résultat par 10."
+    },
+    "en": {
+      "datafication_score": "The datafication score represents the ability of a text to be structured and quantified for data analysis. It is calculated by dividing the number of structured elements (named entities, numbers, dates, strong verbs...) by the total word count, then multiplying the result by 10."
+    }
+  }
+  

@@ -4,6 +4,7 @@ from core.nlp_utils import format_entities, compute_datafication_score
 from core.llm_engine import generate_journalistic_angles, suggest_datasets_llm, parse_markdown_list, suggest_visualizations_llm
 import os
 import json
+from pathlib import Path
 from werkzeug.utils import secure_filename
 from core.nlp_utils import group_named_entities
 from core.nlp_utils import interpret_datafication_score
@@ -21,6 +22,7 @@ import markdown
 
 main = Blueprint("main", __name__)
 
+HELP_TEXTS = json.loads(Path("app/static/texts.json").read_text(encoding="utf-8"))
 
 UPLOAD_FOLDER = "uploads"
 ALLOWED_EXTENSIONS = {"txt", "pdf", "docx"}
@@ -111,9 +113,15 @@ def admin_feedbacks():
     return render_template("admin_feedbacks.html", feedbacks=feedbacks, language=session.get("lang", "en"))
 
 
-@main.route("/", methods=["GET"])
+@main.route("/", methods=["GET", "POST"])
 def home():
-    language = session.get("lang", "fr")
+    language = session.get("lang", "en")
+    if request.method == "POST":
+        # Traitement de l'analyse
+        article_text = request.form['article_text']
+        # Logique d'analyse et génération des résultats
+        return redirect(url_for("main.results"))
+
     return render_template("analyze.html", language=language)
 
 
@@ -251,6 +259,8 @@ def analyze():
             "Strong Verbs": len(entities.get("strong_verbs", [])),
         }
 
+        explanation =  HELP_TEXTS[language]["datafication_score"]
+
         return render_template(
             "results.html",
             article_text=article_text,
@@ -265,6 +275,7 @@ def analyze():
             parsed_sources=parsed_sources,
             language=language,
             entity_counts=entity_counts,  # ✅ Nouvel élément
+            datafication_explanation=explanation
         )
 
     return render_template("analyze.html", error="Aucun texte ou fichier valide fourni.", language=language)
