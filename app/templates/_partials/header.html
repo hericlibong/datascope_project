@@ -1,0 +1,50 @@
+<header class="ds-header" role="banner">
+  <div class="ds-header__inner">
+    <a class="ds-brand" href="/" aria-label="DataScope home">
+      <img src="{{ url_for('static', filename='assets/logo_datascope_sized.png') }}" alt="DataScope" width="40" height="34">
+      <span class="ds-brand__name">DataScope</span>
+    </a>
+
+    <nav class="ds-nav" aria-label="Primary">
+      <a class="ds-nav__link" href="/">{% if language == 'en' %}Analyze{% else %}Analyse{% endif %}</a>
+      <a class="ds-nav__link" href="/about">{% if language == 'en' %}About{% else %}À propos{% endif %}</a>
+      <a class="ds-nav__link" href="/guide">{% if language == 'en' %}Guide{% else %}Guide{% endif %}</a>
+      {% if current_user.is_authenticated %}
+        <a class="ds-nav__link" href="{{ url_for('main.feedback') }}">Feedback</a>
+      {% endif %}
+    </nav>
+
+    <div class="ds-header__actions">
+      <!-- Mobile drawers (wired in app.js; harmless on pages without panels) -->
+      <button class="ds-icon-btn ds-mobile-only" type="button" data-ds-drawer-open="left" aria-label="Open Sources panel" aria-controls="ds-drawer-left" aria-expanded="false">
+        ☰
+      </button>
+      <button class="ds-icon-btn ds-mobile-only" type="button" data-ds-drawer-open="right" aria-label="Open Studio panel" aria-controls="ds-drawer-right" aria-expanded="false">
+        ≡
+      </button>
+
+      <div class="ds-lang">
+        <button class="ds-lang__btn" type="button" aria-haspopup="menu" aria-expanded="false" data-ds-menu="lang">
+          {% if language == 'en' %}
+            <img src="{{ url_for('static', filename='icons/gb.svg') }}" class="ds-flag" alt="English">
+            <span>EN</span>
+          {% else %}
+            <img src="{{ url_for('static', filename='icons/fr.svg') }}" class="ds-flag" alt="Français">
+            <span>FR</span>
+          {% endif %}
+        </button>
+        <div class="ds-menu" role="menu" aria-label="Language" hidden>
+          <a class="ds-menu__item" role="menuitem" href="{{ url_for('main.set_language', lang_code='en') }}">English</a>
+          <a class="ds-menu__item" role="menuitem" href="{{ url_for('main.set_language', lang_code='fr') }}">Français</a>
+        </div>
+      </div>
+
+      {% if current_user.is_authenticated %}
+        <span class="ds-user" aria-label="Current user">{{ current_user.username }}</span>
+        <a class="ds-btn ds-btn--ghost" href="{{ url_for('main.logout') }}">{% if language == 'fr' %}Déconnexion{% else %}Logout{% endif %}</a>
+      {% else %}
+        <a class="ds-btn ds-btn--primary" href="{{ url_for('main.login') }}">{% if language == 'fr' %}Se connecter{% else %}Login{% endif %}</a>
+      {% endif %}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,18 @@
+<footer class="ds-footer" role="contentinfo">
+  <div class="ds-footer__inner">
+    <div class="ds-footer__brand">
+      <img src="{{ url_for('static', filename='assets/datascope_logo_white_rezided.png') }}" alt="DataScope" width="90" height="70">
+      <div>
+        <div class="ds-footer__name">DataScope</div>
+        <div class="ds-footer__meta">© 2025 — NLP & LLM</div>
+      </div>
+    </div>
+
+    <div class="ds-footer__links">
+      <a href="/about">{% if language == 'en' %}About{% else %}À propos{% endif %}</a>
+      <a href="/guide">{% if language == 'en' %}Guide{% else %}Guide{% endif %}</a>
+      <a href="https://github.com/hericlibong/datascope_project" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/hericlibong" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</footer>
