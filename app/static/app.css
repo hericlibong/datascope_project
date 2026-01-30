@@ -246,6 +246,115 @@ body {
 
 .ds-footer__links a:hover { color: var(--ds-text); }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.ds-pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--ds-radius-sm);
+  border: 1px solid var(--ds-border);
+  background: rgba(255,255,255,0.03);
+  color: var(--ds-text);
+}
+
+.ds-stack { display: grid; gap: 12px; }
+.ds-stack--lg { gap: 14px; }
+
+.ds-panel__title {
+  font-weight: 750;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.ds-toc {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 14px;
+}
+
+.ds-toc__link {
+  color: var(--ds-muted);
+  text-decoration: none;
+  border: 1px solid var(--ds-border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.03);
+}
+
+.ds-toc__link:hover { color: var(--ds-text); }
+
+.ds-empty {
+  color: var(--ds-muted);
+  border: 1px dashed rgba(255,255,255,0.18);
+  border-radius: var(--ds-radius-sm);
+  padding: 12px;
+}
+
+.ds-kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ds-kpi {
+  border: 1px solid var(--ds-border);
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--ds-radius-sm);
+  padding: 12px;
+}
+
+.ds-kpi__label { color: var(--ds-muted); font-size: 0.9rem; }
+.ds-kpi__value { font-size: 1.4rem; font-weight: 800; margin-top: 2px; }
+.ds-kpi__hint { color: var(--ds-muted); font-size: 0.9rem; margin-top: 2px; }
+
+.ds-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.ds-field__label { color: var(--ds-muted); font-weight: 650; }
+.ds-field__value { color: var(--ds-text); }
+
+.ds-details {
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-sm);
+  background: rgba(255,255,255,0.03);
+  padding: 10px 12px;
+}
+
+.ds-details__summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.ds-details__content {
+  margin-top: 10px;
+  color: var(--ds-muted);
+}
+
+.ds-details--nested {
+  margin-top: 10px;
+}
+
+@media (min-width: 980px) {
+  .ds-split {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 520px) {
+  .ds-kpis {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Basic reusable UI primitives */
 .ds-card {
   background: rgba(15, 26, 44, 0.72);

@@ -1,0 +1,39 @@
+{# Left panel: datasets list + TOC #}
+
+<div class="ds-panel__section">
+  <h2 class="ds-panel__title">{% if language == 'en' %}Datasets{% else %}Datasets{% endif %}</h2>
+  <p class="ds-muted mb-3">
+    {% if language == 'en' %}
+      Suggested sources to validate or enrich your story.
+    {% else %}
+      Sources suggérées pour valider ou enrichir votre sujet.
+    {% endif %}
+  </p>
+
+  <nav class="ds-toc" aria-label="On this page">
+    <a class="ds-toc__link" href="#score">{% if language == 'en' %}Score{% else %}Score{% endif %}</a>
+    <a class="ds-toc__link" href="#entities">{% if language == 'en' %}Entities{% else %}Entités{% endif %}</a>
+    <a class="ds-toc__link" href="#angles">{% if language == 'en' %}Angles{% else %}Angles{% endif %}</a>
+    <a class="ds-toc__link" href="#datasets">{% if language == 'en' %}Datasets{% else %}Datasets{% endif %}</a>
+    <a class="ds-toc__link" href="#export">{% if language == 'en' %}Export{% else %}Export{% endif %}</a>
+  </nav>
+
+  {% if parsed_sources and parsed_sources|length > 0 %}
+    <div class="ds-stack">
+      {% for item in parsed_sources %}
+        <div class="ds-mini-card">
+          <div class="ds-mini-card__title">{{ item.title }}</div>
+          <div class="ds-mini-card__content">{{ item.content | safe }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="ds-empty">
+      {% if language == 'en' %}
+        No datasets suggested for this analysis.
+      {% else %}
+        Aucun dataset suggéré pour cette analyse.
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

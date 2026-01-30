@@ -1,0 +1,78 @@
+{# Center panel: document + score + entities #}
+
+<div class="ds-stack ds-stack--lg">
+  <section class="ds-card" aria-labelledby="document-title">
+    <div class="ds-card__header">
+      <h1 id="document-title" class="ds-title">{% if language == 'en' %}Analysis Result{% else %}Résultat de l’analyse{% endif %}</h1>
+    </div>
+    <div class="ds-card__body">
+      <div class="ds-subtitle">{% if language == 'en' %}NLP & LLM summary{% else %}Résumé de l’analyse NLP & LLM{% endif %}</div>
+    </div>
+  </section>
+
+  <section class="ds-card" aria-labelledby="text-title">
+    <div class="ds-card__header">
+      <h2 id="text-title" class="ds-title">{% if language == 'en' %}Analyzed text{% else %}Texte analysé{% endif %}</h2>
+    </div>
+    <div class="ds-card__body">
+      <pre class="ds-pre">{{ article_text }}</pre>
+    </div>
+  </section>
+
+  <section id="score" class="ds-card" aria-labelledby="score-title">
+    <div class="ds-card__header">
+      <h2 id="score-title" class="ds-title">{% if language == 'en' %}Datafication Score{% else %}Score de datafication{% endif %}</h2>
+    </div>
+    <div class="ds-card__body">
+      <div class="ds-kpis">
+        <div class="ds-kpi">
+          <div class="ds-kpi__label">{% if language == 'en' %}Score{% else %}Score{% endif %}</div>
+          <div class="ds-kpi__value">{{ score.score }}/10</div>
+        </div>
+        <div class="ds-kpi">
+          <div class="ds-kpi__label">{% if language == 'en' %}Density{% else %}Densité{% endif %}</div>
+          <div class="ds-kpi__value">{{ score.density }}</div>
+          <div class="ds-kpi__hint">({{ score.structured_items }} / {{ score.word_count }} {% if language == 'en' %}words{% else %}mots{% endif %})</div>
+        </div>
+      </div>
+
+      <div class="ds-split">
+        <div>
+          <div class="ds-field"><span class="ds-field__label">{% if language == 'en' %}Commentary{% else %}Commentaire{% endif %}</span> <span class="ds-field__value">{{ score_comment }}</span></div>
+          <div class="ds-field"><span class="ds-field__label">{% if language == 'en' %}Editorial profile{% else %}Profil éditorial{% endif %}</span> <span class="ds-field__value">{{ profile_label }}</span></div>
+        </div>
+
+        <details class="ds-details">
+          <summary class="ds-details__summary">
+            {% if language == 'en' %}How is this score calculated?{% else %}Comment est calculé le score ?{% endif %}
+          </summary>
+          <div class="ds-details__content">{{ datafication_explanation }}</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="entities" class="ds-card" aria-labelledby="entities-title">
+    <div class="ds-card__header">
+      <h2 id="entities-title" class="ds-title">{% if language == 'en' %}Entities detected summary{% else %}Résumé des entités détectées{% endif %}</h2>
+    </div>
+    <div class="ds-card__body">
+      <table class="table table-bordered table-hover text-start">
+        <thead class="table-light">
+          <tr>
+            <th>{% if language == 'en' %}Entity type{% else %}Type d'entité{% endif %}</th>
+            <th class="text-center">{% if language == 'en' %}Count{% else %}Nombre{% endif %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key, count in entity_counts.items() %}
+            <tr>
+              <td class="fw-bold">{{ key }}</td>
+              <td class="text-center"><span class="badge bg-primary">{{ count }}</span></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>

@@ -59,6 +59,32 @@
     if (e.key === 'Escape') closeDrawers();
   });
 
+  // Anchor focus (minimal): when clicking a hash link, focus the target heading after scroll.
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const hash = a.getAttribute('href');
+    if (!hash || hash.length < 2) return;
+    const target = document.getElementById(hash.slice(1));
+    if (!target) return;
+    // Let native navigation happen; then focus.
+    setTimeout(() => {
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    }, 0);
+  });
+
+  // In mobile: allow CTA to open left drawer
+  const openLeftCTA = qs('[data-ds-open-left]');
+  if (openLeftCTA) {
+    openLeftCTA.addEventListener('click', (e) => {
+      // If desktop panels are visible, do nothing special.
+      if (window.matchMedia('(min-width: 980px)').matches) return;
+      e.preventDefault();
+      openDrawer('left');
+    });
+  }
+
   // Language menu (simple; avoids bootstrap dependency)
   const langBtn = qs('[data-ds-menu="lang"]');
   const langMenu = langBtn ? qs('.ds-menu', langBtn.parentElement) : null;
