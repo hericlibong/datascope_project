@@ -1,0 +1,27 @@
+<div class="ds-panel__section">
+  <h2 class="h5 mb-2">{% if language == 'en' %}Sources{% else %}Sources{% endif %}</h2>
+  <p class="text-muted mb-3">
+    {% if language == 'en' %}
+      Your suggested datasets will appear here after analysis.
+    {% else %}
+      Vos suggestions de sources/datasets apparaîtront ici après l’analyse.
+    {% endif %}
+  </p>
+
+  <div class="ds-mini-card">
+    <div class="ds-mini-card__title">{% if language == 'en' %}Input{% else %}Entrée{% endif %}</div>
+    <ul class="ds-list">
+      <li>{% if language == 'en' %}Paste an article in the editor{% else %}Collez un article dans l’éditeur{% endif %}</li>
+      <li>{% if language == 'en' %}Or import a .txt / .pdf / .docx file{% else %}Ou importez un fichier .txt / .pdf / .docx{% endif %}</li>
+    </ul>
+  </div>
+
+  <div class="ds-mini-card">
+    <div class="ds-mini-card__title">{% if language == 'en' %}Examples of sources{% else %}Exemples de sources{% endif %}</div>
+    <ul class="ds-list">
+      <li>INSEE / Eurostat</li>
+      <li>World Bank / OECD</li>
+      <li>OpenStreetMap / WHO</li>
+    </ul>
+  </div>
+</div>

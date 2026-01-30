@@ -246,6 +246,89 @@ body {
 
 .ds-footer__links a:hover { color: var(--ds-text); }
 
+/* Basic reusable UI primitives */
+.ds-card {
+  background: rgba(15, 26, 44, 0.72);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+}
+
+.ds-card__header {
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid var(--ds-border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ds-card__body {
+  padding: 14px;
+}
+
+.ds-title {
+  font-size: 1.15rem;
+  font-weight: 750;
+  letter-spacing: 0.2px;
+}
+
+.ds-subtitle {
+  color: var(--ds-muted);
+  margin-top: 4px;
+}
+
+.ds-muted { color: var(--ds-muted); }
+
+.ds-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ds-textarea,
+.ds-file {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--ds-border) !important;
+  color: var(--ds-text) !important;
+}
+
+.ds-textarea::placeholder { color: rgba(255,255,255,0.45); }
+
+.ds-panel__section { padding: 6px; }
+
+.ds-mini-card {
+  border: 1px solid var(--ds-border);
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--ds-radius-sm);
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.ds-mini-card__title {
+  font-weight: 650;
+  margin-bottom: 8px;
+}
+
+.ds-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ds-muted);
+}
+
+.ds-alert {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: var(--ds-radius-sm);
+  border: 1px solid var(--ds-border);
+}
+
+.ds-alert--warning {
+  border-color: rgba(251, 113, 133, 0.35);
+  background: rgba(251, 113, 133, 0.10);
+}
+
 /* Drawers (mobile/tablet) */
 .ds-drawer {
   position: fixed;
