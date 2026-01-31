@@ -250,6 +250,46 @@ html {
   scroll-behavior: smooth;
 }
 
+.ds-prose {
+  color: var(--ds-text);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.ds-prose p { margin: 0; }
+
+.ds-prose--full {
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.88);
+}
+
+.ds-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ds-badge {
+  border: 1px solid var(--ds-border);
+  background: rgba(255,255,255,0.03);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: var(--ds-text);
+  font-size: 0.95rem;
+}
+
+.ds-badge__count {
+  color: var(--ds-muted);
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.ds-list-compact {
+  display: grid;
+  gap: 10px;
+}
+
+/* Keep ds-pre for legacy/debug uses */
 .ds-pre {
   white-space: pre-wrap;
   word-break: break-word;

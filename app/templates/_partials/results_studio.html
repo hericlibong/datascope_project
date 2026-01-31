@@ -3,25 +3,29 @@
 <div class="ds-panel__section ds-stack">
   <section id="angles" class="ds-card" aria-labelledby="angles-title">
     <div class="ds-card__header">
-      <h2 id="angles-title" class="ds-title">{% if language == 'en' %}Editorial angles{% else %}Angles journalistiques{% endif %}</h2>
+      <h2 id="angles-title" class="ds-title">{% if language == 'en' %}Studio — angles{% else %}Studio — angles{% endif %}</h2>
     </div>
     <div class="ds-card__body">
       {% if parsed_angles and parsed_angles|length > 0 %}
-        <div class="ds-stack">
+        <div class="ds-list-compact">
           {% for item in parsed_angles %}
-            <div class="ds-mini-card">
-              <div class="ds-mini-card__title">{{ item.title }}</div>
-              <div class="ds-mini-card__content">{{ item.content | safe }}</div>
+            <details class="ds-details">
+              <summary class="ds-details__summary">{{ item.title }}</summary>
+              <div class="ds-details__content">
+                <div class="ds-prose">
+                  <p>{{ item.content | safe }}</p>
+                </div>
 
-              {% if item.visualization %}
-                <details class="ds-details ds-details--nested">
-                  <summary class="ds-details__summary">
-                    {% if language == 'en' %}Visualization suggestion{% else %}Suggestion de visualisation{% endif %}
-                  </summary>
-                  <div class="ds-details__content">{{ item.visualization | safe }}</div>
-                </details>
-              {% endif %}
-            </div>
+                {% if item.visualization %}
+                  <details class="ds-details ds-details--nested">
+                    <summary class="ds-details__summary">
+                      {% if language == 'en' %}Visualization suggestion{% else %}Suggestion de visualisation{% endif %}
+                    </summary>
+                    <div class="ds-details__content">{{ item.visualization | safe }}</div>
+                  </details>
+                {% endif %}
+              </div>
+            </details>
           {% endfor %}
         </div>
       {% else %}

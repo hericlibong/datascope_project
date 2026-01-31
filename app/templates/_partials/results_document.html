@@ -12,10 +12,25 @@
 
   <section class="ds-card" aria-labelledby="text-title">
     <div class="ds-card__header">
-      <h2 id="text-title" class="ds-title">{% if language == 'en' %}Analyzed text{% else %}Texte analysé{% endif %}</h2>
+      <h2 id="text-title" class="ds-title">{% if language == 'en' %}Text{% else %}Texte{% endif %}</h2>
     </div>
     <div class="ds-card__body">
-      <pre class="ds-pre">{{ article_text }}</pre>
+      {# Progressive disclosure: excerpt + full text (no JS) #}
+      <div class="ds-prose">
+        {% set excerpt = article_text[:900] %}
+        <p>{{ excerpt }}{% if article_text|length > 900 %}…{% endif %}</p>
+      </div>
+
+      {% if article_text|length > 900 %}
+        <details class="ds-details ds-details--nested">
+          <summary class="ds-details__summary">{% if language == 'en' %}Show full text{% else %}Afficher le texte complet{% endif %}</summary>
+          <div class="ds-details__content">
+            <div class="ds-prose ds-prose--full">
+              <p>{{ article_text }}</p>
+            </div>
+          </div>
+        </details>
+      {% endif %}
     </div>
   </section>
 
@@ -54,25 +69,36 @@
 
   <section id="entities" class="ds-card" aria-labelledby="entities-title">
     <div class="ds-card__header">
-      <h2 id="entities-title" class="ds-title">{% if language == 'en' %}Entities detected summary{% else %}Résumé des entités détectées{% endif %}</h2>
+      <h2 id="entities-title" class="ds-title">{% if language == 'en' %}Key entities{% else %}Entités clés{% endif %}</h2>
     </div>
     <div class="ds-card__body">
-      <table class="table table-bordered table-hover text-start">
-        <thead class="table-light">
-          <tr>
-            <th>{% if language == 'en' %}Entity type{% else %}Type d'entité{% endif %}</th>
-            <th class="text-center">{% if language == 'en' %}Count{% else %}Nombre{% endif %}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for key, count in entity_counts.items() %}
-            <tr>
-              <td class="fw-bold">{{ key }}</td>
-              <td class="text-center"><span class="badge bg-primary">{{ count }}</span></td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div class="ds-badges">
+        {% for key, count in entity_counts.items() %}
+          <span class="ds-badge">{{ key }} <span class="ds-badge__count">{{ count }}</span></span>
+        {% endfor %}
+      </div>
+
+      <details class="ds-details ds-details--nested" style="margin-top: 12px;">
+        <summary class="ds-details__summary">{% if language == 'en' %}Show full table{% else %}Afficher le tableau complet{% endif %}</summary>
+        <div class="ds-details__content">
+          <table class="table table-bordered table-hover text-start">
+            <thead class="table-light">
+              <tr>
+                <th>{% if language == 'en' %}Entity type{% else %}Type d'entité{% endif %}</th>
+                <th class="text-center">{% if language == 'en' %}Count{% else %}Nombre{% endif %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for key, count in entity_counts.items() %}
+                <tr>
+                  <td class="fw-bold">{{ key }}</td>
+                  <td class="text-center"><span class="badge bg-primary">{{ count }}</span></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </details>
     </div>
   </section>
 </div>
