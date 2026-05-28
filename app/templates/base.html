@@ -7,164 +7,57 @@
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DataScope</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/litera/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow rounded-3 fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="/">
-        <img src="{{ url_for('static', filename='assets/logo_datascope_sized.png') }}" alt="DataScope" width="60" height="50" class="d-inline-block align-text-top">        
-    </a>
-    
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">{% if language == 'en' %}Analyze{% else %}Analyse{% endif %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">{% if language == 'en' %}About{% else %}À propos{% endif %}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/guide">{% if language == 'en' %}Guide{% else %}Guide{% endif %}</a>
-          </li>
+  {% include "_partials/header.html" %}
 
-          {% if current_user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('main.feedback') }}">
-              {% if language == 'fr' %}Feedback{% else %}Feedback{% endif %}
-            </a>
-          </li>
+  <!-- Scrim + drawers are inert on desktop; panels optional per-page -->
+  <div class="ds-scrim" data-ds-scrim aria-hidden="true"></div>
 
+  <aside id="ds-drawer-left" class="ds-drawer" aria-hidden="true" tabindex="-1">
+    {% block drawer_left %}{% endblock %}
+  </aside>
+  <aside id="ds-drawer-right" class="ds-drawer ds-drawer--right" aria-hidden="true" tabindex="-1">
+    {% block drawer_right %}{% endblock %}
+  </aside>
+
+  <div class="ds-app">
+    <div class="ds-shell">
+      <aside class="ds-panel" aria-label="Sources panel">
+        {% block panel_left %}{% endblock %}
+      </aside>
+
+      <main class="ds-main" id="main" tabindex="-1">
+        {% block content %}{% endblock %}
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="ds-alert" style="text-align: center;" role="status">
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+          </div>
         {% endif %}
+        {% endwith %}
+      </main>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              {% if language == 'en' %}
-                <img src="{{ url_for('static', filename='icons/gb.svg') }}" class="language-flag" alt="English"> English
-              {% else %}
-                <img src="{{ url_for('static', filename='icons/fr.svg') }}" class="language-flag" alt="Français"> Français
-              {% endif %}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-              <li>
-                <a class="dropdown-item" href="{{ url_for('main.set_language', lang_code='en') }}">
-                  <img src="{{ url_for('static', filename='icons/gb.svg') }}" class="language-flag" alt="English"> English
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="{{ url_for('main.set_language', lang_code='fr') }}">
-                  <img src="{{ url_for('static', filename='icons/fr.svg') }}" class="language-flag" alt="Français"> Français
-                </a>
-              </li>
-            </ul>
-          </li>
-
-  
-          {% if current_user.is_authenticated %}
-            <li class="nav-item text-primary me-3 mt-2">
-              {% if language == "fr" %}
-                Connecté : <strong>{{ current_user.username }}</strong>
-              {% else %}
-                Logged: <strong>{{ current_user.username }}</strong>
-              {% endif %}
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.logout') }}">
-                {% if language == "fr" %}Déconnexion{% else %}Logout{% endif %}
-              </a>
-            </li>
-            {% else %}
-        <!-- Utilisateur non connecté : lien vers login -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('main.login') }}">
-            {% if language == "fr" %}Se connecter{% else %}Login{% endif %}
-          </a>
-        </li>
-            
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  
-  
-
-  <main class="container-md py-4">
-    {% block content %}{% endblock %}
-  </main>
-
-  {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <div class="alert alert-info mt-3 text-center">
-      {% for message in messages %}
-        {{ message }}
-      {% endfor %}
-    </div>
-  {% endif %}
-{% endwith %}
-
-
-<footer class="bg-dark text-light py-5">
-  <div class="container d-flex justify-content-between align-items-center">
-    <!-- Colonne 1 : Logo et Réseaux Sociaux -->
-    <div class="d-flex align-items-center">
-      <a href="/" class="d-flex align-items-center text-decoration-none">
-        <img src="{{ url_for('static', filename='assets/datascope_logo_white_rezided.png') }}" alt="DataScope" width="120" height="100" class="me-2">
-        <span class="fw-bold">DataScope</span>
-      </a>
-      <div class="ms-3">
-        <a href="https://github.com/hericlibong/datascope_project" target="_blank" class="text-light text-decoration-none me-2">
-          <img src="{{ url_for('static', filename='icons/Github.svg') }}" alt="GitHub" width="24" height="24">
-        </a>
-        <a href="https://www.linkedin.com/in/hericlibong" target="_blank" class="text-light text-decoration-none">
-          <img src="{{ url_for('static', filename='icons/linkedin.svg') }}" alt="LinkedIn" width="24" height="24">
-        </a>
-      </div>
+      <aside class="ds-panel" aria-label="Studio panel">
+        {% block panel_right %}{% endblock %}
+      </aside>
     </div>
 
-    <!-- Colonne 2 : Liens -->
-    <div>
-      <ul class="list-unstyled">
-        <li><a href="/about" class="text-light text-decoration-none">{% if language == 'en' %}About{% else %}À propos{% endif %}</a></li>
-        <li><a href="/guide" class="text-light text-decoration-none">{% if language == 'en' %}Guide{% else %}Guide{% endif %}</a></li>
-      </ul>
-    </div>
+    {% include "_partials/footer.html" %}
   </div>
-  <div class="text-center mt-3">
-    <p class="mb-0 small">© 2025 DataScope — Augmented analysis with NLP & LLM</p>
-    <p class="mb-1">
-      <a href="https://hericldev.onrender.com" target="_blank" class="text-primary text-decoration-none">
-        {% if language == "fr" %}
-          Par Heric Libong
-        {% else %}
-          By Heric Libong
-        {% endif %}
-      </a>
-    </p>
-  </div>
-</footer>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-      popoverTriggerList.forEach(function (popoverTriggerEl) {
-        new bootstrap.Popover(popoverTriggerEl);
-      });
-    });
-  </script>
-  
-
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

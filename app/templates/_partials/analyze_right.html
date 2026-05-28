@@ -1,0 +1,28 @@
+<div class="ds-panel__section">
+  <h2 class="ds-panel__title">{% if language == 'en' %}Studio{% else %}Studio{% endif %}</h2>
+  <p class="ds-muted">
+    {% if language == 'en' %}
+      Tips and constraints before running the analysis.
+    {% else %}
+      Conseils et contraintes avant de lancer l’analyse.
+    {% endif %}
+  </p>
+
+  <div class="ds-mini-card">
+    <div class="ds-mini-card__title">{% if language == 'en' %}Constraints{% else %}Contraintes{% endif %}</div>
+    <ul class="ds-list">
+      <li>{% if language == 'en' %}Minimum: 201 words{% else %}Minimum : 201 mots{% endif %}</li>
+      <li>{% if language == 'en' %}Maximum: 3000 words{% else %}Maximum : 3000 mots{% endif %}</li>
+    </ul>
+  </div>
+
+  <div class="ds-mini-card">
+    <div class="ds-mini-card__title">{% if language == 'en' %}You will get{% else %}Vous obtiendrez{% endif %}</div>
+    <ul class="ds-list">
+      <li>{% if language == 'en' %}A datafication score{% else %}Un score de datafication{% endif %}</li>
+      <li>{% if language == 'en' %}Extracted entities{% else %}Des entités extraites{% endif %}</li>
+      <li>{% if language == 'en' %}Editorial angles + viz ideas{% else %}Angles éditoriaux + idées de visuels{% endif %}</li>
+      <li>{% if language == 'en' %}Suggested datasets/sources{% else %}Suggestions de datasets/sources{% endif %}</li>
+    </ul>
+  </div>
+</div>

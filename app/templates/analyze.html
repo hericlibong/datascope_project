@@ -1,54 +1,62 @@
 {% extends 'base.html' %}
+
+{% block panel_left %}
+  {% include "_partials/analyze_left.html" %}
+{% endblock %}
+
+{% block panel_right %}
+  {% include "_partials/analyze_right.html" %}
+{% endblock %}
+
+{% block drawer_left %}
+  {% include "_partials/analyze_left.html" %}
+{% endblock %}
+
+{% block drawer_right %}
+  {% include "_partials/analyze_right.html" %}
+{% endblock %}
+
 {% block content %}
-
-<div class="row justify-content-center custom-analyze">
-  <div class="col-12 col-md-10 col-lg-9">
-    <div class="analyze-block">
-      <div class="d-flex align-items-center">
-        <div class="analyze-header" style="color: grey;">
-          <img src="{{ url_for('static', filename='assets/logo_datascope_sized.png') }}" alt="DataScope" width="60" height="50" class="me-2">
-          <span class="fw-bold">DataScope</span>
+  <div class="ds-card">
+    <div class="ds-card__header">
+      <div>
+        <div class="ds-title">{% if language == 'en' %}Analyze{% else %}Analyse{% endif %}</div>
+        <div class="ds-subtitle">{% if language == 'en' %}Reveal the data potential of an article{% else %}Révélez le potentiel data d’un article{% endif %}</div>
       </div>
-        <h2 class="ms-3 custom-title text-end" style="color:grey">
-          {% if language == "fr" %} Analyser un article{% else %} Analyze an Article{% endif %}
-        </h2>
-      </div>
-      <hr class="my-3"/>
+    </div>
 
+    <div class="ds-card__body">
       <form method="POST" action="/analyze" enctype="multipart/form-data">
-        <div class="mb-4">
-          <label for="article_text" class="form-label">
-            <span class="badge bg-dark">
-              {% if language == "fr" %}Coller votre article{% else %}Paste your article{% endif %}
-            </span>
+        <div class="ds-form-group">
+          <label for="article_text" class="ds-label">
+            {% if language == 'en' %}Paste your article{% else %}Coller votre article{% endif %}
           </label>
-          <textarea name="article_text" class="analyze-textarea" rows="15" placeholder="{% if language == 'fr' %}Texte à analyser...{% else %}Text to analyze...{% endif %}"></textarea>
+          <textarea id="article_text" name="article_text" class="ds-textarea" rows="14" placeholder="{% if language == 'fr' %}Texte à analyser...{% else %}Text to analyze...{% endif %}"></textarea>
         </div>
 
-        <div class="mb-4">
-          <label for="article_file" class="form-label">
-            <span class="badge bg-dark">
-              {% if language == "fr" %}Ou envoyer un fichier (.txt, .pdf, .docx){% else %}Or upload a file (.txt, .pdf, .docx){% endif %}
-            </span>
+        <div class="ds-form-group">
+          <label for="article_file" class="ds-label">
+            {% if language == 'en' %}Or upload a file (.txt, .pdf, .docx){% else %}Ou envoyer un fichier (.txt, .pdf, .docx){% endif %}
           </label>
-          <input type="file" class="form-control" style="color:grey">
+          <input id="article_file" name="article_file" type="file" class="ds-file" aria-label="Article file">
           {% if language == 'en' %}
-          <span class="badge bg-warning">
-            <small class="text-muted">Note: The “Browse” button label may appear in your system’s default language.</small>
-          </span>
+            <span class="ds-help">Note: the “Browse” label may appear in your system’s default language.</span>
           {% endif %}
         </div>
 
-        <button type="submit" class="analyze-btn">
-          {% if language == "fr" %}Analyser{% else %}Analyze{% endif %}
-        </button>
+        <div class="ds-row">
+          <button type="submit" class="ds-btn ds-btn--primary">
+            {% if language == 'fr' %}Analyser{% else %}Analyze{% endif %}
+          </button>
+          <span class="ds-muted">
+            {% if language == 'en' %}Tip: choose language in the header before running.{% else %}Astuce : choisissez la langue dans le header avant de lancer.{% endif %}
+          </span>
+        </div>
       </form>
 
       {% if error %}
-      <div class="alert alert-warning mt-4 text-center">{{ error }}</div>
+        <div class="ds-alert ds-alert--warning" role="alert">{{ error }}</div>
       {% endif %}
     </div>
   </div>
-</div>
-
 {% endblock %}

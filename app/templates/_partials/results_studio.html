@@ -1,0 +1,80 @@
+{# Right panel: angles + viz + export + CTA #}
+
+<div class="ds-panel__section ds-stack">
+  <section id="angles" class="ds-card" aria-labelledby="angles-title">
+    <div class="ds-card__header">
+      <h2 id="angles-title" class="ds-title">{% if language == 'en' %}Studio — angles{% else %}Studio — angles{% endif %}</h2>
+    </div>
+    <div class="ds-card__body">
+      {% if parsed_angles and parsed_angles|length > 0 %}
+        <div class="ds-list-compact">
+          {% for item in parsed_angles %}
+            <details class="ds-details">
+              <summary class="ds-details__summary">{{ item.title }}</summary>
+              <div class="ds-details__content">
+                <div class="ds-prose">
+                  <p>{{ item.content | safe }}</p>
+                </div>
+
+                {% if item.visualization %}
+                  <details class="ds-details ds-details--nested">
+                    <summary class="ds-details__summary">
+                      {% if language == 'en' %}Visualization suggestion{% else %}Suggestion de visualisation{% endif %}
+                    </summary>
+                    <div class="ds-details__content">{{ item.visualization | safe }}</div>
+                  </details>
+                {% endif %}
+              </div>
+            </details>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="ds-empty">
+          {% if language == 'en' %}No angles returned.{% else %}Aucun angle retourné.{% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section id="datasets" class="ds-card" aria-labelledby="datasets-title">
+    <div class="ds-card__header">
+      <h2 id="datasets-title" class="ds-title">{% if language == 'en' %}Datasets{% else %}Datasets{% endif %}</h2>
+    </div>
+    <div class="ds-card__body">
+      <p class="ds-muted">
+        {% if language == 'en' %}
+          Full list is available in the left panel.
+        {% else %}
+          La liste complète est disponible dans le panneau de gauche.
+        {% endif %}
+      </p>
+      <a class="ds-btn ds-btn--ghost" href="#datasets" data-ds-open-left>
+        {% if language == 'en' %}Open left panel{% else %}Ouvrir le panneau gauche{% endif %}
+      </a>
+    </div>
+  </section>
+
+  <section id="export" class="ds-card" aria-labelledby="export-title">
+    <div class="ds-card__header">
+      <h2 id="export-title" class="ds-title">{% if language == 'en' %}Export{% else %}Export{% endif %}</h2>
+    </div>
+    <div class="ds-card__body ds-stack">
+      <form method="POST" action="/download">
+        <input type="hidden" name="article_text" value="{{ article_text }}">
+        <input type="hidden" name="score" value="{{ score }}">
+        <input type="hidden" name="score_comment" value="{{ score_comment }}">
+        <input type="hidden" name="profile" value="{{ profile_label }}">
+        <input type="hidden" name="entities" value="{{ entities }}">
+        <input type="hidden" name="angles" value="{{ angles }}">
+        <input type="hidden" name="sources" value="{{ sources }}">
+        <button type="submit" class="ds-btn ds-btn--primary">
+          {% if language == 'fr' %}📥 Exporter (Markdown){% else %}📥 Export (Markdown){% endif %}
+        </button>
+      </form>
+
+      <a href="/" class="ds-btn ds-btn--ghost">
+        {% if language == 'fr' %}← Analyser un autre article{% else %}← Analyze another article{% endif %}
+      </a>
+    </div>
+  </section>
+</div>
