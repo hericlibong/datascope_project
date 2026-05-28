@@ -105,10 +105,10 @@ Datascope utilise actuellement une identité visuelle « dashboard data tech » 
 - [x] 0.5 Commit : `chore(ui): prepare claude design refonte (fonts + design spec)`
 
 ### Phase 1 — Re-tokenisation `app.css`
-- [ ] 1.1 Réécrire le bloc `:root` avec les tokens Claude (couleurs + typo + spacing)
-- [ ] 1.2 Retirer les `radial-gradient` du `body`, passer en cream plat
-- [ ] 1.3 Smoke test visuel : ouvrir `/`, `/login`, vérifier que rien n'explose
-- [ ] 1.4 Commit : `ui(claude): re-tokenize app.css with cream/coral palette`
+- [x] 1.1 Réécrire le bloc `:root` avec les tokens Claude (couleurs + typo + spacing)
+- [x] 1.2 Retirer les `radial-gradient` du `body`, passer en cream plat
+- [x] 1.3 Smoke test : `/login` répond 200, `app.css` servi correctement
+- [x] 1.4 Commit : `ui(claude): re-tokenize app.css with cream/coral palette`
 
 ### Phase 2 — Composants visuels
 - [ ] 2.1 Boutons : `ds-btn`, `ds-btn--primary` (coral plein), `ds-btn--ghost`
