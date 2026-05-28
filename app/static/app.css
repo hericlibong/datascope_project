@@ -405,22 +405,112 @@ body {
 
 .ds-textarea,
 .ds-file {
-  background: var(--ds-canvas) !important;
-  border: 1px solid var(--ds-hairline) !important;
-  color: var(--ds-ink) !important;
-  border-radius: var(--ds-radius-sm) !important;
-  font-family: var(--ds-font-sans) !important;
-  font-size: 15px !important;
-  line-height: 1.55 !important;
+  width: 100%;
+  background: var(--ds-canvas);
+  border: 1px solid var(--ds-hairline);
+  color: var(--ds-ink);
+  border-radius: var(--ds-radius-sm);
+  font-family: var(--ds-font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  padding: 10px 14px;
+  box-sizing: border-box;
 }
 
 .ds-textarea:focus,
 .ds-file:focus {
-  border-color: var(--ds-primary) !important;
-  outline: none !important;
+  border-color: var(--ds-primary);
+  outline: none;
 }
 
 .ds-textarea::placeholder { color: var(--ds-muted-soft); }
+
+/* Form structure */
+.ds-form-group { margin-bottom: 18px; }
+
+.ds-label {
+  display: block;
+  font-family: var(--ds-font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ds-ink);
+  margin-bottom: 8px;
+}
+
+.ds-help {
+  display: block;
+  font-size: 13px;
+  color: var(--ds-muted);
+  margin-top: 6px;
+}
+
+/* Page wrapper for admin/static pages */
+.ds-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.ds-page-title {
+  font-family: var(--ds-font-serif);
+  font-size: 2.25rem;       /* ~36px display-md */
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  color: var(--ds-ink);
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.ds-center-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* Tables */
+.ds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--ds-font-sans);
+  font-size: 14px;
+  background: var(--ds-canvas);
+  border: 1px solid var(--ds-hairline);
+  border-radius: var(--ds-radius-sm);
+  overflow: hidden;
+}
+
+.ds-table thead {
+  background: var(--ds-surface-card);
+  color: var(--ds-ink);
+}
+
+.ds-table th,
+.ds-table td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--ds-hairline);
+}
+
+.ds-table th { font-weight: 500; }
+
+.ds-table tbody tr:last-child td { border-bottom: none; }
+.ds-table tbody tr:nth-child(even) { background: var(--ds-surface-soft); }
+.ds-table tbody tr:hover { background: var(--ds-surface-cream-strong); }
+
+.ds-table__center { text-align: center; }
+.ds-table__strong { font-weight: 500; color: var(--ds-ink); }
+
+.ds-tag {
+  display: inline-block;
+  background: var(--ds-primary);
+  color: var(--ds-on-primary);
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: var(--ds-radius-pill);
+}
 
 /* ------------------------------------------------------------------ */
 /* Misc primitives (badges, KPIs, lists, details, mini-cards, etc.)   */

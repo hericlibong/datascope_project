@@ -125,13 +125,16 @@ Datascope utilise actuellement une identité visuelle « dashboard data tech » 
 > - Suppression des aliases legacy reportée **fin de Phase 3** (après drop Bootstrap), pour éviter casse de `style.css` qui pourrait encore référencer indirectement.
 > - Le focus `!important` sur inputs reste — sera retiré en 3.1 quand `form-control` Bootstrap disparaît des templates.
 
-### Phase 3 — Dé-bootstrapification
-- [ ] 3.1 Remplacer `form-control`, `form-label`, `alert-info`, `mt-3` etc. dans les 10 templates par des classes `ds-*` natives
-- [ ] 3.2 Réécrire les popovers Bootstrap en JS vanilla (ou supprimer si non utilisés)
-- [ ] 3.3 Retirer `<link>` Bootswatch et `<script>` Bootstrap de `base.html`
-- [ ] 3.4 Commit : `ui(claude): drop bootstrap, finalize ds-* primitives`
+### Phase 3 — Dé-bootstrapification (partielle)
+- [x] 3.1 Remplacer Bootstrap dans templates hors pages secondaires : `analyze.html`, `admin_users.html`, `admin_feedbacks.html`, `_partials/results_document.html`, `base.html` (flash alert) → classes `ds-*`
+- [x] 3.2 Popovers : zéro usage trouvé, init JS supprimé de `base.html`
+- [x] 3.3 Retirer `<script>` `bootstrap.bundle.min.js` (plus aucune dépendance JS)
+- [x] 3.4 Retirer `!important` de `.ds-textarea` / `.ds-file` (plus de `form-control` à combattre)
+- [x] 3.5 Ajouter primitives CSS manquantes : `.ds-table`, `.ds-form-group`, `.ds-label`, `.ds-help`, `.ds-page`, `.ds-page-title`, `.ds-center-actions`, `.ds-tag`
+- [x] 3.6 Commit : `ui(claude): remove bootstrap js + drop bootstrap classes from primary templates`
 
-> Note : `style.css` ne peut pas être supprimé en Phase 3 — il est encore référencé par les 4 pages secondaires (`page-content`, `card-static`, `login-card`). Suppression déplacée en Phase 4.6.
+> Note : le `<link>` Bootswatch CSS reste pour l'instant — les 4 pages secondaires (`login/about/guide/feedback`) en dépendent encore. Suppression déplacée en Phase 4.7.
+> Note : `style.css` même chose — encore référencé par les 4 pages secondaires. Suppression Phase 4.6.
 
 ### Phase 4 — Pages secondaires
 - [ ] 4.1 `about.html`

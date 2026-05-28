@@ -27,21 +27,20 @@
 
     <div class="ds-card__body">
       <form method="POST" action="/analyze" enctype="multipart/form-data">
-        <div class="mb-3">
-          <label for="article_text" class="form-label">
+        <div class="ds-form-group">
+          <label for="article_text" class="ds-label">
             {% if language == 'en' %}Paste your article{% else %}Coller votre article{% endif %}
           </label>
-          <textarea id="article_text" name="article_text" class="form-control ds-textarea" rows="14" placeholder="{% if language == 'fr' %}Texte à analyser...{% else %}Text to analyze...{% endif %}"></textarea>
+          <textarea id="article_text" name="article_text" class="ds-textarea" rows="14" placeholder="{% if language == 'fr' %}Texte à analyser...{% else %}Text to analyze...{% endif %}"></textarea>
         </div>
 
-        <div class="mb-3">
-          <label for="article_file" class="form-label">
+        <div class="ds-form-group">
+          <label for="article_file" class="ds-label">
             {% if language == 'en' %}Or upload a file (.txt, .pdf, .docx){% else %}Ou envoyer un fichier (.txt, .pdf, .docx){% endif %}
           </label>
-          <!-- Keep backend-compatible field name -->
-          <input id="article_file" name="article_file" type="file" class="form-control ds-file" aria-label="Article file">
+          <input id="article_file" name="article_file" type="file" class="ds-file" aria-label="Article file">
           {% if language == 'en' %}
-            <div class="form-text text-muted">Note: the “Browse” label may appear in your system’s default language.</div>
+            <span class="ds-help">Note: the “Browse” label may appear in your system’s default language.</span>
           {% endif %}
         </div>
 

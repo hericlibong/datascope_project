@@ -81,18 +81,18 @@
       <details class="ds-details ds-details--nested" style="margin-top: 12px;">
         <summary class="ds-details__summary">{% if language == 'en' %}Show full table{% else %}Afficher le tableau complet{% endif %}</summary>
         <div class="ds-details__content">
-          <table class="table table-bordered table-hover text-start">
-            <thead class="table-light">
+          <table class="ds-table">
+            <thead>
               <tr>
                 <th>{% if language == 'en' %}Entity type{% else %}Type d'entité{% endif %}</th>
-                <th class="text-center">{% if language == 'en' %}Count{% else %}Nombre{% endif %}</th>
+                <th class="ds-table__center">{% if language == 'en' %}Count{% else %}Nombre{% endif %}</th>
               </tr>
             </thead>
             <tbody>
               {% for key, count in entity_counts.items() %}
                 <tr>
-                  <td class="fw-bold">{{ key }}</td>
-                  <td class="text-center"><span class="badge bg-primary">{{ count }}</span></td>
+                  <td class="ds-table__strong">{{ key }}</td>
+                  <td class="ds-table__center"><span class="ds-tag">{{ count }}</span></td>
                 </tr>
               {% endfor %}
             </tbody>
