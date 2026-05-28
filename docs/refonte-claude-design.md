@@ -111,14 +111,19 @@ Datascope utilise actuellement une identité visuelle « dashboard data tech » 
 - [x] 1.4 Commit : `ui(claude): re-tokenize app.css with cream/coral palette`
 
 ### Phase 2 — Composants visuels
-- [ ] 2.1 Boutons : `ds-btn`, `ds-btn--primary` (coral plein), `ds-btn--ghost`
-- [ ] 2.2 Cards & panels : `ds-card`, `ds-panel` (fond `surface-card`, hairline 1px, no shadow)
-- [ ] 2.3 Header : retirer `backdrop-filter` (glassmorphism), header cream + hairline
-- [ ] 2.4 Typo : appliquer `--ds-font-serif` sur `.ds-title`, h1-h3 + tracking négatif
-- [ ] 2.5 Inputs / textarea : retirer `!important`, border hairline, fond canvas
-- [ ] 2.6 Drawers mobile : fond canvas/cream, scrim adapté
-- [ ] 2.7 Alertes : success/warning/error mappés sur les nouveaux tokens
-- [ ] 2.8 Commit : `ui(claude): refit components to warm-editorial visual language`
+- [x] 2.1 Boutons : `ds-btn` cream/hairline, `ds-btn--primary` coral plein + hover active, `ds-btn--ghost` transparent
+- [x] 2.2 Cards & panels : fond `surface-card`, hairline 1px, suppression box-shadow (color-block first)
+- [x] 2.3 Header : suppression `backdrop-filter` et `rgba(11,18,32,0.72)`, header cream plat + hairline bottom
+- [x] 2.4 Typo : `.ds-title` en serif 28px tracking -0.3px, `.ds-brand__name` en serif 1.35rem, `.ds-kpi__value` en serif éditorial
+- [x] 2.5 Inputs / textarea : background canvas + border hairline + focus coral (`!important` gardé jusqu'à Phase 3 / drop Bootstrap)
+- [x] 2.6 Drawers mobile : fond canvas opaque, scrim warm-ink (rgba 20,20,19,0.55)
+- [x] 2.7 Alertes : variants warning (amber), error (rouge Claude), success (vert Claude), tints alpha 8-10%
+- [x] 2.8 Commit : `ui(claude): refit components to warm-editorial visual language`
+
+> Notes Phase 2 :
+> - Footer passé en `surface-soft` (au lieu du dark `rgba(11,18,32,0.65)`) — cohérence cream-first. Footer dark Claude réservé aux pages produit, pas pertinent pour Datascope.
+> - Suppression des aliases legacy reportée **fin de Phase 3** (après drop Bootstrap), pour éviter casse de `style.css` qui pourrait encore référencer indirectement.
+> - Le focus `!important` sur inputs reste — sera retiré en 3.1 quand `form-control` Bootstrap disparaît des templates.
 
 ### Phase 3 — Dé-bootstrapification
 - [ ] 3.1 Remplacer `form-control`, `form-label`, `alert-info`, `mt-3` etc. dans les 10 templates par des classes `ds-*` natives
