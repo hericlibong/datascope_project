@@ -21,8 +21,9 @@
   --ds-on-dark-soft:        #a09d96;
 
   /* Brand & accents */
-  --ds-primary:             #cc785c;
-  --ds-primary-active:      #a9583e;
+  --ds-primary:             #cc785c;   /* decorative accent — 3.1:1 on cream */
+  --ds-primary-active:      #a9583e;   /* interactive fg — 5.1:1 on white (WCAG AA) */
+  --ds-primary-press:       #7d3e2c;   /* pressed state */
   --ds-primary-disabled:    #e6dfd8;
   --ds-accent-teal:         #5db8a6;
   --ds-accent-amber:        #e8a55a;
@@ -80,9 +81,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Focus visible — coral outline */
+/* Focus visible — solid accessible coral (4.8:1 on cream) */
 :focus-visible {
-  outline: 3px solid rgba(204, 120, 92, 0.55);
+  outline: 2px solid var(--ds-primary-active);
   outline-offset: 2px;
 }
 
@@ -194,14 +195,14 @@ body {
 }
 
 .ds-btn--primary {
-  background: var(--ds-primary);
-  border-color: var(--ds-primary);
+  background: var(--ds-primary-active);
+  border-color: var(--ds-primary-active);
   color: var(--ds-on-primary);
 }
 
 .ds-btn--primary:hover {
-  background: var(--ds-primary-active);
-  border-color: var(--ds-primary-active);
+  background: var(--ds-primary-press);
+  border-color: var(--ds-primary-press);
   color: var(--ds-on-primary);
 }
 
@@ -492,7 +493,7 @@ body {
 
 .ds-tag {
   display: inline-block;
-  background: var(--ds-primary);
+  background: var(--ds-primary-active);
   color: var(--ds-on-primary);
   font-family: var(--ds-font-sans);
   font-size: 12px;

@@ -150,11 +150,19 @@ Datascope utilise actuellement une identité visuelle « dashboard data tech » 
 > Nouvelles primitives CSS ajoutées : `.ds-input`, `.ds-radio-group`, `.ds-radio`, `.ds-btn--lg`, `.ds-login-shell`, `.ds-login-card(__header|__title)`, `.ds-prose-page` (typographie h2/h3/h4/h5/p/ul/hr/.lead pour pages de contenu).
 
 ### Phase 5 — Polish & QA
-- [ ] 5.1 Contrastes WCAG AA (vérifier coral `#cc785c` sur cream `#faf9f5` — peut être limite)
-- [ ] 5.2 Tester drawers mobile, menu langue, focus-visible, navigation clavier
-- [ ] 5.3 Diff visuel manuel sur 3 pages clés : analyze, results, login
-- [ ] 5.4 Vérifier rendu du filtre `markdown` Jinja sur les résultats
-- [ ] 5.5 Commit : `ui(claude): a11y polish and visual QA fixes`
+- [x] 5.1 Contrastes WCAG AA — Fix appliqué :
+  - `--ds-primary` (#cc785c) : 3.1:1 sur cream → conservé pour les accents décoratifs uniquement
+  - `.ds-btn--primary` et `.ds-tag` basculés sur `--ds-primary-active` (#a9583e) → 5.1:1 blanc sur terracotta ✓ WCAG AA
+  - Ajout token `--ds-primary-press: #7d3e2c` pour état hover/pressed
+  - Focus-visible : opacité 55% → `2px solid var(--ds-primary-active)` (4.8:1 sur cream) ✓
+- [x] 5.2 Audit drawers mobile + menu langue + keyboard nav :
+  - Drawers : focus-trap de base OK (focus first element + Escape + scrim click)
+  - Menu langue : ajout navigation ↑↓ entre items, Tab ferme le menu, focus déplacé sur premier item à l'ouverture
+- [x] 5.3 Diff visuel :
+  - Bootstrap résiduel éliminé : `h5 mb-2` + `text-muted mb-3` dans `analyze_left/right.html`, `mb-2` dans `results_sources/studio.html`
+  - Boutons primaires visuellement plus saturés (terracotta vs coral clair) — cohérent avec spec éditoriale
+- [x] 5.4 Filtre `markdown` Jinja vérifié : enregistré dans `create_app()`, visualisations pré-converties via `markdown.markdown()` dans routes.py, affichées avec `| safe` ✓
+- [x] 5.5 Commit : `ui(claude): a11y polish and visual QA fixes`
 
 ---
 

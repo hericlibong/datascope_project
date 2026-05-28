@@ -96,10 +96,31 @@
   }
 
   if (langBtn && langMenu) {
+    function openLang() {
+      langBtn.setAttribute('aria-expanded', 'true');
+      langMenu.hidden = false;
+      const firstItem = qs('[role="menuitem"]', langMenu);
+      firstItem?.focus();
+    }
+
     langBtn.addEventListener('click', () => {
       const isOpen = langBtn.getAttribute('aria-expanded') === 'true';
-      langBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-      langMenu.hidden = isOpen;
+      isOpen ? closeLang() : openLang();
+    });
+
+    // Arrow key navigation inside menu
+    langMenu.addEventListener('keydown', (e) => {
+      const items = qsa('[role="menuitem"]', langMenu);
+      const idx = items.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        items[(idx + 1) % items.length]?.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        items[(idx - 1 + items.length) % items.length]?.focus();
+      } else if (e.key === 'Tab') {
+        closeLang();
+      }
     });
 
     document.addEventListener('click', (e) => {
