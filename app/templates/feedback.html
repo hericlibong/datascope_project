@@ -1,109 +1,107 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row justify-content-center page-content">
-  <div class="col-md-8">
-    <div class="card card-static shadow-sm p-4">
-      {% if language == "fr" %}
-        ✉️ Donner votre avis
-      {% else %}
-        ✉️ Give Feedback
+<div class="ds-page">
+  <div class="ds-card ds-prose-page">
+    <div class="ds-card__body">
+
+      <h2 style="text-align: center;">
+        {% if language == "fr" %}
+          ✉️ Donner votre avis
+        {% else %}
+          ✉️ Give Feedback
+        {% endif %}
+      </h2>
+
+      {% if success %}
+        <div class="ds-alert ds-alert--success" role="status" style="text-align: center;">{{ success }}</div>
       {% endif %}
-    </h2>
 
-    {% if success %}
-      <div class="alert alert-success text-center">{{ success }}</div>
-    {% endif %}
-
-    <form method="POST">
-      <!-- 1. Pertinence de l'analyse -->
-      <div class="mb-3">
-        <label class="form-label">
-          {% if language == 'fr' %}
-            1. L’analyse automatisée vous semble-t-elle pertinente ?
-          {% else %}
-            1. Was the automated analysis relevant to you?
-          {% endif %}
-        </label>
-        {% for value, fr, en in [('not_relevant','Peu pertinente','Not relevant'), ('moderately','Assez pertinente','Somewhat relevant'), ('highly','Très pertinente','Highly relevant')] %}
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="relevance" value="{{ value }}" required>
-            <label class="form-check-label">
-              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
-            </label>
+      <form method="POST">
+        <div class="ds-form-group">
+          <label class="ds-label">
+            {% if language == 'fr' %}
+              1. L’analyse automatisée vous semble-t-elle pertinente ?
+            {% else %}
+              1. Was the automated analysis relevant to you?
+            {% endif %}
+          </label>
+          <div class="ds-radio-group">
+            {% for value, fr, en in [('not_relevant','Peu pertinente','Not relevant'), ('moderately','Assez pertinente','Somewhat relevant'), ('highly','Très pertinente','Highly relevant')] %}
+              <label class="ds-radio">
+                <input type="radio" name="relevance" value="{{ value }}" required>
+                <span class="ds-radio__label">{% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}</span>
+              </label>
+            {% endfor %}
           </div>
-        {% endfor %}
-      </div>
+        </div>
 
-      <!-- 2. Angles éditoriaux -->
-      <div class="mb-3">
-        <label class="form-label">
-          {% if language == 'fr' %}
-            2. Les angles éditoriaux proposés vous ont-ils inspiré ?
-          {% else %}
-            2. Were the suggested editorial angles inspiring?
-          {% endif %}
-        </label>
-        {% for value, fr, en in [('not_useful','Peu utiles','Not useful'), ('interesting','Intéressants','Interesting'), ('inspiring','Inspirants','Inspiring')] %}
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="angles" value="{{ value }}" required>
-            <label class="form-check-label">
-              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
-            </label>
+        <div class="ds-form-group">
+          <label class="ds-label">
+            {% if language == 'fr' %}
+              2. Les angles éditoriaux proposés vous ont-ils inspiré ?
+            {% else %}
+              2. Were the suggested editorial angles inspiring?
+            {% endif %}
+          </label>
+          <div class="ds-radio-group">
+            {% for value, fr, en in [('not_useful','Peu utiles','Not useful'), ('interesting','Intéressants','Interesting'), ('inspiring','Inspirants','Inspiring')] %}
+              <label class="ds-radio">
+                <input type="radio" name="angles" value="{{ value }}" required>
+                <span class="ds-radio__label">{% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}</span>
+              </label>
+            {% endfor %}
           </div>
-        {% endfor %}
-      </div>
+        </div>
 
-      <!-- 3. Fiabilité des sources -->
-      <div class="mb-3">
-        <label class="form-label">
-          {% if language == 'fr' %}
-            3. Que pensez-vous des sources/datasets suggérés ?
-          {% else %}
-            3. How reliable were the suggested datasets/sources?
-          {% endif %}
-        </label>
-        {% for value, fr, en in [('unreliable','Peu fiables','Unreliable'), ('acceptable','Acceptables','Acceptable'), ('reliable','Fiables','Reliable')] %}
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="sources" value="{{ value }}" required>
-            <label class="form-check-label">
-              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
-            </label>
+        <div class="ds-form-group">
+          <label class="ds-label">
+            {% if language == 'fr' %}
+              3. Que pensez-vous des sources/datasets suggérés ?
+            {% else %}
+              3. How reliable were the suggested datasets/sources?
+            {% endif %}
+          </label>
+          <div class="ds-radio-group">
+            {% for value, fr, en in [('unreliable','Peu fiables','Unreliable'), ('acceptable','Acceptables','Acceptable'), ('reliable','Fiables','Reliable')] %}
+              <label class="ds-radio">
+                <input type="radio" name="sources" value="{{ value }}" required>
+                <span class="ds-radio__label">{% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}</span>
+              </label>
+            {% endfor %}
           </div>
-        {% endfor %}
-      </div>
+        </div>
 
-      <!-- 4. Réutilisation future -->
-      <div class="mb-3">
-        <label class="form-label">
-          {% if language == 'fr' %}
-            4. Avez-vous envie de réutiliser cet outil ?
-          {% else %}
-            4. Would you want to reuse this tool?
-          {% endif %}
-        </label>
-        {% for value, fr, en in [('no','Non','No'), ('maybe','Peut-être','Maybe'), ('yes','Oui, certainement','Yes, definitely')] %}
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="reusability" value="{{ value }}" required>
-            <label class="form-check-label">
-              {% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}
-            </label>
+        <div class="ds-form-group">
+          <label class="ds-label">
+            {% if language == 'fr' %}
+              4. Avez-vous envie de réutiliser cet outil ?
+            {% else %}
+              4. Would you want to reuse this tool?
+            {% endif %}
+          </label>
+          <div class="ds-radio-group">
+            {% for value, fr, en in [('no','Non','No'), ('maybe','Peut-être','Maybe'), ('yes','Oui, certainement','Yes, definitely')] %}
+              <label class="ds-radio">
+                <input type="radio" name="reusability" value="{{ value }}" required>
+                <span class="ds-radio__label">{% if language == 'fr' %}{{ fr }}{% else %}{{ en }}{% endif %}</span>
+              </label>
+            {% endfor %}
           </div>
-        {% endfor %}
-      </div>
+        </div>
 
-      <!-- Champ texte libre -->
-      <div class="mb-3">
-        <label for="message" class="form-label">
-          {% if language == "fr" %}Votre message libre (optionnel){% else %}Optional comment{% endif %}
-        </label>
-        <textarea name="message" class="form-control" rows="4" placeholder="{% if language == 'fr' %}Écrivez votre remarque ici...{% else %}Write your comment here...{% endif %}"></textarea>
-      </div>
+        <div class="ds-form-group">
+          <label for="message" class="ds-label">
+            {% if language == "fr" %}Votre message libre (optionnel){% else %}Optional comment{% endif %}
+          </label>
+          <textarea id="message" name="message" class="ds-textarea" rows="4" placeholder="{% if language == 'fr' %}Écrivez votre remarque ici...{% else %}Write your comment here...{% endif %}"></textarea>
+        </div>
 
-      <button type="submit" class="btn btn-primary w-100">
-        {% if language == "fr" %}Envoyer{% else %}Submit{% endif %}
-      </button>
-    </form>
+        <button type="submit" class="ds-btn ds-btn--primary ds-btn--lg" style="width: 100%; justify-content: center;">
+          {% if language == "fr" %}Envoyer{% else %}Submit{% endif %}
+        </button>
+      </form>
+
     </div>
   </div>
 </div>

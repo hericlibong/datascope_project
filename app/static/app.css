@@ -61,17 +61,6 @@
   --ds-font-serif: 'EB Garamond', Garamond, 'Times New Roman', serif;
   --ds-font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --ds-font-mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-
-  /* Legacy aliases — kept until Phase 3 (Bootstrap drop), then audited. */
-  --ds-bg:        var(--ds-canvas);
-  --ds-surface:   var(--ds-surface-card);
-  --ds-surface-2: var(--ds-surface-soft);
-  --ds-border:    var(--ds-hairline);
-  --ds-text:      var(--ds-ink);
-  --ds-accent:    var(--ds-primary);
-  --ds-accent-2:  var(--ds-accent-teal);
-  --ds-danger:    var(--ds-error);
-  --ds-font:      var(--ds-font-sans);
 }
 
 html, body {
@@ -510,6 +499,162 @@ body {
   font-weight: 500;
   padding: 2px 10px;
   border-radius: var(--ds-radius-pill);
+}
+
+/* Single-line input */
+.ds-input {
+  width: 100%;
+  background: var(--ds-canvas);
+  border: 1px solid var(--ds-hairline);
+  color: var(--ds-ink);
+  border-radius: var(--ds-radius-sm);
+  font-family: var(--ds-font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 10px 14px;
+  box-sizing: border-box;
+}
+
+.ds-input:focus {
+  border-color: var(--ds-primary);
+  outline: none;
+}
+
+.ds-input::placeholder { color: var(--ds-muted-soft); }
+
+/* Radio group */
+.ds-radio-group {
+  display: grid;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.ds-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--ds-hairline);
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-canvas);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.ds-radio:hover {
+  background: var(--ds-surface-card);
+  border-color: var(--ds-primary-disabled);
+}
+
+.ds-radio input[type="radio"] {
+  accent-color: var(--ds-primary);
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.ds-radio__label {
+  font-family: var(--ds-font-sans);
+  font-size: 14px;
+  color: var(--ds-ink);
+  cursor: pointer;
+}
+
+/* Button size variant */
+.ds-btn--lg {
+  padding: 14px 24px;
+  font-size: 15px;
+  border-radius: var(--ds-radius-sm);
+}
+
+/* Login layout */
+.ds-login-shell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 24px;
+}
+
+.ds-login-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 32px;
+  background: var(--ds-surface-card);
+  border: 1px solid var(--ds-hairline);
+  border-radius: var(--ds-radius);
+}
+
+.ds-login-card__header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ds-login-card__title {
+  font-family: var(--ds-font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: var(--ds-ink);
+  margin: 12px 0 0;
+}
+
+/* Prose-page typography (about, guide, feedback) */
+.ds-prose-page {
+  font-family: var(--ds-font-sans);
+}
+
+.ds-prose-page h2,
+.ds-prose-page .ds-page-title {
+  font-family: var(--ds-font-serif);
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  color: var(--ds-ink);
+  margin: 0 0 16px;
+}
+
+.ds-prose-page h3,
+.ds-prose-page h4,
+.ds-prose-page h5 {
+  font-family: var(--ds-font-sans);
+  font-weight: 500;
+  color: var(--ds-ink);
+  margin: 28px 0 10px;
+}
+
+.ds-prose-page h4 { font-size: 1.125rem; }
+.ds-prose-page h5 { font-size: 1rem; }
+
+.ds-prose-page p {
+  color: var(--ds-body);
+  line-height: 1.65;
+  margin: 0 0 14px;
+}
+
+.ds-prose-page ul,
+.ds-prose-page ol {
+  color: var(--ds-body);
+  line-height: 1.65;
+  padding-left: 22px;
+  margin: 0 0 16px;
+}
+
+.ds-prose-page li { margin-bottom: 4px; }
+
+.ds-prose-page hr {
+  border: none;
+  border-top: 1px solid var(--ds-hairline);
+  margin: 16px 0 20px;
+}
+
+.ds-prose-page .lead {
+  font-size: 1.125rem;
+  color: var(--ds-body-strong);
+  line-height: 1.6;
+  margin-bottom: 18px;
 }
 
 /* ------------------------------------------------------------------ */

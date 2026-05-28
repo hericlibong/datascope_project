@@ -137,13 +137,17 @@ Datascope utilise actuellement une identité visuelle « dashboard data tech » 
 > Note : `style.css` même chose — encore référencé par les 4 pages secondaires. Suppression Phase 4.6.
 
 ### Phase 4 — Pages secondaires
-- [ ] 4.1 `about.html`
-- [ ] 4.2 `guide.html`
-- [ ] 4.3 `login.html`
-- [ ] 4.4 `feedback.html`
-- [ ] 4.5 `admin_users.html` + `admin_feedbacks.html`
-- [ ] 4.6 Supprimer `static/style.css` + son `<link>` dans `base.html`
-- [ ] 4.7 Commit : `ui(claude): apply design to secondary and admin pages`
+- [x] 4.1 `about.html` → `ds-page` + `ds-card` + `ds-prose-page`, bouton CTA coral `ds-btn--primary ds-btn--lg`
+- [x] 4.2 `guide.html` → même structure que about, bouton secondaire `ds-btn`
+- [x] 4.3 `login.html` → `ds-login-shell` + `ds-login-card` (cream au lieu du dark `#1f1f1f` précédent), logo basculé en version dark, `ds-input` ajouté
+- [x] 4.4 `feedback.html` → `ds-page` + form-check Bootstrap remplacé par `ds-radio-group`/`ds-radio` (cards cliquables avec accent-color coral), bug pré-existant du `</h2>` orphelin corrigé
+- [x] 4.5 `admin_users` + `admin_feedbacks` déjà refit en Phase 3
+- [x] 4.6 Supprimé `static/style.css` (fichier + `<link>`)
+- [x] 4.7 Supprimé `<link>` Bootswatch (dernière dépendance Bootstrap éliminée)
+- [x] 4.8 Supprimé les aliases legacy `--ds-bg/text/accent/...` du `:root` (zéro usage trouvé)
+- [x] 4.9 Commit : `ui(claude): refit secondary pages, drop bootstrap CSS + style.css`
+
+> Nouvelles primitives CSS ajoutées : `.ds-input`, `.ds-radio-group`, `.ds-radio`, `.ds-btn--lg`, `.ds-login-shell`, `.ds-login-card(__header|__title)`, `.ds-prose-page` (typographie h2/h3/h4/h5/p/ul/hr/.lead pour pages de contenu).
 
 ### Phase 5 — Polish & QA
 - [ ] 5.1 Contrastes WCAG AA (vérifier coral `#cc785c` sur cream `#faf9f5` — peut être limite)
